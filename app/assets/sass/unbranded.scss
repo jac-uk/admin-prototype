@@ -47,6 +47,14 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
 	border-bottom: 0;
 }
 
+.img-border {
+	border: 1px solid #0b0c0c;
+	width: 350px;
+	margin-top: 60px;
+	margin-bottom: 30px;
+	float: right;
+}
+
 .govuk-footer {
 	border-top: 0;
 	background-color: #753880 !important;
