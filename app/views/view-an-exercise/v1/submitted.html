@@ -1,0 +1,123 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}Judical Appointments Commission - View an exercise - Submitted{% endblock %}
+
+{% block content %}
+{% include "includes/header.html" %}
+<form action="#" method="post">
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-full">
+			<button type="submit" formaction="#" class="govuk-button govuk-button--secondary govuk-!-margin-top-4 float-right" data-module="govuk-button">Add to favourites</button>
+		</div>
+	</div>
+	<div class="govuk-grid-row clearfix">
+		<div class="govuk-grid-column-full">
+			<span class="govuk-caption-xl">JAC00105</span>
+			<h1 class="govuk-heading-xl">Fee-paid Legal Members of the Mental Health Review Tribunal for Wales</h1>
+		</div>
+	</div>
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-one-quarter">
+			<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
+				<h4 class="moj-side-navigation__title">Exercise</h4>
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item">
+						<a href="index">Overview</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="website-listing">Website listing</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="vacancy-information">Vacancy information</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="contacts">Contacts</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="timeline">Timeline</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="shortlisting">Shortlisting</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="eligibility-information">Eligibility information</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="working-preferences">Working preferences</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="assessment-options">Assessment options</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="downloads">Downloads</a>
+					</li>		  
+				</ul>
+			
+				<h4 class="moj-side-navigation__title">Applications</h4>
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item">
+						<a href="draft">Draft</a>
+					</li>
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="submitted" aria-current="location">Submitted</a>
+					</li>
+				</ul>
+
+				<h4 class="moj-side-navigation__title">Reports</h4>
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item">
+						<a href="diversity">Diversity</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="govuk-grid-column-three-quarters">
+			<h2 class="govuk-heading-l">Submitted</h2>
+		</div>
+		<div class="govuk-grid-column-three-quarters">
+			<table class="govuk-table govuk-!-margin-bottom-9">
+				<caption class="govuk-table__caption hidden">Submitted applications</caption>
+				<thead class="govuk-table__head">
+					<tr class="govuk-table__row">
+						<th scope="col" class="govuk-table__header">Reference number</th>
+						<th scope="col" class="govuk-table__header">Name</th>
+						<th scope="col" class="govuk-table__header">Last updated</th>
+						<th scope="col" class="govuk-table__header">Status</th>
+				  	</tr>
+				</thead>
+				<tbody class="govuk-table__body">
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-001</a></td>
+						<td class="govuk-table__cell">Matt Hastings</td>
+						<td class="govuk-table__cell">18 March 2020</td>
+						<td class="govuk-table__cell">Submitted</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-002</a></td>
+						<td class="govuk-table__cell">Jeremy Suarez</td>
+						<td class="govuk-table__cell">09 March 2020</td>
+						<td class="govuk-table__cell">Recommended for future</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-003</a></td>
+						<td class="govuk-table__cell">Rebecca Mcknight</td>
+						<td class="govuk-table__cell">11 March 2020</td>
+						<td class="govuk-table__cell">Proceed to next stage</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-004</a></td>
+						<td class="govuk-table__cell">Monika Szczygieł</td>
+						<td class="govuk-table__cell">12 March 2020</td>
+						<td class="govuk-table__cell">Withdrawn</td>
+					</tr>
+				</tbody>
+			</table> 
+			<button class="govuk-button" data-module="govuk-button">TBC</button>
+		</div>
+	</div>
+</form>
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
+{% endblock %}

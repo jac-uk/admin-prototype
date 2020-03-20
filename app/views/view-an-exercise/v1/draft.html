@@ -1,6 +1,6 @@
 {% extends "layout_unbranded.html" %}
 
-{% block pageTitle %}Judical Appointments Commission - View an exercise - Assessment options{% endblock %}
+{% block pageTitle %}Judical Appointments Commission - View an exercise - Draft{% endblock %}
 
 {% block content %}
 {% include "includes/header.html" %}
@@ -45,50 +45,69 @@
 					<li class="moj-side-navigation__item">
 						<a href="working-preferences">Working preferences</a>
 					</li>
-					<li class="moj-side-navigation__item moj-side-navigation__item--active">
-						<a href="assessment-options" aria-current="location">Assessment options</a>
+					<li class="moj-side-navigation__item">
+						<a href="assessment-options">Assessment options</a>
 					</li>
 					<li class="moj-side-navigation__item">
 						<a href="downloads">Downloads</a>
 					</li>		  
 				</ul>
 			
-				<!-- <h4 class="moj-side-navigation__title">Applications</h4> -->
-				<h4 class="moj-side-navigation__title">Applicants</h4>
+				<h4 class="moj-side-navigation__title">Applications</h4>
 				<ul class="moj-side-navigation__list">
-					<li class="moj-side-navigation__item">
-						<a href="applications">Applications</a>
-					</li>
-					<li class="moj-side-navigation__item">
-						<a href="diversity">Diversity report</a>
-					</li>
-					<!-- <li class="moj-side-navigation__item">
-						<a href="draft">Draft</a>
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="draft" aria-current="location">Draft</a>
 					</li>
 					<li class="moj-side-navigation__item">
 						<a href="submitted">Submitted</a>
-					</li> -->
+					</li>
 				</ul>
 
-				<!-- <h4 class="moj-side-navigation__title">Reports</h4>
+				<h4 class="moj-side-navigation__title">Reports</h4>
 				<ul class="moj-side-navigation__list">
 					<li class="moj-side-navigation__item">
 						<a href="diversity">Diversity</a>
 					</li>
-				</ul> -->
+				</ul>
 			</nav>
 		</div>
 		<div class="govuk-grid-column-three-quarters">
-			<h2 class="govuk-heading-l float-left">Assessment options</h2>
-			<div class="float-right">
-				<p class="govuk-body govuk-!-font-weight-bold"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> sssessment options</span></a></p>
-			</div>
-			<dl class="govuk-summary-list clearfix">
-				<div class="govuk-summary-list__row">
-					<dt class="govuk-summary-list__key">TBC</dt>
-					<dd class="govuk-summary-list__value">Self Assessment with competencies</dd>
-				</div>
-			</dl>
+			<h2 class="govuk-heading-l">Draft</h2>
+		</div>
+		<div class="govuk-grid-column-three-quarters">
+			<table class="govuk-table govuk-!-margin-bottom-9">
+				<caption class="govuk-table__caption hidden">Draft applications</caption>
+				<thead class="govuk-table__head">
+					<tr class="govuk-table__row">
+						<th scope="col" class="govuk-table__header">Reference number</th>
+						<th scope="col" class="govuk-table__header">Name</th>
+						<th scope="col" class="govuk-table__header">Last updated</th>
+				  	</tr>
+				</thead>
+				<tbody class="govuk-table__body">
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-001</a></td>
+						<td class="govuk-table__cell">Matt Hastings</td>
+						<td class="govuk-table__cell">18 March 2020</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-002</a></td>
+						<td class="govuk-table__cell">Jeremy Suarez</td>
+						<td class="govuk-table__cell">09 March 2020</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-003</a></td>
+						<td class="govuk-table__cell">Rebecca Mcknight</td>
+						<td class="govuk-table__cell">11 March 2020</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-004</a></td>
+						<td class="govuk-table__cell">Monika Szczygieł</td>
+						<td class="govuk-table__cell">12 March 2020</td>
+					</tr>
+				</tbody>
+			</table> 
+			<button class="govuk-button" data-module="govuk-button">TBC</button>
 		</div>
 	</div>
 </form>
