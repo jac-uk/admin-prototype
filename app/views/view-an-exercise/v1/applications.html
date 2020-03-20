@@ -82,50 +82,112 @@
 			<h2 class="govuk-heading-l">Applications</h2>
 		</div>
 		<div class="govuk-grid-column-three-quarters">
-			<table class="govuk-table govuk-!-margin-bottom-9">
-				<caption class="govuk-table__caption hidden">Candidate applications</caption>
-				<thead class="govuk-table__head">
-					<tr class="govuk-table__row">
-						<th scope="col" class="govuk-table__header">Reference number</th>
-						<th scope="col" class="govuk-table__header">Name</th>
-						<th scope="col" class="govuk-table__header">Last updated</th>
-						<th scope="col" class="govuk-table__header">Status</th>
-				  	</tr>
-				</thead>
-				<tbody class="govuk-table__body">
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-001</a></td>
-						<td class="govuk-table__cell">Matt Hastings</td>
-						<td class="govuk-table__cell">18 March 2020</td>
-						<td class="govuk-table__cell">Draft</td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-002</a></td>
-						<td class="govuk-table__cell">Jeremy Suarez</td>
-						<td class="govuk-table__cell">09 March 2020</td>
-						<td class="govuk-table__cell">Recommended for future</td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-003</a></td>
-						<td class="govuk-table__cell">Rebecca Mcknight</td>
-						<td class="govuk-table__cell">11 March 2020</td>
-						<td class="govuk-table__cell">Proceed to next stage</td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-004</a></td>
-						<td class="govuk-table__cell">Monika Szczygieł</td>
-						<td class="govuk-table__cell">12 March 2020</td>
-						<td class="govuk-table__cell">Withdrawn</td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-005</a></td>
-						<td class="govuk-table__cell">Matt Hastings</td>
-						<td class="govuk-table__cell">18 March 2020</td>
-						<td class="govuk-table__cell">Submitted</td>
-					</tr>
-				</tbody>
-			</table> 
-			<button class="govuk-button" data-module="govuk-button">TBC</button>
+
+			<div class="govuk-tabs" data-module="govuk-tabs">
+				<h3 class="govuk-tabs__title">Contents</h3>
+				<ul class="govuk-tabs__list">
+					<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+						<a class="govuk-tabs__tab" href="#submitted">Submitted</a>
+				  	</li>
+				  	<li class="govuk-tabs__list-item">
+						<a class="govuk-tabs__tab" href="#in-progress">In progress</a>
+				  	</li>
+				</ul>
+				<div class="govuk-tabs__panel" id="submitted">
+					<!-- <h3 class="govuk-heading-m">Submitted</h3> -->
+					<table class="govuk-table govuk-!-margin-bottom-9">
+						<caption class="govuk-table__caption hidden">Submitted applications</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Reference number</th>
+								<th scope="col" class="govuk-table__header">Name</th>
+								<th scope="col" class="govuk-table__header">Last updated</th>
+								<th scope="col" class="govuk-table__header">Status</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-001</a></td>
+								<td class="govuk-table__cell">Sharon Schmidt</td>
+								<td class="govuk-table__cell">18 March 2020</td>
+								<td class="govuk-table__cell">Under review</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-002</a></td>
+								<td class="govuk-table__cell">Diana Moore</td>
+								<td class="govuk-table__cell">09 March 2020</td>
+								<td class="govuk-table__cell">Recommended for future</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-003</a></td>
+								<td class="govuk-table__cell">Joseph Harrison</td>
+								<td class="govuk-table__cell">11 March 2020</td>
+								<td class="govuk-table__cell">Proceed to next stage</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-004</a></td>
+								<td class="govuk-table__cell">Archie Hunter</td>
+								<td class="govuk-table__cell">12 March 2020</td>
+								<td class="govuk-table__cell">Withdrawn</td>
+							</tr>
+						</tbody>
+					</table> 
+					<button class="govuk-button" data-module="govuk-button">TBC</button>
+				</div>
+				<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="in-progress">
+					<!-- <h3 class="govuk-heading-m">In progress</h3> -->
+					<table class="govuk-table govuk-!-margin-bottom-9">
+						<caption class="govuk-table__caption hidden">In progress applications</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Reference number</th>
+								<th scope="col" class="govuk-table__header">Name</th>
+								<th scope="col" class="govuk-table__header">Last updated</th>
+								<th scope="col" class="govuk-table__header">Action</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-005</a></td>
+								<td class="govuk-table__cell">Brenda Palmer</td>
+								<td class="govuk-table__cell">18 March 2020</td>
+								<td class="govuk-table__cell">&nbsp;</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-006</a></td>
+								<td class="govuk-table__cell">Paul Kim</td>
+								<td class="govuk-table__cell">18 March 2020</td>
+								<td class="govuk-table__cell">&nbsp;</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-007</a></td>
+								<td class="govuk-table__cell">Matthew Jones</td>
+								<td class="govuk-table__cell">18 March 2020</td>
+								<td class="govuk-table__cell">&nbsp;</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-008</a></td>
+								<td class="govuk-table__cell">Helen Perkins</td>
+								<td class="govuk-table__cell">09 March 2020</td>
+								<td class="govuk-table__cell">&nbsp;</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-009</a></td>
+								<td class="govuk-table__cell">Terry Andrews</td>
+								<td class="govuk-table__cell">11 March 2020</td>
+								<td class="govuk-table__cell">&nbsp;</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-0010</a></td>
+								<td class="govuk-table__cell">Peter Bates</td>
+								<td class="govuk-table__cell">12 March 2020</td>
+								<td class="govuk-table__cell">&nbsp;</td>
+							</tr>
+						</tbody>
+					</table> 
+					<button class="govuk-button" data-module="govuk-button">TBC</button>
+				</div>	
+			</div>	
 		</div>
 	</div>
 </form>

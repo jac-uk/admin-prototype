@@ -37,6 +37,12 @@ $govuk-assets-path: '/govuk/assets/';
     color: #f3f2f1;
 }
 
+.govuk-tabs__panel {
+    border: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 .clearfix {
     clear: both;
 }
