@@ -53,13 +53,13 @@
 					</li>		  
 				</ul>
 			
-				<h4 class="moj-side-navigation__title">Applications</h4>
+				<h4 class="moj-side-navigation__title">Applicants</h4>
 				<ul class="moj-side-navigation__list">
-					<li class="moj-side-navigation__item">
-						<a href="draft">Draft</a>
-					</li>
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
 						<a href="submitted" aria-current="location">Submitted</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="in-progress">In progress</a>
 					</li>
 				</ul>
 
@@ -75,44 +75,95 @@
 			<h2 class="govuk-heading-l">Submitted</h2>
 		</div>
 		<div class="govuk-grid-column-three-quarters">
-			<table class="govuk-table govuk-!-margin-bottom-9">
-				<caption class="govuk-table__caption hidden">Submitted applications</caption>
+			<div class="moj-action-bar">
+				<div class="moj-button-menu">
+					<div class="moj-button-menu__wrapper clearfix">
+						<div class="govuk-form-group float-left govuk-!-margin-right-4">
+							<label class="govuk-label govuk-!-font-weight-bold" for="change-status">Change status</label>
+							<select class="govuk-select" id="change-status" name="change-status">
+								<option value="" selected>Select from</option>
+								<option value="failed-selection">Failed selection day</option>
+								<option value="failed-shortlisting">Failed shortlisting</option>
+								<option value="passed-selection">Passed selection day</option>
+								<option value="passed-shortlisting">Passed shortlisting</option>
+								<option value="proceed-next-stage">Proceed to next stage</option>
+								<option value="recommended-appointment">Recommended for appointment - s87</option>
+								<option value="recommended-future-appointment">Recommended for future appointment - s94</option>
+								<option value="record-judicial-office">Record to Judicial Office</option>
+								<option value="rejected-character">Rejected on character</option>
+								<option value="rejected-ineligible">Rejected as ineligible</option>
+								<option value="withdrawn">Withdrawn</option>
+							</select>
+						</div>
+						<button type="submit" class="govuk-button moj-button-menu__item govuk-button--secondary float-left govuk-!-margin-top-6" data-module="govuk-button">Apply</button>
+					</div>
+				</div>
+			</div>
+			<table class="govuk-table jac-table govuk-!-margin-bottom-9">
 				<thead class="govuk-table__head">
 					<tr class="govuk-table__row">
-						<th scope="col" class="govuk-table__header">Reference number</th>
-						<th scope="col" class="govuk-table__header">Name</th>
-						<th scope="col" class="govuk-table__header">Last updated</th>
-						<th scope="col" class="govuk-table__header">Status</th>
-				  	</tr>
+						<th class="govuk-table__header moj-multi-select__select-all-container" scope="col"></th>
+						<th class="govuk-table__header govuk-!-width-one-quarter" scope="col">Reference number</th>
+						<th class="govuk-table__header govuk-!-width-one-quarter" scope="col">Name</th>
+						<th class="govuk-table__header" scope="col">Status</th>
+					</tr>
 				</thead>
 				<tbody class="govuk-table__body">
-					<tr class="govuk-table__row">
+					<tr class="govuk-table__row govuk-table__row--selected">
+						<td class="govuk-table__cell">
+							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-001">
+								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-001">
+									<span class="govuk-visually-hidden">Select JAC00105-001</span>
+								</label>
+							</div>
+						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-001</a></td>
-						<td class="govuk-table__cell">Matt Hastings</td>
-						<td class="govuk-table__cell">18 March 2020</td>
-						<td class="govuk-table__cell">Submitted</td>
+						<td class="govuk-table__cell">Sharon Schmidt</td>
+						<td class="govuk-table__cell">Passed shortlisting</td>
 					</tr>
 					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">
+							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-002" value="jac00105-002">
+								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-002">
+									<span class="govuk-visually-hidden">Select JAC00105-002</span>
+								</label>
+							</div>
+						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-002</a></td>
-						<td class="govuk-table__cell">Jeremy Suarez</td>
-						<td class="govuk-table__cell">09 March 2020</td>
-						<td class="govuk-table__cell">Recommended for future</td>
+						<td class="govuk-table__cell">Diana Moore</td>
+						<td class="govuk-table__cell">Passed shortlisting</td>
 					</tr>
 					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">
+							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-003" value="jac00105-003">
+								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-003">
+									<span class="govuk-visually-hidden">Select JAC00105-003</span>
+								</label>
+							</div>
+						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-003</a></td>
-						<td class="govuk-table__cell">Rebecca Mcknight</td>
-						<td class="govuk-table__cell">11 March 2020</td>
-						<td class="govuk-table__cell">Proceed to next stage</td>
+						<td class="govuk-table__cell">Joseph Harrison</td>
+						<td class="govuk-table__cell">Recommended for future appointment - s94</td>
 					</tr>
 					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">
+							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-004" value="jac00105-004">
+								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-004">
+									<span class="govuk-visually-hidden">Select JAC00105-004</span>
+								</label>
+							</div>
+						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-004</a></td>
-						<td class="govuk-table__cell">Monika Szczygieł</td>
-						<td class="govuk-table__cell">12 March 2020</td>
-						<td class="govuk-table__cell">Withdrawn</td>
+						<td class="govuk-table__cell">Archie Hunter</td>
+						<td class="govuk-table__cell">Passed shortlisting</td>
 					</tr>
 				</tbody>
 			</table> 
-			<button class="govuk-button" data-module="govuk-button">TBC</button>
+			<button class="govuk-button" data-module="govuk-button">Download - TBC</button> 
 		</div>
 	</div>
 </form>

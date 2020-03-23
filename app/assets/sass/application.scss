@@ -43,6 +43,10 @@ $govuk-assets-path: '/govuk/assets/';
     padding-right: 0 !important;
 }
 
+.govuk-table__header, .govuk-table__cell {
+    vertical-align: middle;
+}
+
 .clearfix {
     clear: both;
 }
