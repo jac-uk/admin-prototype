@@ -33,7 +33,8 @@ $govuk-assets-path: '/govuk/assets/';
 }
 
 .blue-panel .govuk-caption-m,
-.blue-panel .govuk-heading-m {
+.blue-panel .govuk-heading-m,
+.blue-panel .govuk-link {
     color: #f3f2f1;
 }
 
@@ -45,6 +46,15 @@ $govuk-assets-path: '/govuk/assets/';
 
 .govuk-table__header, .govuk-table__cell {
     vertical-align: middle;
+}
+
+.app-task-list__items {
+    padding-left: 0;
+}
+
+.govuk-tag-not-done {
+    background: #f3f2f1;
+    color: #6f777b;
 }
 
 .clearfix {
