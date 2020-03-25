@@ -57,6 +57,16 @@ $govuk-assets-path: '/govuk/assets/';
     color: #6f777b;
 }
 
+.past-timeline .moj-timeline__item:before,
+.past-timeline .moj-timeline:before {
+    background-color: #b1b4b6;
+}
+
+.past-timeline .moj-timeline__title,
+.past-timeline .moj-timeline__date {
+    color: #626a6e;
+}
+
 .clearfix {
     clear: both;
 }
