@@ -82,3 +82,7 @@ $govuk-assets-path: '/govuk/assets/';
 .hidden {
     display: none;
 }
+
+.no-border {
+    border: 0 !important;
+}
