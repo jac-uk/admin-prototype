@@ -66,3 +66,30 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
 .govuk-footer .govuk-footer__link {
 	color: #fff;
 }
+
+.govuk-width-container {
+    max-width: 1200px;
+}
+
+.index-page {
+    max-width: 960px !important;
+}
+
+/* 	==========================================================================
+    Media Queries
+   	========================================================================== */
+	/* @media only screen and (min-width: 63.8125em) { 1021px to 1240px or more 16px
+	.govuk-width-container {
+			margin-left: 30px;
+			margin-right: 30px;
+			margin: 0 auto;
+		}    
+	} */
+
+	@media only screen and (min-width: 1021px) and (max-width: 1240px)  {
+		.govuk-width-container {
+			margin-left: 30px;
+			margin-right: 30px;
+		}    
+	
+	}
