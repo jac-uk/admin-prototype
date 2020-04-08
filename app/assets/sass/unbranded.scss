@@ -78,18 +78,9 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
 /* 	==========================================================================
     Media Queries
    	========================================================================== */
-	/* @media only screen and (min-width: 63.8125em) { 1021px to 1240px or more 16px
+	@media only screen and (min-width: 63.8125em) and (max-width: 77.5em) { /* 1021px/16px to 1240px/16px */
 	.govuk-width-container {
 			margin-left: 30px;
 			margin-right: 30px;
-			margin: 0 auto;
 		}    
-	} */
-
-	@media only screen and (min-width: 1021px) and (max-width: 1240px)  {
-		.govuk-width-container {
-			margin-left: 30px;
-			margin-right: 30px;
-		}    
-	
-	}
+	} 
