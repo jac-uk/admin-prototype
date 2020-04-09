@@ -9,8 +9,13 @@ $(document).ready(function () {
   	window.GOVUKFrontend.initAll()
 })
 
-// MOJ Multi select component
+// MOJ 'Multi select' component
 new MOJFrontend.MultiSelect({
 	container: $('.moj-multi-select__select-all-container'),
 	checkboxes: $('.govuk-checkboxes__input')
+});
+
+// MOJ 'Sortable table' component
+new MOJFrontend.SortableTable({
+	table: $('table')[0]
 });
