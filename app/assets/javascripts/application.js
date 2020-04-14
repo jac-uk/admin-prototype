@@ -16,6 +16,6 @@ new MOJFrontend.MultiSelect({
 });
 
 // MOJ 'Sortable table' component
-//new MOJFrontend.SortableTable({
-//	table: $('table')[0]
-//});
+new MOJFrontend.SortableTable({
+	table: $('table')[0]
+});
