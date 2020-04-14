@@ -71,6 +71,24 @@ $govuk-assets-path: '/govuk/assets/';
     vertical-align: top;
 }
 
+.jac-table .govuk-checkboxes__item {
+    // min-height: 25px !important;
+}
+
+.jac-table .govuk-checkboxes__input {
+    // top: -15px !important;
+}
+
+.jac-check-table .moj-multi-select__checkbox {
+    display: block;
+}
+
+.jac-check-table td,
+.jac-check-table th {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
 .clearfix {
     clear: both;
 }
