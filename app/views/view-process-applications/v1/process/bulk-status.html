@@ -1,0 +1,179 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}Judical Appointments Commission - View an exercise - JAC00105-abc0001{% endblock %}
+
+{% block content %}
+{% include "includes/header.html" %}
+<form action="applied-bulk" method="post">
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-full">
+			<button type="submit" formaction="#" class="govuk-button govuk-button--secondary govuk-!-margin-top-4 float-right" data-module="govuk-button">Add to favourites</button>
+		</div>
+	</div>
+	<div class="govuk-grid-row clearfix">
+		<div class="govuk-grid-column-full">
+			<span class="govuk-caption-xl">JAC00105</span>
+			<h1 class="govuk-heading-xl">Fee-paid Legal Members of the Mental Health Review Tribunal for Wales</h1>
+		</div>
+	</div>
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-one-quarter">
+			<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
+				<h4 class="moj-side-navigation__title">Exercise</h4>
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item">
+						<a href="#">Overview</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Website listing</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Vacancy information</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Contacts</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Timeline</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Shortlisting</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Eligibility information</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Working preferences</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Assessment options</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Downloads</a>
+					</li>		  
+				</ul>
+			
+				<h4 class="moj-side-navigation__title">Applications</h4> 
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item">
+						<a href="index" aria-current="location">Drafts (15)</a>
+					</li>
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="applied">Applied (100)</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Shortlisted (1)</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Selected (0)</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Recommended (0)</a>
+					</li> 
+				</ul>
+			</nav>
+		</div>
+		<div class="govuk-grid-column-three-quarters">
+			<h2 class="govuk-heading-l">Bulk action (TBC)</h2>
+			<p class="govuk-body">You have added 4 applicants (TBC).</p>
+			<dl class="govuk-summary-list">
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Spencer Singh</dt>
+					<dd class="govuk-summary-list__value">JAC00105-abc0002</dd>
+					<dd class="govuk-summary-list__actions">
+						<a class="govuk-link" href="#">
+						  Remove<span class="govuk-visually-hidden"> applicant</span>
+						</a>
+					</dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Luke Walker</dt>
+					<dd class="govuk-summary-list__value">JAC00105-abc0003</dd>
+					<dd class="govuk-summary-list__actions">
+						<a class="govuk-link" href="#">
+						  Remove<span class="govuk-visually-hidden"> applicant</span>
+						</a>
+					</dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Nathan Powell</dt>
+					<dd class="govuk-summary-list__value">JAC00105-abc0004</dd>
+					<dd class="govuk-summary-list__actions">
+						<a class="govuk-link" href="#">
+						  Remove<span class="govuk-visually-hidden"> applicant</span>
+						</a>
+					</dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Harry Farmer</dt>
+					<dd class="govuk-summary-list__value">JAC00105-abc0005</dd>
+					<dd class="govuk-summary-list__actions">
+						<a class="govuk-link" href="#">
+						  Remove<span class="govuk-visually-hidden"> applicant</span>
+						</a>
+					</dd>
+				</div>	
+			</dl>
+			<div class="govuk-form-group govuk-!-padding-top-4">
+				<fieldset class="govuk-fieldset">
+				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<h3 class="govuk-fieldset__heading">Select (TBC)</h3>
+					</legend> 
+					<div class="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="bulk-status" name="bulk-status" type="radio" value="Failed selection day" {{ checked("bulk-status", "Failed selection day") }}>
+							<label class="govuk-label govuk-radios__label" for="bulk-status">Failed selection day</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="bulk-status-2" name="bulk-status" type="radio" value="Failed shortlisting" {{ checked("bulk-status", "Failed shortlisting") }}>
+							<label class="govuk-label govuk-radios__label" for="bulk-status-2">Failed shortlisting</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="bulk-status-3" name="bulk-status" type="radio" value="Passed selection day" {{ checked("bulk-status", "Passed selection day") }}>
+							<label class="govuk-label govuk-radios__label" for="bulk-status-3">Passed selection day</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="bulk-status-4" name="bulk-status" type="radio" value="Passed shortlisting" {{ checked("bulk-status", "Passed shortlisting") }}>
+							<label class="govuk-label govuk-radios__label" for="bulk-status-4">Passed shortlisting</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="bulk-status-5" name="bulk-status" type="radio" value="Proceed to next stage" {{ checked("bulk-status", "Proceed to next stage") }}>
+							<label class="govuk-label govuk-radios__label" for="bulk-status-5">Proceed to next stage</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="bulk-status-6" name="bulk-status" type="radio" value="Recommended for appointment - s87" {{ checked("bulk-status", "Recommended for appointment - s87") }}>
+							<label class="govuk-label govuk-radios__label" for="bulk-status-6">Recommended for appointment - s87</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="bulk-status-7" name="bulk-status" type="radio" value="Recommended for future appointment - s94" {{ checked("bulk-status", "Recommended for future appointment - s94") }}>
+							<label class="govuk-label govuk-radios__label" for="bulk-status-7">Recommended for future appointment - s94</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="bulk-status-8" name="bulk-status" type="radio" value="Record to Judicial Office" {{ checked("bulk-status", "Record to Judicial Office") }}>
+							<label class="govuk-label govuk-radios__label" for="bulk-status-8">Record to Judicial Office</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="bulk-status-9" name="bulk-status" type="radio" value="Rejected on character" {{ checked("bulk-status", "Rejected on character") }}>
+							<label class="govuk-label govuk-radios__label" for="bulk-status-9">Rejected on character</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="bulk-status-10" name="bulk-status" type="radio" value="Rejected as ineligible" {{ checked("bulk-status", "Rejected as ineligible") }}>
+							<label class="govuk-label govuk-radios__label" for="bulk-status-10">Rejected as ineligible</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="bulk-status-11" name="bulk-status" type="radio" value="Withdrawn" {{ checked("bulk-status", "Withdrawn") }}>
+							<label class="govuk-label govuk-radios__label" for="bulk-status-11">Withdrawn</label>
+						</div>
+				  	</div>
+				</fieldset>
+			</div>
+
+			<button class="govuk-button" data-module="govuk-button">Save and return</button> 
+		</div>
+	</div>
+</form>
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
+{% endblock %}
