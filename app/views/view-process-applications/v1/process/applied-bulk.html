@@ -61,9 +61,23 @@
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
 						<a href="applied">Applied (100)</a>
 					</li>
+					{% if data['update-status'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item">
 						<a href="#">Shortlisted (5)</a>
 					</li>
+					{% elseif data['update-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="#">Shortlisted (1)</a>
+					</li>
+					{% elseif data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="#">Shortlisted (4)</a>
+					</li>
+					{% else %}
+					<li class="moj-side-navigation__item">
+						<a href="#">Shortlisted (0)</a>
+					</li>
+					{% endif %}
 					<li class="moj-side-navigation__item">
 						<a href="#">Selected (0)</a>
 					</li>
@@ -132,7 +146,7 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="applied-jac00105-abc0001">JAC00105-abc0001</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="max-talbot">Max Talbot</a></td>
-						<td class="govuk-table__cell">Passed scenario test</td>
+						<td class="govuk-table__cell">{{ data['update-status'] }}</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -145,7 +159,7 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0002</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Spencer Singh</a></td>
-						<td class="govuk-table__cell">Passed scenario test</td>
+						<td class="govuk-table__cell">{{ data['bulk-status'] }}</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -158,7 +172,7 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0003</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Luke Walker</a></td>
-						<td class="govuk-table__cell">Passed scenario test</td>
+						<td class="govuk-table__cell">{{ data['bulk-status'] }}</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -171,7 +185,7 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0004</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Nathan Powell</a></td>
-						<td class="govuk-table__cell">Passed scenario test</td>
+						<td class="govuk-table__cell">{{ data['bulk-status'] }}</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -184,7 +198,7 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0005</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Harry Farmer</a></td>
-						<td class="govuk-table__cell">Passed scenario test</td>
+						<td class="govuk-table__cell">{{ data['bulk-status'] }}</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">

@@ -61,9 +61,15 @@
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
 						<a href="applied">Applied (100)</a>
 					</li>
+					{% if data['update-status'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item">
 						<a href="#">Shortlisted (1)</a>
 					</li>
+					{% else %}
+					<li class="moj-side-navigation__item">
+						<a href="#">Shortlisted (0)</a>
+					</li>
+					{% endif %}
 					<li class="moj-side-navigation__item">
 						<a href="#">Selected (0)</a>
 					</li>
@@ -153,8 +159,8 @@
 							<label class="govuk-label govuk-radios__label" for="bulk-status-8">Test submitted over time</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="bulk-status-9" name="bulk-status" type="radio" value="Withdrawn" {{ checked("bulk-status", "Withdrawn") }}>
-							<label class="govuk-label govuk-radios__label" for="bulk-status-9">Withdrawn</label>
+							<input class="govuk-radios__input" id="bulk-status-9" name="bulk-status" type="radio" value="Withdrawn application" {{ checked("bulk-status", "Withdrawn application") }}>
+							<label class="govuk-label govuk-radios__label" for="bulk-status-9">Withdrawn application</label>
 						</div>
 				  	</div>
 				</fieldset>

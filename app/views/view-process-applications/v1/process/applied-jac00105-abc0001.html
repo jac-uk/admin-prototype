@@ -70,9 +70,15 @@
 					<li class="moj-side-navigation__item">
 						<a href="recommended">Recommended (20)</a>
 					</li> -->
+					{% if data['update-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="#">Shortlisted (1)</a>
+					</li>
+					{% else %}
 					<li class="moj-side-navigation__item">
 						<a href="#">Shortlisted (0)</a>
 					</li>
+					{% endif %}
 					<li class="moj-side-navigation__item">
 						<a href="#">Selected (0)</a>
 					</li>
