@@ -1,10 +1,10 @@
 {% extends "layout_unbranded.html" %}
 
-{% block pageTitle %}Judical Appointments Commission - View and process applicationss - Applied (100){% endblock %}
+{% block pageTitle %}Judical Appointments Commission - View and process applications - Shortlisted (50){% endblock %}
 
 {% block content %}
 {% include "includes/header.html" %}
-<form action="bulk-status" method="post">
+<form action="#" method="post">
 	<div class="govuk-grid-row">
 		<div class="govuk-grid-column-full">
 			<button type="submit" formaction="#" class="govuk-button govuk-button--secondary govuk-!-margin-top-4 float-right" data-module="govuk-button">Add to favourites</button>
@@ -56,28 +56,14 @@
 				<h4 class="moj-side-navigation__title">Applications</h4> 
 				<ul class="moj-side-navigation__list">
 					<li class="moj-side-navigation__item">
-						<a href="index" aria-current="location">Drafts (15)</a>
+						<a href="#" aria-current="location">Drafts (15)</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Applied (100)</a>
 					</li>
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
-						<a href="applied">Applied (100)</a>
+						<a href="#">Shortlisted (50)</a>
 					</li>
-					{% if data['update-status'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
-					<li class="moj-side-navigation__item">
-						<a href="#">Shortlisted (5)</a>
-					</li>
-					{% elseif data['update-status'] == "Passed scenario test" %}
-					<li class="moj-side-navigation__item">
-						<a href="#">Shortlisted (1)</a>
-					</li>
-					{% elseif data['bulk-status'] == "Passed scenario test" %}
-					<li class="moj-side-navigation__item">
-						<a href="#">Shortlisted (4)</a>
-					</li>
-					{% else %}
-					<li class="moj-side-navigation__item">
-						<a href="#">Shortlisted (0)</a>
-					</li>
-					{% endif %}
 					<li class="moj-side-navigation__item">
 						<a href="#">Selected (0)</a>
 					</li>
@@ -88,40 +74,15 @@
 			</nav>
 		</div>
 		<div class="govuk-grid-column-three-quarters">
-			<h2 class="govuk-heading-l">Applied (100)</h2>
+			<h2 class="govuk-heading-l">Shortlisted (50)</h2>
 		</div>
 		<div class="govuk-grid-column-three-quarters">
-
-			<!-- <div class="moj-action-bar">
-				<div class="moj-button-menu">
-					<div class="moj-button-menu__wrapper clearfix">
-						<div class="govuk-form-group float-left govuk-!-margin-right-4">
-							<label class="govuk-label govuk-!-font-weight-bold" for="change-status">Bulk action</label>
-							<select class="govuk-select" id="change-status" name="change-status">
-								<option value="" selected>Select from</option>
-								<option value="failed-selection">Failed selection day</option>
-								<option value="failed-shortlisting">Failed shortlisting</option>
-								<option value="passed-selection">Passed selection day</option>
-								<option value="passed-shortlisting">Passed scenario test</option>
-								<option value="proceed-next-stage">Proceed to next stage</option>
-								<option value="recommended-appointment">Recommended for appointment - s87</option>
-								<option value="recommended-future-appointment">Recommended for future appointment - s94</option>
-								<option value="record-judicial-office">Record to Judicial Office</option>
-								<option value="rejected-character">Rejected on character</option>
-								<option value="rejected-ineligible">Rejected as ineligible</option>
-								<option value="withdrawn">Withdrawn</option>
-							</select>
-						</div>
-						<button type="submit" class="govuk-button moj-button-menu__item govuk-button--secondary float-left govuk-!-margin-top-6" data-module="govuk-button">Add</button>
-					</div>
-				</div>
-			</div> -->
-
 			<table class="govuk-table jac-check-table govuk-!-margin-bottom-4">
-				<caption class="govuk-table__caption hidden">Submitted applications</caption>
+				<caption class="govuk-table__caption hidden">Shortlisted applications</caption>
 				<thead class="govuk-table__head">
 					<!-- <tr class="govuk-table__row">
-						<th scope="col" class="govuk-table__header" aria-sort="ascending">Reference number</th> 
+						<th class="govuk-table__header moj-multi-select__select-all-container" scope="col" style="padding-right: 0; width: 40px"></th>
+						<th scope="col" class="govuk-table__header">Reference number</th>
 						<th scope="col" class="govuk-table__header" aria-sort="none">Name</th>
 						<th scope="col" class="govuk-table__header" aria-sort="none">Status</th>
 					</tr> -->
@@ -129,7 +90,6 @@
 						<th class="govuk-table__header moj-multi-select__select-all-container" scope="col" style="padding-right: 0; width: 40px"></th>
 						<th scope="col" class="govuk-table__header">Reference number</th>
 						<th scope="col" class="govuk-table__header">Name</th>
-						<th scope="col" class="govuk-table__header">Status</th>
 					</tr>
 				</thead>
 				<tbody class="govuk-table__body">
@@ -143,9 +103,8 @@
 								</label>
 							</div>
 						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="applied-jac00105-abc0001">JAC00105-abc0001</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="max-talbot">Max Talbot</a></td>
-						<td class="govuk-table__cell">{{ data['update-status'] }}</td>
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0001</a></td>
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">Max Talbot</a></td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -157,8 +116,7 @@
 							</div>
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0002</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Spencer Singh</a></td>
-						<td class="govuk-table__cell">{{ data['bulk-status'] }}</td>
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">Spencer Singh</a></td> 
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -171,7 +129,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0003</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Luke Walker</a></td>
-						<td class="govuk-table__cell">{{ data['bulk-status'] }}</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -184,7 +141,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0004</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Nathan Powell</a></td>
-						<td class="govuk-table__cell">{{ data['bulk-status'] }}</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -197,7 +153,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0005</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Harry Farmer</a></td>
-						<td class="govuk-table__cell">{{ data['bulk-status'] }}</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -210,7 +165,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0006</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Alex Potter</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -223,7 +177,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0007</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Connor Wood</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -236,7 +189,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0008</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Connor Gibbs</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -249,7 +201,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0009</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Josh Davison</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -262,7 +213,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0010</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Kai Blackburn</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<!-- 11 to 20 -->
 					<tr class="govuk-table__row">
@@ -276,7 +226,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0011</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Imogen Newman</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -289,7 +238,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0012</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Leon Hewitt</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -302,7 +250,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0013</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Isobel Kemp</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -315,7 +262,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0014</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Zachary Taylor</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -328,7 +274,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0015</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Matilda Dean</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -341,7 +286,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0016</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Max Lucas</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -354,7 +298,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0017</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Eve Kent</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -367,7 +310,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0018</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Alicia Howell</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -380,7 +322,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0019</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Morgan Randall</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -393,7 +334,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0020</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Sophia Lane</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<!-- 21 to 30 -->
 					<tr class="govuk-table__row">
@@ -407,7 +347,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0021</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Matthew Greenwood</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -420,7 +359,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0022</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Gabriel Pearce</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -433,7 +371,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0023</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Sophie Bevan</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -446,7 +383,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0024</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Declan Clayton</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -459,7 +395,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0025</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Joel Hussain</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -472,7 +407,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0026</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Lara Whitehead</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -485,7 +419,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0027</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Maisie Brooks</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -498,7 +431,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0028</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Luca Knight</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -511,7 +443,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0029</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Robert Finch</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -524,7 +455,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0030</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Gabriel Carroll</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<!-- 31 to 40 -->
 					<tr class="govuk-table__row">
@@ -538,7 +468,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0031</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Christopher Collier</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -551,7 +480,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0032</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Muhammad Skinner</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -564,7 +492,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0033</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Summer Godfrey</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -577,7 +504,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0034</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Jake Bates</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -590,7 +516,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0035</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Oliver Mahmood</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -603,7 +528,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0036</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Thomas Dunn</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -616,7 +540,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0037</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Sam Fitzgerald</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -629,7 +552,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0038</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Elliot Field</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -642,7 +564,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0039</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Brandon Kelly</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -655,7 +576,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0040</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Caitlin Myers</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<!-- 41 to 50 -->
 					<tr class="govuk-table__row">
@@ -669,7 +589,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0041</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Georgina O'Connor</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -682,7 +601,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0042</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Leon Young</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -695,7 +613,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0043</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Joshua Hancock</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -708,7 +625,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0044</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Muhammad Chapman</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -721,7 +637,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0045</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Hayden Chandler</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -734,7 +649,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0046</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Ryan Stone</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -747,7 +661,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0047</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Henry Fry</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -760,7 +673,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0048</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Alex Duncan</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -773,7 +685,6 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0049</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Leo Day</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
@@ -786,29 +697,10 @@
 						</td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0050</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Niamh Baxter</a></td>
-						<td class="govuk-table__cell">&nbsp;</td>
 					</tr>
 				</tbody>
 			</table> 
-			<nav class="moj-pagination" id="pagination-label">
-				<p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
-				<ul class="moj-pagination__list">
-					<!-- <li class="moj-pagination__item  moj-pagination__item--prev">
-				  		<a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
-					</li> -->
-					<!-- <li class="moj-pagination__item">
-						<a class="moj-pagination__link" href="/page=1">1</a>
-					</li> -->
-					<!-- <li class="moj-pagination__item moj-pagination__item--active">2</li> -->
-					<!-- <li class="moj-pagination__item">
-						<a class="moj-pagination__link" href="/page=3">3</a>
-					</li> -->
-					<li class="moj-pagination__item  moj-pagination__item--next">
-				  		<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
-					</li>
-				</ul>
-				<p class="moj-pagination__results">Showing <b>1</b> to <b>50</b> of <b>100</b> results</p>
-			</nav> 
+			
 			<button class="govuk-button govuk-!-margin-top-8" data-module="govuk-button">Bulk action (TBC)</button>
 		</div>
 	</div>
