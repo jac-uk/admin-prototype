@@ -20,22 +20,22 @@ $govuk-assets-path: '/govuk/assets/';
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 .panel {
-    background: #f3f2f1;
+    background: govuk-colour("light-grey");
     padding: 20px;
 }
 
 .blue-panel {
-    background: #1e70b8;
+    background: govuk-colour("blue");
 }
 
 .panel .govuk-caption-m {
-    color: #0b0c0c;
+    color: govuk-colour("black");
 }
 
 .blue-panel .govuk-caption-m,
 .blue-panel .govuk-heading-m,
 .blue-panel .govuk-link {
-    color: #f3f2f1;
+    color: govuk-colour("light-grey");
 }
 
 .govuk-tabs__panel {
@@ -53,18 +53,18 @@ $govuk-assets-path: '/govuk/assets/';
 }
 
 .govuk-tag-not-done {
-    background: #f3f2f1;
-    color: #6f777b;
+    background: govuk-colour("light-grey");
+    color: govuk-colour("dark-grey");
 }
 
 .past-timeline .moj-timeline__item:before,
 .past-timeline .moj-timeline:before {
-    background-color: #b1b4b6;
+    background-color: govuk-colour("mid-grey");
 }
 
 .past-timeline .moj-timeline__title,
 .past-timeline .moj-timeline__date {
-    color: #626a6e;
+    color: govuk-colour("dark-grey");
 }
 
 .exercise-table-cell {
