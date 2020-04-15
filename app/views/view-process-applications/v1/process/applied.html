@@ -61,16 +61,6 @@
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
 						<a href="applied">Applied (100)</a>
 					</li>
-					<!-- <li class="moj-side-navigation__item">
-						<a href="shortlisted">Shortlisted (50)</a>
-					</li>
-					<li class="moj-side-navigation__item">
-						<a href="selected">Selected (30)</a>
-					</li>
-					<li class="moj-side-navigation__item">
-						<a href="recommended">Recommended (20)</a>
-					</li> -->
-
 					{% if data['update-status'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item">
 						<a href="#">Shortlisted (1)</a>
@@ -90,35 +80,22 @@
 			</nav>
 		</div>
 		<div class="govuk-grid-column-three-quarters">
-			<h2 class="govuk-heading-l">Applied (100)</h2>
-			<!-- <h3 class="govuk-heading-m">100 applications have been submitted</h3> -->
-		</div>
-		<div class="govuk-grid-column-three-quarters">
-
-			<!-- <div class="moj-action-bar">
-				<div class="moj-button-menu">
-					<div class="moj-button-menu__wrapper clearfix">
-						<div class="govuk-form-group float-left govuk-!-margin-right-4">
-							<label class="govuk-label govuk-!-font-weight-bold" for="change-status">Bulk action</label>
-							<select class="govuk-select" id="change-status" name="change-status">
-								<option value="" selected>Select from</option>
-								<option value="failed-selection">Failed selection day</option>
-								<option value="failed-shortlisting">Failed shortlisting</option>
-								<option value="passed-selection">Passed selection day</option>
-								<option value="passed-shortlisting">Passed shortlisting</option>
-								<option value="proceed-next-stage">Proceed to next stage</option>
-								<option value="recommended-appointment">Recommended for appointment - s87</option>
-								<option value="recommended-future-appointment">Recommended for future appointment - s94</option>
-								<option value="record-judicial-office">Record to Judicial Office</option>
-								<option value="rejected-character">Rejected on character</option>
-								<option value="rejected-ineligible">Rejected as ineligible</option>
-								<option value="withdrawn">Withdrawn</option>
-							</select>
-						</div>
-						<button type="submit" class="govuk-button moj-button-menu__item govuk-button--secondary float-left govuk-!-margin-top-6" data-module="govuk-button">Add</button>
+			<!-- <h2 class="govuk-heading-l">Applied (100)</h2> -->
+			<div class="moj-page-header-actions">
+				<div class="moj-page-header-actions__title">
+				  	<h2 class="govuk-heading-l">Applied (100)</h2>
+				</div>
+				<div class="moj-page-header-actions__actions">
+					<div class="moj-button-menu">
+				  		<div class="moj-button-menu__wrapper">
+							<button type="submit" class="govuk-button moj-button-menu__item moj-page-header-actions__action" data-module="govuk-button">Bulk action (TBC)</button>
+							<!-- <button type="submit" class="govuk-button moj-button-menu__item govuk-button--secondary moj-page-header-actions__action" data-module="govuk-button">Share collection</button> -->
+				  		</div>
 					</div>
 				</div>
-			</div> -->
+			</div> 
+		</div>
+		<div class="govuk-grid-column-three-quarters">
 
 			{% if data['update-status'] %}
 			<table class="govuk-table jac-check-table govuk-!-margin-bottom-4">
@@ -1412,23 +1389,13 @@
 			<nav class="moj-pagination" id="pagination-label">
 				<p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
 				<ul class="moj-pagination__list">
-					<!-- <li class="moj-pagination__item  moj-pagination__item--prev">
-				  		<a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
-					</li> -->
-					<!-- <li class="moj-pagination__item">
-						<a class="moj-pagination__link" href="/page=1">1</a>
-					</li> -->
-					<!-- <li class="moj-pagination__item moj-pagination__item--active">2</li> -->
-					<!-- <li class="moj-pagination__item">
-						<a class="moj-pagination__link" href="/page=3">3</a>
-					</li> -->
 					<li class="moj-pagination__item  moj-pagination__item--next">
 				  		<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
 					</li>
 				</ul>
 				<p class="moj-pagination__results">Showing <b>1</b> to <b>50</b> of <b>100</b> results</p>
 			</nav> 
-			<button class="govuk-button govuk-!-margin-top-8" data-module="govuk-button">Bulk action (TBC)</button>
+			<!-- <button class="govuk-button govuk-!-margin-top-8" data-module="govuk-button">Bulk action (TBC)</button> -->
 		</div>
 	</div>
 </form>
