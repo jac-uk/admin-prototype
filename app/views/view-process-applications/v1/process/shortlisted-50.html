@@ -64,9 +64,15 @@
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
 						<a href="#">Shortlisted (50)</a>
 					</li>
+					{% if data['update-status-shortlisted'] == "Invited to selection day" %}
 					<li class="moj-side-navigation__item">
 						<a href="#">Selected (24)</a>
 					</li>
+					{% else %}
+					<li class="moj-side-navigation__item">
+						<a href="#">Selected (23)</a>
+					</li>
+					{% endif %}
 					<li class="moj-side-navigation__item">
 						<a href="#">Recommended (0)</a>
 					</li> 
@@ -117,9 +123,9 @@
 								</label>
 							</div>
 						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0001</a></td>
+						<td class="govuk-table__cell"><a class="govuk-link" href="shortlisted-jac00105-abc0001">JAC00105-abc0001</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Max Talbot</a></td>
-						<td class="govuk-table__cell">Invited to selection day</td>
+						<td class="govuk-table__cell">{{ data['update-status-shortlisted'] }}</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">

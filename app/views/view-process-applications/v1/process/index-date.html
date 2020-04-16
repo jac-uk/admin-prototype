@@ -61,9 +61,23 @@
 					<li class="moj-side-navigation__item">
 						<a href="applied">Applied (100)</a>
 					</li>
+					{% if data['update-status'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="#">Shortlisted (5)</a>
+					</li>
+					{% elseif data['update-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="#">Shortlisted (1)</a>
+					</li>
+					{% elseif data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="#">Shortlisted (4)</a>
+					</li>
+					{% else %}
 					<li class="moj-side-navigation__item">
 						<a href="#">Shortlisted (0)</a>
 					</li>
+					{% endif %}
 					<li class="moj-side-navigation__item">
 						<a href="#">Selected (0)</a>
 					</li>
@@ -90,7 +104,7 @@
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Sharon Schmidt</a></td>
 						<td class="govuk-table__cell">18 February 2020</td>
-						<td class="govuk-table__cell">Withdrawn application</td>
+						<td class="govuk-table__cell">Withdrew application</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Yasmin Humphries</a></td>
@@ -105,7 +119,7 @@
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Brenda Palmer</a></td>
 						<td class="govuk-table__cell">18 February 2020</td>
-						<td class="govuk-table__cell">Withdrawn application</td>
+						<td class="govuk-table__cell">Withdrew application</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Sofia Dennis</a></td>
@@ -135,7 +149,7 @@
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Sebastian Burrows</a></td>
 						<td class="govuk-table__cell">19 February 2020</td>
-						<td class="govuk-table__cell">Withdrawn application</td>
+						<td class="govuk-table__cell">Withdrew application</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Paul Kim</a></td>

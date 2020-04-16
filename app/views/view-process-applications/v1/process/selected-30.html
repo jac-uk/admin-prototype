@@ -67,9 +67,15 @@
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
 						<a href="#">Selected (30)</a>
 					</li>
+					{% if data['update-status-selected'] == "Passed selection" %}
 					<li class="moj-side-navigation__item">
 						<a href="#">Recommended (9)</a>
 					</li> 
+					{% else %}
+					<li class="moj-side-navigation__item">
+						<a href="#">Recommended (8)</a>
+					</li> 
+					{% endif %}
 				</ul>
 			</nav>
 		</div>
@@ -117,9 +123,9 @@
 								</label>
 							</div>
 						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0001</a></td>
+						<td class="govuk-table__cell"><a class="govuk-link" href="selected-jac00105-abc0001">JAC00105-abc0001</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Max Talbot</a></td>
-						<td class="govuk-table__cell">Passed selection</td>
+						<td class="govuk-table__cell">{{ data['update-status-selected'] }}</td>
 					</tr>
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
