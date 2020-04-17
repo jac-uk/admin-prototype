@@ -88,6 +88,15 @@
 						<a href="recommended">Recommended (0)</a>
 					</li>
 					{% endif %} 
+					{% if data['update-status-recommended'] == "Approved for immediate appointment" %}
+					<li class="moj-side-navigation__item">
+						<a href="handover">Handover (1)</a>
+					</li>
+					{% else %}
+					<li class="moj-side-navigation__item">
+						<a href="handover">Handover (0)</a>
+					</li>
+					{% endif %} 
 				</ul>
 			</nav>
 		</div>
