@@ -63,27 +63,39 @@
 					</li>
 					{% if data['update-status'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item">
-						<a href="#">Shortlisted (5)</a>
+						<a href="shortlisted">Shortlisted (5)</a>
 					</li>
 					{% elseif data['update-status'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item">
-						<a href="#">Shortlisted (1)</a>
+						<a href="shortlisted">Shortlisted (1)</a>
 					</li>
 					{% elseif data['bulk-status'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item">
-						<a href="#">Shortlisted (4)</a>
+						<a href="shortlisted">Shortlisted (4)</a>
 					</li>
 					{% else %}
 					<li class="moj-side-navigation__item">
-						<a href="#">Shortlisted (0)</a>
+						<a href="shortlisted">Shortlisted (0)</a>
 					</li>
 					{% endif %}
+					{% if data['update-status-shortlisted'] == "Invited to selection day" %}
 					<li class="moj-side-navigation__item">
-						<a href="#">Selected (0)</a>
+						<a href="selected">Selected (1)</a>
 					</li>
+					{% else %}
 					<li class="moj-side-navigation__item">
-						<a href="#">Recommended (0)</a>
-					</li> 
+						<a href="selected">Selected (0)</a>
+					</li>
+					{% endif %}
+					{% if data['update-status-selected'] == "Passed selection" %}
+					<li class="moj-side-navigation__item">
+						<a href="recommended">Recommended (1)</a>
+					</li>
+					{% else %}
+					<li class="moj-side-navigation__item">
+						<a href="recommended">Recommended (0)</a>
+					</li>
+					{% endif %} 
 				</ul>
 			</nav>
 		</div>

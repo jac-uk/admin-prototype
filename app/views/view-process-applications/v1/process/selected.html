@@ -56,424 +56,86 @@
 				<h4 class="moj-side-navigation__title">Applications</h4> 
 				<ul class="moj-side-navigation__list">
 					<li class="moj-side-navigation__item">
-						<a href="#" aria-current="location">Drafts (15)</a>
+						<a href="index" aria-current="location">Drafts (15)</a>
 					</li>
 					<li class="moj-side-navigation__item">
-						<a href="#">Applied (100)</a>
+						<a href="applied">Applied (100)</a>
 					</li>
+					{% if data['update-status'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item">
-						<a href="#">Shortlisted (50)</a>
+						<a href="shortlisted">Shortlisted (1)</a>
 					</li>
+					{% else %}
+					<li class="moj-side-navigation__item">
+						<a href="shortlisted">Shortlisted (0)</a>
+					</li>
+					{% endif %}
+					{% if data['update-status-shortlisted'] == "Invited to selection day" %}
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
-						<a href="#">Selected (30)</a>
+						<a href="selected">Selected (1)</a>
 					</li>
+					{% else %}
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="selected">Selected (0)</a>
+					</li>
+					{% endif %}
+					{% if data['update-status-selected'] == "Passed selection" %}
 					<li class="moj-side-navigation__item">
-						<a href="#">Recommended (0)</a>
-					</li> 
+						<a href="recommended">Recommended (1)</a>
+					</li>
+					{% else %}
+					<li class="moj-side-navigation__item">
+						<a href="recommended">Recommended (0)</a>
+					</li>
+					{% endif %} 
 				</ul>
 			</nav>
 		</div>
+		{% if data['update-status-shortlisted'] == "Invited to selection day" %}
 		<div class="govuk-grid-column-three-quarters">
-			<h2 class="govuk-heading-l">Selected (30)</h2>
-			<!-- <div class="moj-page-header-actions">
-				<div class="moj-page-header-actions__title">
-				  	<h2 class="govuk-heading-l">Selected (30)</h2>
-				</div>
-				<div class="moj-page-header-actions__actions">
-					<div class="moj-button-menu">
-				  		<div class="moj-button-menu__wrapper">
-							<button type="submit" class="govuk-button moj-button-menu__item moj-page-header-actions__action" data-module="govuk-button">Bulk action (TBC)</button>
-				  		</div>
-					</div>
-				</div>
-			</div> -->
+			<h2 class="govuk-heading-l">Selected (1)</h2>
 		</div>
 		<div class="govuk-grid-column-three-quarters">
-			<table class="govuk-table jac-check-table govuk-!-margin-bottom-4">
+			<table class="govuk-table jac-table govuk-!-margin-bottom-4">
 				<caption class="govuk-table__caption hidden">Shortlisted applications</caption>
 				<thead class="govuk-table__head">
-					<!-- <tr class="govuk-table__row">
-						<th class="govuk-table__header moj-multi-select__select-all-container" scope="col" style="padding-right: 0; width: 40px"></th>
-						<th scope="col" class="govuk-table__header">Reference number</th>
-						<th scope="col" class="govuk-table__header" aria-sort="none">Name</th>
-						<th scope="col" class="govuk-table__header" aria-sort="none">Status</th>
-					</tr> -->
 					<tr class="govuk-table__row">
-						<th class="govuk-table__header moj-multi-select__select-all-container" scope="col" style="padding-right: 0; width: 40px"></th>
+						<!-- <th class="govuk-table__header moj-multi-select__select-all-container" scope="col" style="padding-right: 0; width: 40px"></th> -->
 						<th scope="col" class="govuk-table__header">Reference number</th>
 						<th scope="col" class="govuk-table__header">Name</th>
+						{% if data['update-status-selected'] %}
+						<th scope="col" class="govuk-table__header">Status</th>
+						{% endif %}
 					</tr>
 				</thead>
 				<tbody class="govuk-table__body">
-					<!-- 1 to 10 -->
 					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
+						<!-- <td class="govuk-table__cell">
 							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
 								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0001" value="jac00105-abc0001">
 								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0001">
 									<span class="govuk-visually-hidden">Select JAC00105-abc0001</span>
 								</label>
 							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0001</a></td>
+						</td> -->
+						<td class="govuk-table__cell"><a class="govuk-link" href="selected-jac00105-abc0001">JAC00105-abc0001</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Max Talbot</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0004" value="jac00105-abc0004">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0004">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0004</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0004</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Nathan Powell</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0005" value="jac00105-abc0005">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0005">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0005</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0005</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Harry Farmer</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0006" value="jac00105-abc0006">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0006">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0006</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0006</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Alex Potter</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0007" value="jac00105-abc0007">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0007">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0007</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0007</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Connor Wood</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0008" value="jac00105-abc0008">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0008">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0008</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0008</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Connor Gibbs</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0009" value="jac00105-abc0009">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0009">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0009</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0009</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Josh Davison</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0010" value="jac00105-abc0010">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0010">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0010</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0010</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Kai Blackburn</a></td>
-					</tr>
-					<!-- 11 to 20 -->
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0013" value="jac00105-abc0013">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0013">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0013</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0013</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Isobel Kemp</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0014" value="jac00105-abc0014">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0014">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0014</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0014</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Zachary Taylor</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0016" value="jac00105-abc0016">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0016">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0016</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0016</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Max Lucas</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0019" value="jac00105-abc0019">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0019">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0019</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0019</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Morgan Randall</a></td>
-					</tr>
-					<!-- 21 to 30 -->
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0022" value="jac00105-abc0022">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0022">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0022</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0022</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Gabriel Pearce</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0023" value="jac00105-abc0023">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0023">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0023</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0023</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Sophie Bevan</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0028" value="jac00105-abc0028">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0028">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0028</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0028</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Luca Knight</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0029" value="jac00105-abc0029">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0029">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0029</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0029</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Robert Finch</a></td>
-					</tr>
-					<!-- 31 to 40 -->
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0031" value="jac00105-abc0031">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0031">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0031</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0031</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Christopher Collier</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0032" value="jac00105-abc0032">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0032">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0032</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0032</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Muhammad Skinner</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0033" value="jac00105-abc0033">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0033">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0033</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0033</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Summer Godfrey</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0034" value="jac00105-abc0034">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0034">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0034</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0034</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Jake Bates</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0035" value="jac00105-abc0035">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0035">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0035</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0035</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Oliver Mahmood</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0036" value="jac00105-abc0036">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0036">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0036</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0036</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Thomas Dunn</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0037" value="jac00105-abc0037">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0037">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0037</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0037</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Sam Fitzgerald</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0039" value="jac00105-abc0039">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0039">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0039</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0039</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Brandon Kelly</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0040" value="jac00105-abc0040">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0040">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0040</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0040</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Caitlin Myers</a></td>
-					</tr>
-					<!-- 41 to 50 -->
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0041" value="jac00105-abc0041">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0041">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0041</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0041</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Georgina O'Connor</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0042" value="jac00105-abc0042">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0042">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0042</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0042</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Leon Young</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0043" value="jac00105-abc0043">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0043">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0043</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0043</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Joshua Hancock</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0044" value="jac00105-abc0044">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0044">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0044</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0044</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Muhammad Chapman</a></td>
-					</tr>
-					<tr class="govuk-table__row">
-						<td class="govuk-table__cell">
-							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
-								<input type="checkbox" class="govuk-checkboxes__input" id="application-jac00105-abc0048" value="jac00105-abc0048">
-								<label class="govuk-label govuk-checkboxes__label" for="application-jac00105-abc0048">
-									<span class="govuk-visually-hidden">Select JAC00105-abc0048</span>
-								</label>
-							</div>
-						</td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0048</a></td>
-						<td class="govuk-table__cell"><a class="govuk-link" href="#">Alex Duncan</a></td>
+						{% if data['update-status-selected'] %}
+						<td class="govuk-table__cell">{{ data['update-status-selected'] }}</td>
+						{% endif %}
 					</tr>
 				</tbody>
 			</table> 
-			<button class="govuk-button govuk-!-margin-top-8" data-module="govuk-button">Bulk action (TBC)</button> 
+			<!-- <button disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled govuk-!-margin-top-8" data-module="govuk-button">Bulk action (TBC)</button> -->
 		</div>
+		{% else %}
+		<div class="govuk-grid-column-three-quarters">
+			<h2 class="govuk-heading-l">Selected (0)</h2>
+		</div>
+		<div class="govuk-grid-column-three-quarters">
+			<p class="govuk-body">No applications have been added to this section (TBC).</p>
+		</div>
+		{% endif %}
 	</div>
 </form>
 {% endblock %}
