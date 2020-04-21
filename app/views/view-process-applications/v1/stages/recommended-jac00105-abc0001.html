@@ -4,7 +4,7 @@
 
 {% block content %}
 {% include "includes/header.html" %}
-<form action="shortlisted" method="post">
+<form action="recommended" method="post">
 	<div class="govuk-grid-row">
 		<div class="govuk-grid-column-full">
 			<button type="submit" formaction="#" class="govuk-button govuk-button--secondary govuk-!-margin-top-4 float-right" data-module="govuk-button">Add to favourites</button>
@@ -52,23 +52,30 @@
 						<a href="#">Downloads</a>
 					</li>		  
 				</ul>
-			
+
 				<h4 class="moj-side-navigation__title">Applications</h4> 
 				<ul class="moj-side-navigation__list">
 					<li class="moj-side-navigation__item">
-						<a href="#" aria-current="location">Drafts (15)</a>
+						<a href="#" aria-current="location">Drafts</a>
 					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Applied</a>
+					</li>
+				</ul>
+			
+				<h4 class="moj-side-navigation__title">Stages</h4> 
+				<ul class="moj-side-navigation__list">
 					<li class="moj-side-navigation__item">
 						<a href="#">Applied (100)</a>
 					</li>
-					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+					<li class="moj-side-navigation__item">
 						<a href="#">Shortlisted (1)</a>
 					</li>
 					<li class="moj-side-navigation__item">
-						<a href="#">Selected (0)</a>
+						<a href="#">Selected (1)</a>
 					</li>
-					<li class="moj-side-navigation__item">
-						<a href="#">Recommended (0)</a>
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="#">Recommended (1)</a>
 					</li> 
 					<li class="moj-side-navigation__item">
 						<a href="handover">Handover (0)</a>
@@ -90,16 +97,28 @@
 					</legend>
 					<div class="govuk-radios">
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="update-status-shortlisted" name="update-status-shortlisted" type="radio" value="Invited to selection day" {{ checked("update-status-shortlisted", "Invited to selection day") }}>
-							<label class="govuk-label govuk-radios__label" for="update-status-shortlisted">Invited to selection day</label>
+							<input class="govuk-radios__input" id="update-status-recommended" name="update-status-recommended" type="radio" value="Approved for immediate appointment" {{ checked("update-status-recommended", "Approved for immediate appointment") }}>
+							<label class="govuk-label govuk-radios__label" for="update-status-recommended">Approved for immediate appointment</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="update-status-shortlisted-2" name="update-status-shortlisted" type="radio" value="Rejected as ineligible" {{ checked("update-status-shortlisted", "Rejected as ineligible") }}>
-							<label class="govuk-label govuk-radios__label" for="update-status-shortlisted-2">Rejected as ineligible</label>
+							<input class="govuk-radios__input" id="update-status-recommended-2" name="update-status-recommended" type="radio" value="Approved for future appointment" {{ checked("update-status-recommended", "Approved for future appointment") }}>
+							<label class="govuk-label govuk-radios__label" for="update-status-recommended-2">Approved for future appointment</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="update-status-shortlisted-3" name="update-status-shortlisted" type="radio" value="Withdrew application" {{ checked("update-status-shortlisted", "Withdrew application") }}>
-							<label class="govuk-label govuk-radios__label" for="update-status-shortlisted-3">Withdrew application</label>
+							<input class="govuk-radios__input" id="update-status-recommended-3" name="update-status-recommended" type="radio" value="EMP agreed by SCC" {{ checked("update-status-recommended", "EMP agreed by SCC") }}>
+							<label class="govuk-label govuk-radios__label" for="update-status-recommended-3">EMP agreed by SCC</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="update-status-recommended-4" name="update-status-recommended" type="radio" value="Rejected by character" {{ checked("update-status-recommended", "Rejected by character") }}>
+							<label class="govuk-label govuk-radios__label" for="update-status-recommended-4">Rejected by character</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="update-status-recommended-5" name="update-status-recommended" type="radio" value="Rejected as ineligible" {{ checked("update-status-recommended", "Rejected as ineligible") }}>
+							<label class="govuk-label govuk-radios__label" for="update-status-recommended-5">Rejected as ineligible</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="update-status-recommended-6" name="update-status-recommended" type="radio" value="Withdrew application" {{ checked("update-status-recommended", "Withdrew application") }}>
+							<label class="govuk-label govuk-radios__label" for="update-status-recommended-6">Withdrew application</label>
 						</div>
 				  	</div>
 				</fieldset>
