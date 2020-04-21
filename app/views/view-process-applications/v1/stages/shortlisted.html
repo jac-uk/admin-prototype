@@ -65,12 +65,41 @@
 			
 				<h4 class="moj-side-navigation__title">Stages</h4> 
 				<ul class="moj-side-navigation__list">
+					{% if data['update-status'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item">
 						<a href="applied">Applied (95)</a>
 					</li>
-					<li class="moj-side-navigation__item moj-side-navigation__item--active">
-						<a href="#">Shortlisted (5)</a>
+					{% elseif data['update-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="applied">Applied (99)</a>
 					</li>
+					{% elseif data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="applied">Applied (96)</a>
+					</li>
+					{% else %}
+					<li class="moj-side-navigation__item">
+						<a href="applied">Applied (100)</a>
+					</li>
+					{% endif %}
+
+					{% if data['update-status'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="shortlisted">Shortlisted (5)</a>
+					</li>
+					{% elseif data['update-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="shortlisted">Shortlisted (1)</a>
+					</li>
+					{% elseif data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="shortlisted">Shortlisted (4)</a>
+					</li>
+					{% else %}
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="shortlisted">Shortlisted (0)</a>
+					</li>
+					{% endif %}
 					<li class="moj-side-navigation__item">
 						<a href="#">Selected (0)</a>
 					</li>
@@ -83,9 +112,24 @@
 				</ul>
 			</nav>
 		</div>
+
+		{% if data['update-status'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
 		<div class="govuk-grid-column-three-quarters">
-			<h2 class="govuk-heading-l">Shortlisted (5)</h2>
+			<h2 class="govuk-heading-l">Shortlisted (5)</h2> 
 		</div>
+		{% elseif data['update-status'] == "Passed scenario test" %}
+		<div class="govuk-grid-column-three-quarters">
+			<h2 class="govuk-heading-l">Shortlisted (1)</h2> 
+		</div>
+		{% elseif data['bulk-status'] == "Passed scenario test" %}
+		<div class="govuk-grid-column-three-quarters">
+			<h2 class="govuk-heading-l">Shortlisted (4)</h2> 
+		</div>
+		{% else %}
+		<div class="govuk-grid-column-three-quarters">
+			<h2 class="govuk-heading-l">Shortlisted (0)</h2> 
+		</div>
+		{% endif %}
 		<div class="govuk-grid-column-three-quarters">
 			<table class="govuk-table jac-check-table govuk-!-margin-bottom-4">
 				<caption class="govuk-table__caption hidden">Shortlisted applications</caption>
@@ -97,6 +141,8 @@
 					</tr>
 				</thead>
 				<tbody class="govuk-table__body">
+					<!-- 1 to 10 -->
+					{% if data['update-status'] == "Passed scenario test" %}
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
 							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
@@ -109,6 +155,10 @@
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0001</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Max Talbot</a></td>
 					</tr>
+					{% else %}
+					<!-- empty -->
+					{% endif %}
+					{% if data['bulk-status'] == "Passed scenario test" %}
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
 							<div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
@@ -157,6 +207,9 @@
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">JAC00105-abc0005</a></td>
 						<td class="govuk-table__cell"><a class="govuk-link" href="#">Harry Farmer</a></td>
 					</tr>
+					{% else %}
+					<!-- empty -->
+					{% endif %}
 				</tbody>
 			</table> 
 			<button class="govuk-button govuk-!-margin-top-8" data-module="govuk-button">Bulk action (TBC)</button> 
