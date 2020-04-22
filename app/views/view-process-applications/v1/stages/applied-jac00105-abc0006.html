@@ -1,6 +1,6 @@
 {% extends "layout_unbranded.html" %}
 
-{% block pageTitle %}Judical Appointments Commission - View and process applications - JAC00105-abc0001{% endblock %}
+{% block pageTitle %}Judical Appointments Commission - View and process applications - JAC00105-abc0006{% endblock %}
 
 {% block content %}
 {% include "includes/header.html" %}
@@ -69,10 +69,6 @@
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
 						<a href="applied">Applied (94)</a>
 					</li>
-					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" %}
-					<li class="moj-side-navigation__item moj-side-navigation__item--active">
-						<a href="applied">Applied (98)</a>
-					</li>
 					{% elseif data['update-status-abc0001'] == "Passed scenario test" or data['update-status-abc0006'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
 						<a href="applied">Applied (99)</a>
@@ -91,10 +87,6 @@
 					<li class="moj-side-navigation__item">
 						<a href="shortlisted">Shortlisted (6)</a>
 					</li>
-					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" %}
-					<li class="moj-side-navigation__item">
-						<a href="shortlisted">Shortlisted (2)</a>
-					</li>
 					{% elseif data['update-status-abc0001'] == "Passed scenario test" or data['update-status-abc0006'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item">
 						<a href="shortlisted">Shortlisted (1)</a>
@@ -109,99 +101,65 @@
 					</li>
 					{% endif %}
 					<li class="moj-side-navigation__item">
-						<a href="#">Selected (0)</a>
+						<a href="selected">Selected (0)</a>
 					</li>
 					<li class="moj-side-navigation__item">
-						<a href="#">Recommended (0)</a>
-					</li> 
+						<a href="recommended">Recommended (0)</a>
+					</li>
 					<li class="moj-side-navigation__item">
-						<a href="#">Handover (0)</a>
+						<a href="handover">Handover (0)</a>
 					</li> 
 				</ul>
 			</nav>
 		</div>
 		<div class="govuk-grid-column-three-quarters">
-			<h2 class="govuk-heading-l">Bulk action (TBC)</h2>
-			<p class="govuk-body">You have added 4 applicants (TBC).</p>
-			<dl class="govuk-summary-list">
-				<div class="govuk-summary-list__row">
-					<dt class="govuk-summary-list__key">Harry Farmer</dt>
-					<dd class="govuk-summary-list__value"><a class="govuk-link" href="#">JAC00105-abc0005</a></dd>
-					<dd class="govuk-summary-list__actions">
-						<a class="govuk-link" href="#">
-						  Remove<span class="govuk-visually-hidden"> applicant</span>
-						</a>
-					</dd>
-				</div>	
-				<div class="govuk-summary-list__row">
-					<dt class="govuk-summary-list__key">Luke Walker</dt>
-					<dd class="govuk-summary-list__value"><a class="govuk-link" href="#">JAC00105-abc0003</a></dd>
-					<dd class="govuk-summary-list__actions">
-						<a class="govuk-link" href="#">
-						  Remove<span class="govuk-visually-hidden"> applicant</span>
-						</a>
-					</dd>
-				</div>
-				<div class="govuk-summary-list__row">
-					<dt class="govuk-summary-list__key">Nathan Powell</dt>
-					<dd class="govuk-summary-list__value"><a class="govuk-link" href="#">JAC00105-abc0004</a></dd>
-					<dd class="govuk-summary-list__actions">
-						<a class="govuk-link" href="#">
-						  Remove<span class="govuk-visually-hidden"> applicant</span>
-						</a>
-					</dd>
-				</div>
-				<div class="govuk-summary-list__row">
-					<dt class="govuk-summary-list__key">Spencer Singh</dt>
-					<dd class="govuk-summary-list__value"><a class="govuk-link" href="#">JAC00105-abc0002</a></dd>
-					<dd class="govuk-summary-list__actions">
-						<a class="govuk-link" href="#">
-						  Remove<span class="govuk-visually-hidden"> applicant</span>
-						</a>
-					</dd>
-				</div>
-			</dl>
-			<div class="govuk-form-group govuk-!-padding-top-4">
+			<!-- <span class="govuk-caption-l">Application</span> -->
+			<h2 class="govuk-heading-l">JAC00105-abc0006</h2>
+			<p class="govuk-body">TBC - include submitted date</p>
+			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset">
 				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+						<!-- <h3 class="govuk-fieldset__heading">Update the status for this application</h3> -->
 						<h3 class="govuk-fieldset__heading">Add status / Update status (TBC)</h3>
-					</legend> 
+					</legend>
 					<div class="govuk-radios">
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="bulk-status" name="bulk-status" type="radio" value="Passed sift" {{ checked("bulk-status", "Passed sift") }}>
-							<label class="govuk-label govuk-radios__label" for="bulk-status">Passed sift</label>
+							<input class="govuk-radios__input" id="update-status-abc0006" name="update-status-abc0006" type="radio" value="Passed sift" {{ checked("update-status-abc0006", "Passed sift") }}>
+							<label class="govuk-label govuk-radios__label" for="update-status-abc0006">Passed sift</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="bulk-status-2" name="bulk-status" type="radio" value="Failed sift" {{ checked("bulk-status", "Failed sift") }}>
-							<label class="govuk-label govuk-radios__label" for="bulk-status-2">Failed sift</label>
+							<input class="govuk-radios__input" id="update-status-abc0006-2" name="update-status-abc0006" type="radio" value="Failed sift" {{ checked("update-status-abc0006", "Failed sift") }}>
+							<label class="govuk-label govuk-radios__label" for="update-status-abc0006-2">Failed sift</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="bulk-status-3" name="bulk-status" type="radio" value="Submitted first test(s)" {{ checked("bulk-status", "Submitted first test(s)") }}>
-							<label class="govuk-label govuk-radios__label" for="bulk-status-3">Submitted first test(s)</label>
+							<input class="govuk-radios__input" id="update-status-abc0006-3" name="update-status-abc0006" type="radio" value="Submitted first test(s)" {{ checked("update-status-abc0006", "Submitted first test(s)") }}>
+							<label class="govuk-label govuk-radios__label" for="update-status-abc0006-3">Submitted first test(s)</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="bulk-status-4" name="bulk-status" type="radio" value="Submitted scenario test" {{ checked("bulk-status", "Submitted scenario test") }}>
-							<label class="govuk-label govuk-radios__label" for="bulk-status-4">Submitted scenario test</label>
+							<input class="govuk-radios__input" id="update-status-abc0006-4" name="update-status-abc0006" type="radio" value="Submitted scenario test" {{ checked("update-status-abc0006", "Submitted scenario test") }}>
+							<label class="govuk-label govuk-radios__label" for="update-status-abc0006-4">Submitted scenario test</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="bulk-status-5" name="bulk-status" type="radio" value="Passed first test(s)" {{ checked("bulk-status", "Passed first test(s)") }}>
-							<label class="govuk-label govuk-radios__label" for="bulk-status-5">Passed first test(s)</label>
+							<input class="govuk-radios__input" id="update-status-abc0006-5" name="update-status-abc0006" type="radio" value="Passed first test(s)" {{ checked("update-status-abc0006", "Passed first test(s)") }}>
+							<label class="govuk-label govuk-radios__label" for="update-status-abc0006-5">Passed first test(s)</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="bulk-status-6" name="bulk-status" type="radio" value="Passed scenario test" {{ checked("bulk-status", "Passed scenario test") }}>
-							<label class="govuk-label govuk-radios__label" for="bulk-status-6">Passed scenario test</label>
+							<input class="govuk-radios__input" id="update-status-abc0006-6" name="update-status-abc0006" type="radio" value="Passed scenario test" {{ checked("update-status-abc0006", "Passed scenario test") }}>
+							<label class="govuk-label govuk-radios__label" for="update-status-abc0006-6">Passed scenario test</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="bulk-status-7" name="bulk-status" type="radio" value="No test submitted" {{ checked("bulk-status", "No test submitted") }}>
-							<label class="govuk-label govuk-radios__label" for="bulk-status-7">No test submitted</label>
+							<input class="govuk-radios__input" id="update-status-abc0006-7" name="update-status-abc0006" type="radio" value="No test submitted" {{ checked("update-status-abc0006", "No test submitted") }}>
+							<label class="govuk-label govuk-radios__label" for="update-status-abc0006-7">No test submitted</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="bulk-status-8" name="bulk-status" type="radio" value="Test submitted over time" {{ checked("bulk-status", "Test submitted over time") }}>
-							<label class="govuk-label govuk-radios__label" for="bulk-status-8">Test submitted over time</label>
+							<input class="govuk-radios__input" id="update-status-abc0006-8" name="update-status-abc0006" type="radio" value="Test submitted over time" {{ checked("update-status-abc0006", "Test submitted over time") }}>
+							<label class="govuk-label govuk-radios__label" for="update-status-abc0006-8">Test submitted over time</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="bulk-status-9" name="bulk-status" type="radio" value="Withdrew application" {{ checked("bulk-status", "Withdrew application") }}>
-							<label class="govuk-label govuk-radios__label" for="bulk-status-9">Withdrew application</label>
+							<input class="govuk-radios__input" id="update-status-abc0006-9" name="update-status-abc0006" type="radio" value="Withdrew application" {{ checked("update-status-abc0006", "Withdrew application") }}>
+							<label class="govuk-label govuk-radios__label" for="update-status-abc0006-9">Withdrew application</label>
 						</div>
 				  	</div>
 				</fieldset>
