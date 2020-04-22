@@ -69,6 +69,18 @@
 					<li class="moj-side-navigation__item">
 						<a href="applied">Applied (94)</a>
 					</li>
+					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="applied">Applied (95)</a>
+					</li>
+					{% elseif data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="applied">Applied (95)</a>
+					</li>
+					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="applied">Applied (94)</a>
+					</li>
 					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item">
 						<a href="applied">Applied (98)</a>
@@ -90,6 +102,18 @@
 					{% if data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
 						<a href="shortlisted">Shortlisted (6)</a>
+					</li>
+					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="shortlisted">Shortlisted (5)</a>
+					</li>
+					{% elseif data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="shortlisted">Shortlisted (5)</a>
+					</li>
+					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="shortlisted">Shortlisted (7)</a>
 					</li>
 					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
@@ -124,6 +148,18 @@
 		{% if data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
 		<div class="govuk-grid-column-three-quarters">
 			<h2 class="govuk-heading-l">Shortlisted (6)</h2> 
+		</div>
+		{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+		<div class="govuk-grid-column-three-quarters">
+			<h2 class="govuk-heading-l">Shortlisted (5)</h2> 
+		</div>
+		{% elseif data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+		<div class="govuk-grid-column-three-quarters">
+			<h2 class="govuk-heading-l">Shortlisted (5)</h2> 
+		</div>
+		{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+		<div class="govuk-grid-column-three-quarters">
+			<h2 class="govuk-heading-l">Shortlisted (7)</h2> 
 		</div>
 		{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" %}
 		<div class="govuk-grid-column-three-quarters">
