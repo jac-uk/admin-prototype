@@ -83,7 +83,18 @@
 		</nav>
 	</div>
 	<div class="govuk-grid-column-three-quarters">
-		<h2 class="govuk-heading-l">Applied (984)</h2> 
+		<div class="moj-page-header-actions">
+			<div class="moj-page-header-actions__title">
+				<h2 class="govuk-heading-l">Applied (984)</h2>
+			</div>	
+			<div class="moj-page-header-actions__actions">
+				<div class="moj-button-menu">
+					  <div class="moj-button-menu__wrapper">
+						<button type="submit" class="govuk-button moj-button-menu__item moj-page-header-actions__action" data-module="govuk-button">Set status</button>
+					  </div>
+				</div>
+			</div>		
+		</div> 
 	</div>
 	<div class="govuk-grid-column-three-quarters">
 		<form action="applied-984-results" method="post" class="clearfix" autocomplete="off">
@@ -781,7 +792,6 @@
 			</ul>
 			<p class="moj-pagination__results">Showing <b>451</b> to <b>500</b> of <b>984</b> results</p>
 		</nav> 
-		<button class="govuk-button govuk-!-margin-top-8" data-module="govuk-button">Continue</button> 
 	</div>
 </div>
 {% endblock %}
