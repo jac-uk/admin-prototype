@@ -1,0 +1,183 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}Judical Appointments Commission - View and process applications - New activity{% endblock %}
+
+{% block content %}
+{% include "includes/header.html" %}
+<form action="add-update-status" method="post">
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-full">
+			<button type="submit" formaction="#" class="govuk-button govuk-button--secondary govuk-!-margin-top-4 float-right" data-module="govuk-button">Add to favourites</button>
+		</div>
+	</div>
+	<div class="govuk-grid-row clearfix">
+		<div class="govuk-grid-column-full">
+			<span class="govuk-caption-xl">JAC00105</span>
+			<h1 class="govuk-heading-xl">Fee-paid Legal Members of the Mental Health Review Tribunal for Wales</h1>
+		</div>
+	</div>
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-one-quarter">
+			<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
+				<h4 class="moj-side-navigation__title">Exercise</h4>
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item">
+						<a href="#">Overview</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Website listing</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Vacancy information</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Contacts</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Timeline</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Shortlisting</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Eligibility information</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Working preferences</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Assessment options</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Downloads</a>
+					</li>		  
+				</ul>
+
+				<h4 class="moj-side-navigation__title">Applications</h4> 
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item">
+						<a href="#" aria-current="location">Drafts</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Applied</a>
+					</li>
+				</ul>
+			
+				<h4 class="moj-side-navigation__title">Stages</h4> 
+				<ul class="moj-side-navigation__list">
+					{% if data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="applied">Applied (94)</a>
+					</li>
+					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="applied">Applied (95)</a>
+					</li>
+					{% elseif data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="applied">Applied (95)</a>
+					</li>
+					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="applied">Applied (94)</a>
+					</li>
+					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="applied">Applied (98)</a>
+					</li>
+					{% elseif data['update-status-abc0001'] == "Passed scenario test" or data['update-status-abc0006'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="applied">Applied (99)</a>
+					</li>
+					{% elseif data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="applied">Applied (96)</a>
+					</li>
+					{% else %}
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="applied">Applied (100)</a>
+					</li>
+					{% endif %}
+
+					{% if data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="shortlisted">Shortlisted (6)</a>
+					</li>
+					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="shortlisted">Shortlisted (5)</a>
+					</li>
+					{% elseif data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="shortlisted">Shortlisted (5)</a>
+					</li>
+					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="shortlisted">Shortlisted (7)</a>
+					</li>
+					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="shortlisted">Shortlisted (2)</a>
+					</li>
+					{% elseif data['update-status-abc0001'] == "Passed scenario test" or data['update-status-abc0006'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="shortlisted">Shortlisted (1)</a>
+					</li>
+					{% elseif data['bulk-status'] == "Passed scenario test" %}
+					<li class="moj-side-navigation__item">
+						<a href="shortlisted">Shortlisted (4)</a>
+					</li>
+					{% else %}
+					<li class="moj-side-navigation__item">
+						<a href="shortlisted">Shortlisted (0)</a>
+					</li>
+					{% endif %}
+					<li class="moj-side-navigation__item">
+						<a href="selected">Selected (0)</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="recommended">Recommended (0)</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="handover">Handover (0)</a>
+					</li> 
+				</ul>
+			</nav>
+		</div>
+		<div class="govuk-grid-column-three-quarters">
+			<a href="javascript:window.history.back()" class="govuk-back-link govuk-!-margin-bottom-9">Back</a>
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset">
+				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+						<span class="govuk-caption-l">JAC00105-abc0001</span>
+						<h2 class="govuk-fieldset__heading">New activity</h2>
+					</legend>
+					<div class="govuk-radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="new-activity" name="new-activity" type="radio" value="Add status / Update status" {{ checked("new-activity", "Add status / Update status") }}>
+							<label class="govuk-label govuk-radios__label" for="new-activity">Add status / Update status</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="new-activity-2" name="new-activity" type="radio" value="Radio option 2" {{ checked("new-activity", "Radio option 2") }}>
+							<label class="govuk-label govuk-radios__label" for="new-activity-2">Radio option 2</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="new-activity-3" name="new-activity" type="radio" value="Radio option 3" {{ checked("new-activity", "Radio option 3") }}>
+							<label class="govuk-label govuk-radios__label" for="new-activity-3">Radio option 3</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="new-activity-4" name="new-activity" type="radio" value="Radio option 4" {{ checked("new-activity", "Radio option 4") }}>
+							<label class="govuk-label govuk-radios__label" for="new-activity-4">Radio option 4</label>
+						</div>
+				  	</div>
+				</fieldset>
+			</div>
+			<button class="govuk-button" data-module="govuk-button">Continue</button> 
+		</div>
+	</div>
+</form>
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
+{% endblock %}
