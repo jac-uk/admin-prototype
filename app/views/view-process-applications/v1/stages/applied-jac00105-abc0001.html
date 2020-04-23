@@ -157,10 +157,16 @@
 				</div>
 			</div>
 			{% endif %} -->
+			<p class="govuk-body"><a href="applications-applied-jac00105-abc0001">View submitted application</a></p>
+			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset">
 				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-						<h3 class="govuk-fieldset__heading">Add status / Update status (TBC)</h3>
+						{% if data['update-status-abc0001'] %}
+						<h3 class="govuk-fieldset__heading">Update status (TBC)</h3>
+						{% else %}
+						<h3 class="govuk-fieldset__heading">Add status (TBC)</h3>
+						{% endif %}
 					</legend>
 					<div class="govuk-radios">
 						<div class="govuk-radios__item">

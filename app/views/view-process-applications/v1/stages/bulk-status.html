@@ -146,8 +146,6 @@
 		</div>
 		<div class="govuk-grid-column-three-quarters">
 			<h2 class="govuk-heading-l">You have added 4 applicants</h2>
-			<!-- <h2 class="govuk-heading-l">Bulk action (TBC)</h2>
-			<p class="govuk-body">You have added 4 applicants (TBC).</p> -->
 			<dl class="govuk-summary-list">
 				<div class="govuk-summary-list__row">
 					<dt class="govuk-summary-list__key">Harry Farmer</dt>
@@ -189,7 +187,11 @@
 			<div class="govuk-form-group govuk-!-padding-top-4">
 				<fieldset class="govuk-fieldset">
 				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-						<h3 class="govuk-fieldset__heading">Add status / Update status (TBC)</h3>
+						{% if data['bulk-status'] %}
+						<h3 class="govuk-fieldset__heading">Update status (TBC)</h3>
+						{% else %}
+						<h3 class="govuk-fieldset__heading">Add status (TBC)</h3>
+						{% endif %}
 					</legend> 
 					<div class="govuk-radios">
 						<div class="govuk-radios__item">
