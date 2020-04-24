@@ -67,6 +67,17 @@ router.post('/examples/branching/over-18-answer', function (req, res) {
   }
 })
 
+router.post('/examples/branching/fruits', function (req, res) {
+  let fruits = req.session.data['fruits'] || []
+
+  // If they pick apple or banana then show them the success page
+  if (fruits.includes('banana') || fruits.includes('apple')) {
+    res.redirect('branching/success')
+  } else {
+    res.redirect('branching/failure')
+  }
+})
+
 module.exports = router
 
 // Strip off markdown extensions if present and redirect
