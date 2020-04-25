@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Example - Branching
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/breadcrumb_examples.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/docs/examples/branching/fruits-2" method="post" class="form">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              What fruits do you like?
+            </h2>
+          </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--inline">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="banana" name="fruits-2" type="checkbox" value="banana">
+              <label class="govuk-label govuk-checkboxes__label" for="banana">
+                Banana
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="apple" name="fruits-2" type="checkbox" value="apple">
+              <label class="govuk-label govuk-checkboxes__label" for="apple">
+                Apple
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="orange" name="fruits-2" type="checkbox" value="orange">
+              <label class="govuk-label govuk-checkboxes__label" for="orange">
+                Orange
+              </label>
+            </div>
+          </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
