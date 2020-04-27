@@ -9,7 +9,7 @@ router.post('/view-process-applications/v1/stages/application-jac00105-router', 
 	
 	if (applicationJac00105.includes('jac00105-abc0001')) {
 		res.redirect('/view-process-applications/v1/stages/applied-jac00105-abc0001')
-	} else if (applicationJac00105.includes('jac00105-abc0002') || applicationJac00105.includes('jac00105-abc0003') || applicationJac00105.includes('jac00105-abc0004') || applicationJac00105.includes('jac00105-abc0005')) {
+	} else if (applicationJac00105.includes('jac00105-abc0002') && applicationJac00105.includes('jac00105-abc0003') && applicationJac00105.includes('jac00105-abc0004') && applicationJac00105.includes('jac00105-abc0005')) {
 		res.redirect('/view-process-applications/v1/stages/bulk-status')
     } else if (applicationJac00105.includes('jac00105-abc0006')) {
 		res.redirect('/view-process-applications/v1/stages/applied-jac00105-abc0006')
