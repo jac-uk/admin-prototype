@@ -12,9 +12,11 @@ router.post('/view-process-applications/v1/stages/application-jac00105-router', 
 	
 	let applicationJac00105 = req.session.data['application-jac00105'] || []
 	
-	// Only one option selected - compare arrays function 
+	// To make only one option to be checked
 	// e.g. if (arraysAreEqual(applicationJac00105, ['jac00105-abc0001'])) {
-		
+
+	// 'includes' means if it includes that value at all, it doesnt care what else is checked
+
 	if (applicationJac00105.includes('jac00105-abc0001')) {
 		res.redirect('/view-process-applications/v1/stages/applied-jac00105-abc0001')
 	} else if (applicationJac00105.includes('jac00105-abc0002') && applicationJac00105.includes('jac00105-abc0003') && applicationJac00105.includes('jac00105-abc0004') && applicationJac00105.includes('jac00105-abc0005')) {
