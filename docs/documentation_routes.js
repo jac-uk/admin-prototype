@@ -80,11 +80,12 @@ router.post('/examples/branching/fruits', function (req, res) {
 
 router.post('/examples/branching/fruits-2', function (req, res) {
   let fruits2 = req.session.data['fruits-2'] || []
+  console.log(fruits2)
 
   // If they pick apple or banana then show them the success page
-  if (fruits2.includes('banana')) {
+  if (fruits2 == ['banana']) {
     res.redirect('branching/success')
-  } else if (fruits2.includes('apple')) {
+  } else if (fruits2 == ['apple']) {
     res.redirect('branching/success-2')
   } else {
     res.redirect('branching/failure')
