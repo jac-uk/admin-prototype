@@ -80,6 +80,11 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
     max-width: 960px !important;
 }
 
+code {
+	background: govuk-colour("light-grey");
+	padding: 2px 6px 4px 6px;
+}
+
 /* 	==========================================================================
     Media Queries
    	========================================================================== */
