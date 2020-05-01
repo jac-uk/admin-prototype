@@ -500,20 +500,6 @@
 				</div>
 				<!-- Issues -->
 				<div class="govuk-tabs__panel" id="issues">
-
-					{% if data['add-comment'] %}
-						{% if data['issue-character-abc0001'] == "Recommend" %}
-						<h3 class="govuk-heading-m">Comment <span class="moj-badge moj-badge--green">{{ data['issue-character-abc0001'] }}</span> </h3>
-						{% elseif data['issue-character-abc0001'] == "Reject" %}
-						<h3 class="govuk-heading-m">Comment <span class="moj-badge moj-badge--red">{{ data['issue-character-abc0001'] }}</span></h3> 
-						{% else %}
-						<h3 class="govuk-heading-m">Comment <span class="moj-badge moj-badge--blue">{{ data['issue-character-abc0001'] }}</span></h3> 
-						{% endif %}
-						<p class="govuk-body">{{ data['add-comment'] | striptags(true) | escape | nl2br }}</p>
-						<!-- <p class="govuk-body"><a href="#">Edit comment</a></p> -->
-						<hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
-					{% endif %}
-
 					<h3 class="govuk-heading-m">Character</h3>
 					<dl class="govuk-summary-list govuk-!-margin-bottom-9">
 						<div class="govuk-summary-list__row">
@@ -542,6 +528,20 @@
 							<dd class="govuk-summary-list__value">Canada</dd>
 						</div>
 					</dl>
+
+					{% if data['add-comment'] %}
+						{% if data['issue-character-abc0001'] == "Recommend" %}
+						<h3 class="govuk-heading-m">Comment <span class="moj-badge moj-badge--green">{{ data['issue-character-abc0001'] }}</span> </h3>
+						{% elseif data['issue-character-abc0001'] == "Reject" %}
+						<h3 class="govuk-heading-m">Comment <span class="moj-badge moj-badge--red">{{ data['issue-character-abc0001'] }}</span></h3> 
+						{% else %}
+						<h3 class="govuk-heading-m">Comment <span class="moj-badge moj-badge--blue">{{ data['issue-character-abc0001'] }}</span></h3> 
+						{% endif %}
+						<p class="govuk-body">{{ data['add-comment'] | striptags(true) | escape | nl2br }}</p>
+						<p class="govuk-body"><a href="edit-comment">Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Remove</a></p>
+						<hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
+					{% endif %}
+
 					<div class="govuk-form-group">
 						<fieldset class="govuk-fieldset">
 							  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
