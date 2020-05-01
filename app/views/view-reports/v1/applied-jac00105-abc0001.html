@@ -502,17 +502,16 @@
 				<div class="govuk-tabs__panel" id="issues">
 
 					{% if data['add-comment'] %}
-					<div class="govuk-inset-text govuk-!-margin-bottom-8">
 						{% if data['issue-character-abc0001'] == "Recommend" %}
-							<span class="moj-badge moj-badge--green govuk-!-margin-bottom-4">{{ data['issue-character-abc0001'] }}</span> 
+						<h3 class="govuk-heading-m">Comment <span class="moj-badge moj-badge--green">{{ data['issue-character-abc0001'] }}</span> </h3>
 						{% elseif data['issue-character-abc0001'] == "Reject" %}
-							<span class="moj-badge moj-badge--red govuk-!-margin-bottom-4">{{ data['issue-character-abc0001'] }}</span> 
+						<h3 class="govuk-heading-m">Comment <span class="moj-badge moj-badge--red">{{ data['issue-character-abc0001'] }}</span></h3> 
 						{% else %}
-							<span class="moj-badge moj-badge--blue govuk-!-margin-bottom-4">{{ data['issue-character-abc0001'] }}</span> 
+						<h3 class="govuk-heading-m">Comment <span class="moj-badge moj-badge--blue">{{ data['issue-character-abc0001'] }}</span></h3> 
 						{% endif %}
 						<p class="govuk-body">{{ data['add-comment'] | striptags(true) | escape | nl2br }}</p>
-						<!-- <p class="govuk-body govuk-!-margin-bottom-9"><a href="#">Edit comment</a></p> -->
-					</div>
+						<!-- <p class="govuk-body"><a href="#">Edit comment</a></p> -->
+						<hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
 					{% endif %}
 
 					<h3 class="govuk-heading-m">Character</h3>
