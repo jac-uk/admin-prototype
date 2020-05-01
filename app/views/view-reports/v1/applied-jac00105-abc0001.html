@@ -502,41 +502,19 @@
 				<div class="govuk-tabs__panel" id="issues">
 
 					{% if data['add-comment'] %}
-					<div class="govuk-inset-text">
-						<p class="govuk-body">{{ data['issue-character-abc0001'] }}</p>
+					<div class="govuk-inset-text govuk-!-margin-bottom-8">
+						{% if data['issue-character-abc0001'] == "Recommend" %}
+							<span class="moj-badge moj-badge--green govuk-!-margin-bottom-4">{{ data['issue-character-abc0001'] }}</span> 
+						{% elseif data['issue-character-abc0001'] == "Reject" %}
+							<span class="moj-badge moj-badge--red govuk-!-margin-bottom-4">{{ data['issue-character-abc0001'] }}</span> 
+						{% else %}
+							<span class="moj-badge moj-badge--blue govuk-!-margin-bottom-4">{{ data['issue-character-abc0001'] }}</span> 
+						{% endif %}
+						<p class="govuk-body">{{ data['add-comment'] | striptags(true) | escape | nl2br }}</p>
+						<!-- <p class="govuk-body govuk-!-margin-bottom-9"><a href="#">Edit comment</a></p> -->
 					</div>
-					<p class="govuk-body">{{ data['add-comment'] }}</p>
-					<p class="govuk-body govuk-!-margin-bottom-9"><a href="#">Edit comment</a></p>
+					{% endif %}
 
-					<h3 class="govuk-heading-m">Character</h3>
-					<dl class="govuk-summary-list govuk-!-margin-bottom-9">
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key no-border govuk-!-width-two-thirds">Has endorsements on their licence, or received any motoring fixed-penalty notices in the last 4 years</dt>
-							<dd class="govuk-summary-list__value">Yes</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key no-border govuk-!-width-two-thirds">&nbsp;</dt>
-							<dd class="govuk-summary-list__value">
-								<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0">Date</p>
-								<p class="govuk-body">9 March 2017</p>
-							</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key govuk-!-width-two-thirds">&nbsp;</dt>
-							<dd class="govuk-summary-list__value">
-								<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0">Declaration</p>
-								<p class="govuk-body">SP30 3 penalty points and a fixed fine of £125.</p>
-							</dd>
-						</div>
-					</dl>
-					<h3 class="govuk-heading-m">Eligibility</h3>
-					<dl class="govuk-summary-list govuk-!-margin-bottom-9">
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key govuk-!-width-two-thirds">Citizenship</dt>
-							<dd class="govuk-summary-list__value">Canada</dd>
-						</div>
-					</dl>
-					{% else %}
 					<h3 class="govuk-heading-m">Character</h3>
 					<dl class="govuk-summary-list govuk-!-margin-bottom-9">
 						<div class="govuk-summary-list__row">
@@ -586,8 +564,7 @@
 							  </div>
 						</fieldset>
 					</div>
-					<button class="govuk-button" data-module="govuk-button">Continue</button>
-					{% endif %} 
+					<button class="govuk-button" data-module="govuk-button">Continue</button> 
 				</div>
 			</div>
 		</div>
