@@ -155,12 +155,7 @@
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key govuk-!-width-two-thirds">Citizenship</dt>
-							<dd class="govuk-summary-list__value">
-								<ul class="govuk-list govuk-list--bullet">
-									<li>UK</li>
-									<li>Republic of Ireland</li>
-								</ul>
-							</dd>
+							<dd class="govuk-summary-list__value">Canada</dd>
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key govuk-!-width-two-thirds">Reasonable adjustments</dt>
@@ -182,8 +177,22 @@
 							<dd class="govuk-summary-list__value">No</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key govuk-!-width-two-thirds">Has endorsements on their licence, or received any motoring fixed-penalty notices in the last 4 years</dt>
+							<dt class="govuk-summary-list__key no-border">Has endorsements on their licence, or received any motoring fixed-penalty notices in the last 4 years</dt>
 							<dd class="govuk-summary-list__value">Yes</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key no-border">&nbsp;</dt>
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body govuk-!-font-weight-bold">Date</p>
+								<p class="govuk-body">9 March 2017</p>
+							</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">&nbsp;</dt>
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body govuk-!-font-weight-bold">Declaration</p>
+								<p class="govuk-body">SP30 3 penalty points and fixed fine of £125.</p>
+							</dd>
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key govuk-!-width-two-thirds">Been declared bankrupt or entered into an Individual Voluntary Agreement (IVA)</dt>
@@ -491,14 +500,34 @@
 				</div>
 				<!-- Issues -->
 				<div class="govuk-tabs__panel" id="issues">
-					<h3 class="govuk-heading-m">Character information</h3>
+					<h3 class="govuk-heading-m">Character</h3>
 					<dl class="govuk-summary-list govuk-!-margin-bottom-9">
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key govuk-!-width-two-thirds">Has endorsements on their licence, or received any motoring fixed-penalty notices in the last 4 years</dt>
+							<dt class="govuk-summary-list__key no-border govuk-!-width-two-thirds">Has endorsements on their licence, or received any motoring fixed-penalty notices in the last 4 years</dt>
 							<dd class="govuk-summary-list__value">Yes</dd>
 						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key no-border">&nbsp;</dt>
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body govuk-!-font-weight-bold">Date</p>
+								<p class="govuk-body">9 March 2017</p>
+							</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">&nbsp;</dt>
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body govuk-!-font-weight-bold">Declaration</p>
+								<p class="govuk-body">SP30 3 penalty points and fixed fine of £125.</p>
+							</dd>
+						</div>
 					</dl>
-
+					<h3 class="govuk-heading-m">Eligibility</h3>
+					<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key govuk-!-width-two-thirds">Citizenship</dt>
+							<dd class="govuk-summary-list__value">Canada</dd>
+						</div>
+					</dl>
 					<div class="govuk-form-group">
 						<fieldset class="govuk-fieldset">
 							  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -506,27 +535,21 @@
 							</legend>
 							<div class="govuk-radios">
 								<div class="govuk-radios__item">
-									<input class="govuk-radios__input" id="issue-character-abc0001" name="issue-character-abc0001" type="radio" value="Proceed" {{ checked("issue-character-abc0001", "Proceed") }}>
-									<label class="govuk-label govuk-radios__label" for="issue-character-abc0001">Proceed</label>
+									<input class="govuk-radios__input" id="issue-character-abc0001" name="issue-character-abc0001" type="radio" value="Recommend" {{ checked("issue-character-abc0001", "Recommend") }}>
+									<label class="govuk-label govuk-radios__label" for="issue-character-abc0001">Recommend</label>
 								</div>
 								<div class="govuk-radios__item">
 									<input class="govuk-radios__input" id="issue-character-abc0001-2" name="issue-character-abc0001" type="radio" value="Reject" {{ checked("issue-character-abc0001", "Reject") }}>
 									<label class="govuk-label govuk-radios__label" for="issue-character-abc0001-2">Reject</label>
 								</div>
 								<div class="govuk-radios__item">
-									<input class="govuk-radios__input" id="issue-character-abc0001-3" name="issue-character-abc0001" type="radio" value="Reject declaration" {{ checked("issue-character-abc0001", "Reject declaration") }}>
-									<label class="govuk-label govuk-radios__label" for="issue-character-abc0001-3">Reject declaration</label>
-								</div>
-								<div class="govuk-radios__item">
-									<input class="govuk-radios__input" id="issue-character-abc0001-4" name="issue-character-abc0001" type="radio" value="Discuss" {{ checked("issue-character-abc0001", "Discuss") }}>
-									<label class="govuk-label govuk-radios__label" for="issue-character-abc0001-4">Discuss</label>
+									<input class="govuk-radios__input" id="issue-character-abc0001-3" name="issue-character-abc0001" type="radio" value="Discuss" {{ checked("issue-character-abc0001", "Discuss") }}>
+									<label class="govuk-label govuk-radios__label" for="issue-character-abc0001-3">Discuss</label>
 								</div>
 							  </div>
 						</fieldset>
 					</div>
 					<button class="govuk-button" data-module="govuk-button">Continue</button> 
-					<!-- <button class="govuk-button govuk-button--secondary govuk-!-margin-right-1" data-module="govuk-button" formaction="#">Download as PDF</button>
-					<button class="govuk-button govuk-button--secondary" data-module="govuk-button" formaction="#">Export data</button> -->
 				</div>
 			</div>
 		</div>
