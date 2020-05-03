@@ -528,55 +528,6 @@
 							<dd class="govuk-summary-list__value">Canada</dd>
 						</div>
 					</dl>
-
-					{% if data['add-comment'] %}
-
-						{% if data['issue-character-abc0001'] == "Recommend" %}
-						<div class="moj-page-header-actions">
-							<div class="moj-page-header-actions__title">
-								<h3 class="govuk-heading-m">Comment <span class="moj-badge moj-badge--green">{{ data['issue-character-abc0001'] }}</span> </h3>
-							</div>	
-							<div class="moj-page-header-actions__actions">
-								<div class="moj-button-menu">
-									<div class="moj-button-menu__wrapper">
-										<button type="submit" class="govuk-button govuk-button--secondary moj-button-menu__item moj-page-header-actions__action" data-module="govuk-button" formaction="#">Unlock</button>
-									</div>
-								</div>
-							</div>		
-						</div> 
-						{% elseif data['issue-character-abc0001'] == "Discuss" %}
-						<div class="moj-page-header-actions">
-							<div class="moj-page-header-actions__title">
-								<h3 class="govuk-heading-m">Comment <span class="moj-badge moj-badge--blue">{{ data['issue-character-abc0001'] }}</span></h3> 
-							</div>	
-							<div class="moj-page-header-actions__actions">
-								<div class="moj-button-menu">
-									<div class="moj-button-menu__wrapper">
-										<button type="submit" class="govuk-button govuk-button--secondary moj-button-menu__item moj-page-header-actions__action" data-module="govuk-button" formaction="#">Unlock</button>
-									</div>
-								</div>
-							</div>		
-						</div> 
-						{% else %}
-						<div class="moj-page-header-actions">
-							<div class="moj-page-header-actions__title">
-								<h3 class="govuk-heading-m">Comment <span class="moj-badge moj-badge--red">{{ data['issue-character-abc0001'] }}</span></h3> 
-							</div>	
-							<div class="moj-page-header-actions__actions">
-								<div class="moj-button-menu">
-									<div class="moj-button-menu__wrapper">
-										<button type="submit" class="govuk-button govuk-button--secondary moj-button-menu__item moj-page-header-actions__action" data-module="govuk-button" formaction="#">Unlock</button>
-									</div>
-								</div>
-							</div>		
-						</div> 
-						{% endif %}
-
-						<p class="govuk-body">{{ data['add-comment'] | striptags(true) | escape | nl2br }}</p>
-						<!-- <p class="govuk-body"><a href="edit-comment">Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Remove</a></p> -->
-						<hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
-					{% endif %}
-
 					<div class="govuk-form-group">
 						<fieldset class="govuk-fieldset">
 							  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
