@@ -568,7 +568,9 @@
 						</fieldset>
 					</div>
 					{% if data['issue-character-abc0001'] %}
-					<button class="govuk-button" data-module="govuk-button">Save changes</button><!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="govuk-body"><a href="#">Cancel</a> --></p>
+					<button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" type="submit">Save changes</button>
+					<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="reset">Clear form</button>
+					<p class="govuk-body"><a href="applied-jac00105-abc0001-saved#issues">Cancel</a></p>
 					{% else %}
 					<button class="govuk-button" data-module="govuk-button">Save</button>
 					{% endif %}
