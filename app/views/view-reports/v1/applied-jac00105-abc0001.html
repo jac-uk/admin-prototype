@@ -567,7 +567,11 @@
 							</div>
 						</fieldset>
 					</div>
-					<button class="govuk-button" data-module="govuk-button">Save</button> 
+					{% if data['issue-character-abc0001'] %}
+					<button class="govuk-button" data-module="govuk-button">Save changes</button><!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="govuk-body"><a href="#">Cancel</a> --></p>
+					{% else %}
+					<button class="govuk-button" data-module="govuk-button">Save</button>
+					{% endif %}
 				</div>
 			</div>
 		</div>
