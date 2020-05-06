@@ -18,13 +18,13 @@ router.all('/view-process-applications/exercise-ended/application-jac00105-route
 	// 'includes' means if it includes that value at all, it doesnt care what else is checked
 
 	if (applicationJac00105.includes('jac00105-abc0001')) {
-		res.redirect('applied-jac00105-abc0001')
+		res.redirect('jac00105-abc0001')
 	} else if (applicationJac00105.includes('jac00105-abc0002') && applicationJac00105.includes('jac00105-abc0003') && applicationJac00105.includes('jac00105-abc0004') && applicationJac00105.includes('jac00105-abc0005')) {
 		res.redirect('bulk-status')
 	} else if (applicationJac00105.includes('jac00105-abc0006')) {
-		res.redirect('applied-jac00105-abc0006')
+		res.redirect('jac00105-abc0006')
 	} else {
-		res.redirect('applied')
+		res.redirect('sift')
 	}
 })
 
