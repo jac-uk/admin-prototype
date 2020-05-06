@@ -1,0 +1,81 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}Judical Appointments Commission - View an exercise - Shortlisting{% endblock %}
+
+{% block content %}
+{% include "includes/header.html" %}
+<form action="#" method="post">
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-full">
+			<button type="submit" formaction="#" class="govuk-button govuk-button--secondary govuk-!-margin-top-4 float-right" data-module="govuk-button">Add to favourites</button>
+		</div>
+	</div>
+	<div class="govuk-grid-row clearfix">
+		<div class="govuk-grid-column-full">
+			<span class="govuk-caption-xl">JAC00105</span>
+			<h1 class="govuk-heading-xl">Fee-paid Legal Members of the Mental Health Review Tribunal for Wales</h1>
+		</div>
+	</div>
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-one-quarter">
+			<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
+				<h4 class="moj-side-navigation__title">Exercise</h4>
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item">
+						<a href="index">Overview</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="website-listing">Website listing</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="vacancy-information">Vacancy information</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="contacts">Contacts</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="timeline">Timeline</a>
+					</li>
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="shortlisting" aria-current="location">Shortlisting</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="eligibility-information">Eligibility information</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="working-preferences">Working preferences</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="assessment-options">Assessment options</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="downloads">Downloads</a>
+					</li>		  
+				</ul>
+			</nav>
+		</div>
+		<div class="govuk-grid-column-three-quarters">
+			<h2 class="govuk-heading-l float-left_">Shortlisting</h2>
+			<!-- <div class="float-right">
+				<p class="govuk-body govuk-!-font-weight-bold"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> shortlisting</span></a></p>
+			</div> -->
+			<dl class="govuk-summary-list clearfix">
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Methods</dt>
+					<dd class="govuk-summary-list__value">
+						<ul class="govuk-list govuk-list--bullet">
+							<li>Situational judgement qualifying test (QT)</li>
+							<li>Critical analysis qualifying test (QT)</li>
+							<li>Paper sift</li>
+						</ul>
+					</dd>
+				</div>
+			</dl>
+		</div>
+	</div>
+</form>
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
+{% endblock %}

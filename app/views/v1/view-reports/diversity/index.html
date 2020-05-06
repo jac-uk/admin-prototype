@@ -1,0 +1,849 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}Judical Appointments Commission - View reports - Diversity{% endblock %}
+
+{% block content %}
+{% include "includes/header.html" %}
+<form action="#" method="post">
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-full">
+			<button type="submit" formaction="#" class="govuk-button govuk-button--secondary govuk-!-margin-top-4 float-right" data-module="govuk-button">Add to favourites</button>
+		</div>
+	</div>
+	<div class="govuk-grid-row clearfix">
+		<div class="govuk-grid-column-full">
+			<span class="govuk-caption-xl">JAC00105</span>
+			<h1 class="govuk-heading-xl">Fee-paid Legal Members of the Mental Health Review Tribunal for Wales</h1>
+		</div>
+	</div>
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-one-quarter">
+			<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
+				<h4 class="moj-side-navigation__title">Exercise</h4>
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item">
+						<a href="#">Overview</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Website listing</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Vacancy information</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Contacts</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Timeline</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Shortlisting</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Eligibility information</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Working preferences</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Assessment options</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Downloads</a>
+					</li>		  
+				</ul>
+			
+				<h4 class="moj-side-navigation__title">Applications</h4> 
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item">
+						<a href="#" aria-current="location">Drafts</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Applied</a>
+					</li>
+				</ul>
+
+				<h4 class="moj-side-navigation__title">Stages</h4> 
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item">
+						<a href="#">Applied (50)</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Shortlisted (20)</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Selected (10)</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Recommended (10)</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Handover (10)</a>
+					</li>
+				</ul>
+
+				<h4 class="moj-side-navigation__title">Reports</h4>
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="index" aria-current="location">Diversity</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#" aria-current="location">Issues</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="govuk-grid-column-three-quarters">
+			<div class="moj-page-header-actions">
+				<div class="moj-page-header-actions__title">
+					<h2 class="govuk-heading-l">Diversity</h2>
+				</div>	
+				<div class="moj-page-header-actions__actions">
+					<div class="moj-button-menu">
+				  		<div class="moj-button-menu__wrapper">
+							<button type="submit" class="govuk-button moj-button-menu__item moj-page-header-actions__action" data-module="govuk-button">Export all data</button>
+				  		</div>
+					</div>
+				</div>		
+			</div> 
+		</div>
+		<div class="govuk-grid-column-three-quarters">
+			<div class="govuk-grid-row">
+				<div class="govuk-grid-column-one-half">
+					<div class="panel govuk-!-margin-bottom-9">
+						<span class="govuk-caption-m">Total applications</span>
+						<h2 class="govuk-heading-m govuk-!-margin-bottom-0">100</h2>
+					</div>
+				</div>
+				<div class="govuk-grid-column-one-half">
+					<div class="panel govuk-!-margin-bottom-9">
+						<span class="govuk-caption-m">Type of exercise</span>
+						<h2 class="govuk-heading-m govuk-!-margin-bottom-0">Legal</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="govuk-grid-column-three-quarters">
+			<div class="govuk-tabs" data-module="govuk-tabs">
+				<h2 class="govuk-tabs__title">Contents</h2>
+				<ul class="govuk-tabs__list">
+				  	<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+						<a class="govuk-tabs__tab" href="#applied">Applied</a>
+				  	</li>
+				 	<li class="govuk-tabs__list-item">
+						<a class="govuk-tabs__tab" href="#shortlisted">Shortlisted</a>
+				  	</li>
+				  	<li class="govuk-tabs__list-item">
+						<a class="govuk-tabs__tab" href="#selected">Selected</a>
+				  	</li>
+				  	<li class="govuk-tabs__list-item">
+						<a class="govuk-tabs__tab" href="#recommended">Recommended</a>
+					</li>
+					<li class="govuk-tabs__list-item">
+						<a class="govuk-tabs__tab" href="#handover">Handover</a>
+				  	</li>
+				</ul>
+				<!-- Applied -->
+				<div class="govuk-tabs__panel" id="applied">
+					<!-- <h3 class="govuk-heading-m govuk-!-margin-bottom-6">Applied (100)</h3> -->
+					<!-- <h3 class="govuk-heading-m govuk-!-margin-bottom-6">Applied</h3>
+					<h4 class="govuk-heading-s">Data for 100 submitted applications (TBC)</h4>
+					<p class="govuk-body">Data for 100 submitted applications (TBC).</p> -->
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Gender by applied stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Gender</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Male</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">65% (65)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Female</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">26% (26)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Gender neutral</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">9% (9)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Other</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Ethnicity by applied stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Ethnicity</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">BAME</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">10% (10)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">White</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">89% (89)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">1% (1)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Other</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Disability by applied stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Disability</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Yes</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">20% (20)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">No</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">78% (78)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">2% (2)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Professional background by applied stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Professional background</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Barrister</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">40% (40)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">CILEx</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">10% (10)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Solicitor</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">45% (45)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">5% (5)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Other</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Social mobility by applied stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Social mobility</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Attended UK state school</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">20% (20)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">First generation to attend University</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">68% (68)</td>
+							</tr>
+						</tbody>
+					</table>
+					<button class="govuk-button govuk-button--secondary govuk-!-margin-top-2" data-module="govuk-button">Export data</button>
+				</div>
+				<!-- Shortlisted -->
+				<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="shortlisted">
+					<!-- <h3 class="govuk-heading-m govuk-!-margin-bottom-6">Shortlisted (50)</h3> -->
+					<!-- <h3 class="govuk-heading-m govuk-!-margin-bottom-6">Shortlisted</h3>
+					<h4 class="govuk-heading-s">Data for 50 applications that were shortlisted (TBC)</h4>
+					<p class="govuk-body">Data for 50 applications that were shortlisted (TBC).</p> -->
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Gender by shortlisted stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Gender</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Male</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">66% (33)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Female</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">26% (13)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Gender neutral</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">8% (4)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Other</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Ethnicity by shortlisted stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Ethnicity</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">BAME</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">10% (5)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">White</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">90% (45)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Other</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Disability by shortlisted stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Disability</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Yes</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">20% (10)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">No</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">78% (39)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">2% (1)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Professional background by shortlisted stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Professional background</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Barrister</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">40% (20)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">CILEx</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">10% (5)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Solicitor</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">44% (22)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">6% (3)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Other</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Social mobility by shortlisted stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Social mobility</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Attended UK state school</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">20% (10)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">First generation to attend University</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">68% (34)</td>
+							</tr>
+						</tbody>
+					</table>
+					<button class="govuk-button govuk-button--secondary govuk-!-margin-top-2" data-module="govuk-button">Export data</button>
+				</div>
+				<!-- Selected -->
+				<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="selected">
+					<!-- <h3 class="govuk-heading-m govuk-!-margin-bottom-6">Selected (30)</h3> -->
+					<!-- <h3 class="govuk-heading-m govuk-!-margin-bottom-6">Selected</h3>
+					<h4 class="govuk-heading-s">Data for 30 applications that were selected (TBC)</h4>
+					 <p class="govuk-body">Data for 30 applications that were selected (TBC).</p> -->
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Gender by selected stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Gender</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Male</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">60% (18)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Female</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">27% (8)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Gender neutral</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">13% (4)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Other</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Ethnicity by selected stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Ethnicity</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">BAME</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">5% (5)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">White</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">25% (25)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Other</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Disability by selected stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Disability</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Yes</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">23% (7)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">No</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">77% (23)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Professional background by selected stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Professional background</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Barrister</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">47% (14)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">CILEx</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">10% (3)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Solicitor</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">40% (12)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">3% (1)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Other</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Social mobility by selected stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Social mobility</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Attended UK state school</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">17% (5)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">First generation to attend University</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">73% (22)</td>
+							</tr>
+						</tbody>
+					</table>
+					<button class="govuk-button govuk-button--secondary govuk-!-margin-top-2" data-module="govuk-button">Export data</button>
+				</div>
+				<!-- Recommended -->
+				<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="recommended">
+					<!-- <h3 class="govuk-heading-m govuk-!-margin-bottom-6">Recommended (20)</h3> -->
+					<!-- <h3 class="govuk-heading-m govuk-!-margin-bottom-6">Recommended</h3>
+					<h4 class="govuk-heading-s">Data for 20 applications that were recommended (TBC)</h4>
+					<p class="govuk-body">Data for 20 applications that were recommended (TBC).</p> -->
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Gender by recommended stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Gender</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Male</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">70% (14)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Female</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">20% (4)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Gender neutral</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">10% (2)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Other</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Ethnicity by recommended stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Ethnicity</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">BAME</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">10% (2)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">White</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">80% (18)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Other</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Disability by recommended stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Disability</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Yes</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">20% (4)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">No</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">80% (16)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Professional background by recommended stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Professional background</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Barrister</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">55% (11)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">CILEx</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">5% (1)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Solicitor</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">40% (8)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Other</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Social mobility by recommended stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Social mobility</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Attended UK state school</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">15% (3)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">First generation to attend University</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">85% (17)</td>
+							</tr>
+						</tbody>
+					</table>
+					<button class="govuk-button govuk-button--secondary govuk-!-margin-top-2" data-module="govuk-button">Export data</button>
+				</div>
+				<!-- Handover -->
+				<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="handover">
+					<!-- <h3 class="govuk-heading-m govuk-!-margin-bottom-6">Handover (10)</h3> -->
+					<!-- <h3 class="govuk-heading-m govuk-!-margin-bottom-6">Handover</h3>
+					<h4 class="govuk-heading-s">Data for 10 applications that were awarded the role (TBC)</h4>
+					<p class="govuk-body">Data for 10 applications that were awarded the role (TBC).</p> -->
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Gender by handover stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Gender</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Male</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">80% (8)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Female</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">20% (2)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Gender neutral</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Other</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Ethnicity by handover stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Ethnicity</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">BAME</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">20% (2)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">White</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">80% (8)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Other</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Disability by handover stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Disability</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Yes</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">10% (1)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">No</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">90% (9)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Professional background by handover stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Professional background</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Barrister</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">60% (6)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">CILEx</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Solicitor</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">40% (4)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Prefer not to say</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Other</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">0% (0)</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Social mobility by handover stage</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header">Social mobility</th>
+								<th scope="col" class="govuk-table__header govuk-table__header--numeric">Applications</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">Attended UK state school</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">10% (1)</td>
+							</tr>
+							<tr class="govuk-table__row">
+								<th scope="row" class="govuk-table__header">First generation to attend University</th>
+								<td class="govuk-table__cell govuk-table__cell--numeric">80% (8)</td>
+							</tr>
+						</tbody>
+					</table>
+					<button class="govuk-button govuk-button--secondary govuk-!-margin-top-2" data-module="govuk-button">Export data</button>
+			  	</div>
+			</div>
+		</div>
+	</div>
+</form>
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
+{% endblock %}
