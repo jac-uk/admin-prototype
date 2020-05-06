@@ -2,9 +2,9 @@ const express = require('express')
 const router = express.Router()
 
 // compare arrays function
-const arraysAreEqual = function(a, b){
-	return JSON.stringify(a) == JSON.stringify(b)
-  }
+//const arraysAreEqual = function(a, b){
+//	return JSON.stringify(a) == JSON.stringify(b)
+//  }
 
 // Add your routes here - above the module.exports line
 
