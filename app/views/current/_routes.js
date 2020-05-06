@@ -8,7 +8,7 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
-router.all('view-process-applications/exercise-ended/application-jac00105-router', function (req, res) {
+router.all('/view-process-applications/exercise-ended/application-jac00105-router', function (req, res) {
 	
 	let applicationJac00105 = req.session.data['application-jac00105'] || []
 	
@@ -18,13 +18,13 @@ router.all('view-process-applications/exercise-ended/application-jac00105-router
 	// 'includes' means if it includes that value at all, it doesnt care what else is checked
 
 	if (applicationJac00105.includes('jac00105-abc0001')) {
-		res.redirect('view-process-applications/exercise-ended/applied-jac00105-abc0001')
+		res.redirect('applied-jac00105-abc0001')
 	} else if (applicationJac00105.includes('jac00105-abc0002') && applicationJac00105.includes('jac00105-abc0003') && applicationJac00105.includes('jac00105-abc0004') && applicationJac00105.includes('jac00105-abc0005')) {
-		res.redirect('view-process-applications/exercise-ended/bulk-status')
+		res.redirect('bulk-status')
 	} else if (applicationJac00105.includes('jac00105-abc0006')) {
-		res.redirect('view-process-applications/exercise-ended/applied-jac00105-abc0006')
+		res.redirect('applied-jac00105-abc0006')
 	} else {
-		res.redirect('view-process-applications/exercise-ended/applied')
+		res.redirect('applied')
 	}
 })
 
