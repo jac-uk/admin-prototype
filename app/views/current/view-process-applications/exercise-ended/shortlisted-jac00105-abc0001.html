@@ -95,26 +95,31 @@
 		</div>
 		<div class="govuk-grid-column-three-quarters">
 			<span class="govuk-caption-l">Max Talbot</span> 
-			<h2 class="govuk-heading-l">JAC00105-abc0001</h2>
-			<p class="govuk-body"><a href="applied-jac00105-abc0001">View submitted application</a></p>
+			<h2 class="govuk-heading-l">JAC00105-abc0001 <!-- <span class="moj-badge moj-badge--green">Passed scenario test</span> --></h2>
+			<p class="govuk-body"><a href="#">View submitted application</a></p>
 			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset">
 				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-						<h3 class="govuk-fieldset__heading">Update status (TBC)</h3>
+						<h3 class="govuk-fieldset__heading">Add status (TBC)</h3>
 					</legend>
 					<div class="govuk-radios">
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="update-status-shortlisted" name="update-status-shortlisted" type="radio" value="Invited to selection day" {{ checked("update-status-shortlisted", "Invited to selection day") }}>
-							<label class="govuk-label govuk-radios__label" for="update-status-shortlisted">Invited to selection day</label>
+							<input class="govuk-radios__input" id="add-status-shortlisted" name="add-status-shortlisted" type="radio" value="Invited to selection day" {{ checked("add-status-shortlisted", "Invited to selection day") }}>
+							<label class="govuk-label govuk-radios__label" for="add-status-shortlisted">Invited to selection day</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="update-status-shortlisted-2" name="update-status-shortlisted" type="radio" value="Rejected as ineligible" {{ checked("update-status-shortlisted", "Rejected as ineligible") }}>
-							<label class="govuk-label govuk-radios__label" for="update-status-shortlisted-2">Rejected as ineligible</label>
+							<input class="govuk-radios__input" id="add-status-shortlisted-2" name="add-status-shortlisted" type="radio" value="Rejected as ineligible" {{ checked("add-status-shortlisted", "Rejected as ineligible") }}>
+							<label class="govuk-label govuk-radios__label" for="add-status-shortlisted-2">Rejected as ineligible</label>
 						</div>
 						<div class="govuk-radios__item">
-							<input class="govuk-radios__input" id="update-status-shortlisted-3" name="update-status-shortlisted" type="radio" value="Withdrew application" {{ checked("update-status-shortlisted", "Withdrew application") }}>
-							<label class="govuk-label govuk-radios__label" for="update-status-shortlisted-3">Withdrew application</label>
+							<input class="govuk-radios__input" id="add-status-shortlisted-3" name="add-status-shortlisted" type="radio" value="Withdrew application" {{ checked("add-status-shortlisted", "Withdrew application") }}>
+							<label class="govuk-label govuk-radios__label" for="add-status-shortlisted-3">Withdrew application</label>
+						</div>
+						<div class="govuk-radios__divider">or</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="add-status-shortlisted-4" name="add-status-shortlisted" type="radio" value="Move back to Sift stage" {{ checked("add-status-shortlisted", "Move back to Sift stage") }}>
+							<label class="govuk-label govuk-radios__label" for="add-status-shortlisted-4">Move back to sift stage (TBC)</label>
 						</div>
 				  	</div>
 				</fieldset>
