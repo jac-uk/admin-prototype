@@ -1,6 +1,6 @@
 {% extends "layout_unbranded.html" %}
 
-{% block pageTitle %}Judical Appointments Commission - View and process applications - Sift (100){% endblock %}
+{% block pageTitle %}Judical Appointments Commission - View and process applications - Review (100){% endblock %}
 
 {% block content %}
 {% include "includes/header.html" %}
@@ -67,35 +67,35 @@
 				<ul class="moj-side-navigation__list">
 					{% if data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
-						<a href="sift">Sift (94)</a>
+						<a href="review">Review (94)</a>
 					</li>
 					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
-						<a href="sift">Sift (95)</a>
+						<a href="review">Review (95)</a>
 					</li>
 					{% elseif data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
-						<a href="sift">Sift (95)</a>
+						<a href="review">Review (95)</a>
 					</li>
 					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
-						<a href="sift">Sift (94)</a>
+						<a href="review">Review (94)</a>
 					</li>
 					{% elseif data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
-						<a href="sift">Sift (98)</a>
+						<a href="review">Review (98)</a>
 					</li>
 					{% elseif data['update-status-abc0001'] == "Passed scenario test" or data['update-status-abc0006'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
-						<a href="sift">Sift (99)</a>
+						<a href="review">Review (99)</a>
 					</li>
 					{% elseif data['bulk-status'] == "Passed scenario test" %}
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
-						<a href="sift">Sift (96)</a>
+						<a href="review">Review (96)</a>
 					</li>
 					{% else %}
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
-						<a href="sift">Sift (100)</a>
+						<a href="review">Review (100)</a>
 					</li>
 					{% endif %}
 
@@ -154,8 +154,6 @@
 				</ul>
 			</nav>
 		</div>
-
-
 
 		{% if data['update-status-abc0001'] == "Passed scenario test" %}
 		<div class="govuk-grid-column-three-quarters">
@@ -230,13 +228,11 @@
 		</div>
 		{% endif %}
 
-
-
 		{% if data['update-status-abc0001'] == "Passed scenario test" and data['update-status-abc0006'] == "Passed scenario test" and data['bulk-status'] == "Passed scenario test" %}
 		<div class="govuk-grid-column-three-quarters">
 			<div class="moj-page-header-actions">
 				<div class="moj-page-header-actions__title">
-					<h2 class="govuk-heading-l">Sift (94)</h2>
+					<h2 class="govuk-heading-l">Review (94)</h2>
 				</div>	
 				<div class="moj-page-header-actions__actions">
 					<div class="moj-button-menu">
@@ -251,7 +247,7 @@
 		<div class="govuk-grid-column-three-quarters">
 			<div class="moj-page-header-actions">
 				<div class="moj-page-header-actions__title">
-					<h2 class="govuk-heading-l">Sift (95)</h2>
+					<h2 class="govuk-heading-l">Review (95)</h2>
 				</div>	
 				<div class="moj-page-header-actions__actions">
 					<div class="moj-button-menu">
@@ -266,7 +262,7 @@
 		<div class="govuk-grid-column-three-quarters">
 			<div class="moj-page-header-actions">
 				<div class="moj-page-header-actions__title">
-					<h2 class="govuk-heading-l">Sift (95)</h2>
+					<h2 class="govuk-heading-l">Review (95)</h2>
 				</div>	
 				<div class="moj-page-header-actions__actions">
 					<div class="moj-button-menu">
@@ -281,7 +277,7 @@
 		<div class="govuk-grid-column-three-quarters">
 			<div class="moj-page-header-actions">
 				<div class="moj-page-header-actions__title">
-					<h2 class="govuk-heading-l">Sift (94)</h2>
+					<h2 class="govuk-heading-l">Review (94)</h2>
 				</div>	
 				<div class="moj-page-header-actions__actions">
 					<div class="moj-button-menu">
@@ -296,7 +292,7 @@
 		<div class="govuk-grid-column-three-quarters">
 			<div class="moj-page-header-actions">
 				<div class="moj-page-header-actions__title">
-					<h2 class="govuk-heading-l">Sift (98)</h2>
+					<h2 class="govuk-heading-l">Review (98)</h2>
 				</div>	
 				<div class="moj-page-header-actions__actions">
 					<div class="moj-button-menu">
@@ -311,7 +307,7 @@
 		<div class="govuk-grid-column-three-quarters">
 			<div class="moj-page-header-actions">
 				<div class="moj-page-header-actions__title">
-					<h2 class="govuk-heading-l">Sift (99)</h2>
+					<h2 class="govuk-heading-l">Review (99)</h2>
 				</div>	
 				<div class="moj-page-header-actions__actions">
 					<div class="moj-button-menu">
@@ -326,7 +322,7 @@
 		<div class="govuk-grid-column-three-quarters">
 			<div class="moj-page-header-actions">
 				<div class="moj-page-header-actions__title">
-					<h2 class="govuk-heading-l">Sift (96)</h2>
+					<h2 class="govuk-heading-l">Review (96)</h2>
 				</div>	
 				<div class="moj-page-header-actions__actions">
 					<div class="moj-button-menu">
@@ -341,7 +337,7 @@
 		<div class="govuk-grid-column-three-quarters">
 			<div class="moj-page-header-actions">
 				<div class="moj-page-header-actions__title">
-					<h2 class="govuk-heading-l">Sift (100)</h2>
+					<h2 class="govuk-heading-l">Review (100)</h2>
 				</div>	
 				<div class="moj-page-header-actions__actions">
 					<div class="moj-button-menu">

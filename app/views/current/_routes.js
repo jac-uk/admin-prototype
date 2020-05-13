@@ -24,7 +24,7 @@ router.all('/view-process-applications/exercise-ended/application-jac00105-route
 	} else if (applicationJac00105.includes('jac00105-abc0006')) {
 		res.redirect('jac00105-abc0006')
 	} else {
-		res.redirect('sift')
+		res.redirect('review')
 	}
 })
 
