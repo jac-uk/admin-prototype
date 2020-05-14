@@ -1,6 +1,6 @@
 {% extends "layout_unbranded.html" %}
 
-{% block pageTitle %}Judical Appointments Commission - View candidate history - Max Talbot{% endblock %}
+{% block pageTitle %}Judical Appointments Commission - View candidate profile and history - Max Talbot{% endblock %}
 
 {% block content %}
 <div class="header-background clearfix">
@@ -36,7 +36,7 @@
 			<!-- <span class="govuk-caption-xl">Candidates</span> -->
 			<h1 class="govuk-heading-xl govuk-!-margin-bottom-7">Max Talbot</h1>
 			<div class="govuk-grid-row">
-				<div class="govuk-grid-column-two-thirds">
+				<div class="govuk-grid-column-two-thirds _govuk-grid-column-one-half">
 					<h2 class="govuk-heading-l">Contact details</h2>
 					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
@@ -49,7 +49,7 @@
 							  <dd class="govuk-summary-list__value">01273 800 900</dd>
 							  <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> phone</span></a></dd>
 						</div>
-						<div class="govuk-summary-list__row">
+						<!-- <div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key no-border">Independent assessors</dt>
 							<dd class="govuk-summary-list__value">
 								<p class="govuk-body">Henry Brady</p>
@@ -57,7 +57,7 @@
 								<p class="govuk-body">07771 900 900</p>
 							</dd>
 							<dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> assessor</span></a></dd>
-						</div>
+						</div> 
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">&nbsp;</dt>
 							<dd class="govuk-summary-list__value">
@@ -66,20 +66,113 @@
 								<p class="govuk-body">020 7450 4000</p>
 							</dd>
 							<dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> assessor</span></a></dd>
+						</div> -->
+					</dl>
+
+					<h2 class="govuk-heading-l govuk-!-margin-top-8 govuk-!-margin-bottom-4">Diversity</h2>
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Ethnic group</dt>
+							<dd class="govuk-summary-list__value">White</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Gender</dt>
+							<dd class="govuk-summary-list__value">Male</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Disability</dt>
+							<dd class="govuk-summary-list__value">No</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Professional background</dt>
+							<dd class="govuk-summary-list__value">
+								<ul class="govuk-list govuk-list--bullet">
+									<li>Barrister</li>
+									<li>Solicitor</li>
+								</ul>
+							</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Fee-paid judicial role</dt>
+							<dd class="govuk-summary-list__value">Prefer not to say</dd>
 						</div>
 					</dl>
-					<h2 class="govuk-heading-l govuk-!-margin-top-8">Notes about the candidate</h2>
+
+					<h2 class="govuk-heading-l govuk-!-margin-top-8 govuk-!-margin-bottom-4">Character declarations</h2>
+					<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
+						<li>2018 - Late tax return penalty</li>
+						<li>2017 - Declared bankrupt</li>
+						<li>2017 - Fixed penality SP50</li>
+						<li>2015 - Fixed penalty SP30</li>
+					</ul>
+
+					<h2 class="govuk-heading-l govuk-!-margin-top-6">Notes about the candidate</h2>
 					<button class="govuk-button govuk-button--secondary" data-module="govuk-button">Add a note</button>
 					<ul class="govuk-list govuk-list--bullet">
 						<li>2019 - Request to change email address</li>
 						<li>2016 - Eligibility considered by SCC. Outcome: Proceed</li>
 					</ul>
 				</div>
-				<div class="govuk-grid-column-one-third">
-					<div class="panel govuk-!-margin-bottom-0">
+				<div class="govuk-grid-column-one-third _govuk-grid-column-one-half">
+					<div class="govuk-!-margin-left-4"> 
+						<h3 class="govuk-heading-m">Application outcomes</h3>
+						<div class="govuk-tabs" data-module="govuk-tabs">
+							<h2 class="govuk-tabs__title">Contents</h2>
+							<ul class="govuk-tabs__list">
+								<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+									<a class="govuk-tabs__tab" href="#current">Current</a>
+								</li>
+								<li class="govuk-tabs__list-item">
+									<a class="govuk-tabs__tab" href="#past">Past</a>
+								</li>
+							</ul>
+							<div class="govuk-tabs__panel" id="current">
+								<table class="govuk-table">
+									<!-- <thead class="govuk-table__head">
+										<tr class="govuk-table__row">
+											<th scope="col" class="govuk-table__header">Case manager</th>
+											<th scope="col" class="govuk-table__header">Cases opened</th>
+										</tr>
+									</thead> -->
+									<tbody class="govuk-table__body">
+										<tr class="govuk-table__row">
+											<td class="govuk-table__cell"><a href="#">JAC00105 Fee-paid Legal Members of the Mental Health Review Tribunal for Wales</a></td>
+											<td class="govuk-table__cell">Applied</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past">
+								<table class="govuk-table">
+									<!-- <thead class="govuk-table__head">
+										<tr class="govuk-table__row">
+											<th scope="col" class="govuk-table__header">Case manager</th>
+											<th scope="col" class="govuk-table__header">Cases opened</th>
+										</tr>
+									</thead> -->
+									<tbody class="govuk-table__body">
+										<tr class="govuk-table__row">
+											<td class="govuk-table__cell"><a href="#">JAC00136 Fee-Paid Medical Member SEC</a></td>
+											<td class="govuk-table__cell">Appointed</td>
+										</tr>
+										<tr class="govuk-table__row">
+											<td class="govuk-table__cell"><a href="#">JAC00178 Fee-Paid Medical Member SEC</a></td>
+											<td class="govuk-table__cell">Withdrew</td>
+										</tr>
+										<tr class="govuk-table__row">
+											<td class="govuk-table__cell"><a href="#">JAC00125 Fee-Paid Medical Member SEC</a></td>
+											<td class="govuk-table__cell">Withdrew</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="panel govuk-!-margin-bottom-0">
 						<h3 class="govuk-heading-m">Applications</h3>
+
 						<p class="govuk-body govuk-!-margin-bottom-0">TBC</p>
-						<!-- <h4 class="govuk-heading-s">Current</h4>
+						<h4 class="govuk-heading-s">Current</h4>
 						<ul class="govuk-list govuk-!-margin-bottom-0">
 							<li><a class="govuk-link" href="#">JAC00105 Fee-paid Legal Members of the Mental Health Review Tribunal for Wales</a></li>
 						</ul>
@@ -87,8 +180,8 @@
 						<ul class="govuk-list govuk-!-margin-bottom-0">
 							<li><a class="govuk-link" href="#">JAC00136 Fee-Paid Medical Member SEC</a></li>
 							<li><a class="govuk-link" href="#">JAC00178 Fee-Paid Medical Member SEC</a></li>
-						</ul> -->
-					</div>
+						</ul>
+					</div> -->
 				</div> 
 			</div>
 		</div>
