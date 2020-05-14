@@ -1,0 +1,119 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}Judical Appointments Commission - View candidate history - Candidates{% endblock %}
+
+{% block content %}
+<div class="header-background clearfix">
+	<div class="header-title govuk-!-margin-bottom-2">
+		<a href="/" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-24 govuk-!-font-weight-bold">Internal service name</a>
+		<nav class="float-right">
+			<ul id="navigation" class="govuk-header__navigation user-menu">
+				<li class="govuk-header__navigation-item">
+					<a class="govuk-header__link" href="#">Exercises</a>
+				</li>
+				<li class="govuk-header__navigation-item">
+					<a class="govuk-header__link" href="index">Candidates</a>
+				</li>
+				<li class="govuk-header__navigation-item">
+					<a class="govuk-header__link" href="#">My account</a>
+				</li>
+				<li class="govuk-header__navigation-item">
+					<a class="govuk-header__link" href="#">Sign out</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<div class="govuk-phase-banner">
+	<p class="govuk-phase-banner__content">
+		<strong class="govuk-tag govuk-phase-banner__content__tag">beta</strong>
+		<span class="govuk-phase-banner__text">This is a new service – your <a class="govuk-link govuk-link--no-visited-state" href="#">feedback</a> will help us to improve it.</span>
+	</p>
+</div>
+<form action="#" method="post">
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-full govuk-!-margin-top-8">
+			<h1 class="govuk-heading-xl govuk-!-margin-bottom-7">Candidates</h1>
+			<h3 class="govuk-heading-m">10 profiles</h3>
+			<table class="govuk-table jac-table govuk-!-margin-bottom-9">
+				<caption class="govuk-table__caption hidden">Candidate profiles</caption>
+				<thead class="govuk-table__head">
+					<tr class="govuk-table__row">
+						<th scope="col" class="govuk-table__header">Name</th>
+						<th scope="col" class="govuk-table__header">Account created on</th>
+						<th scope="col" class="govuk-table__header">Number of applications</th>
+					  </tr>
+				</thead>
+				<tbody class="govuk-table__body">
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">Alex Potter</a></td>
+						<td class="govuk-table__cell">14 May 2017</td>
+						<td class="govuk-table__cell">3</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">Connor Gibbs</a></td>
+						<td class="govuk-table__cell">5 July 2017</td>
+						<td class="govuk-table__cell">13</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">Connor Wood</a></td>
+						<td class="govuk-table__cell">31 October 2019</td>
+						<td class="govuk-table__cell">7</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">Harry Farmer</a></td>
+						<td class="govuk-table__cell">1 February 2020</td>
+						<td class="govuk-table__cell">1</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">Josh Davison</a></td>
+						<td class="govuk-table__cell">24 April 2016</td>
+						<td class="govuk-table__cell">8</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">Kai Blackburn</a></td>
+						<td class="govuk-table__cell">17 March 2018</td>
+						<td class="govuk-table__cell">2</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">Luke Walker</a></td>
+						<td class="govuk-table__cell">19 September 2018</td>
+						<td class="govuk-table__cell">22</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="max-talbot">Max Talbot</a></td>
+						<td class="govuk-table__cell">21 May 2016</td>
+						<td class="govuk-table__cell">4</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">Nathan Powell</a></td>
+						<td class="govuk-table__cell">3 August 2019</td>
+						<td class="govuk-table__cell">9</td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell"><a class="govuk-link" href="#">Spencer Singh</a></td>
+						<td class="govuk-table__cell">19 December 2017</td>
+						<td class="govuk-table__cell">2</td>
+					</tr>
+				</tbody>
+			</table> 
+			<!-- <ul class="govuk-list">
+				<li class="govuk-!-margin-bottom-2"><a class="govuk-link govuk-!-margin-bottom-0" href="#">Alex Potter</a></li>
+				<li class="govuk-!-margin-bottom-2"><a class="govuk-link govuk-!-margin-bottom-0" href="#">Connor Gibbs</a></li>
+				<li class="govuk-!-margin-bottom-2"><a class="govuk-link govuk-!-margin-bottom-0" href="#">Connor Wood</a></li>
+				<li class="govuk-!-margin-bottom-2"><a class="govuk-link govuk-!-margin-bottom-0" href="#">Harry Farmer</a></li>
+				<li class="govuk-!-margin-bottom-2"><a class="govuk-link govuk-!-margin-bottom-0" href="#">Josh Davison</a></li>
+				<li class="govuk-!-margin-bottom-2"><a class="govuk-link govuk-!-margin-bottom-0" href="#">Kai Blackburn</a></li>
+				<li class="govuk-!-margin-bottom-2"><a class="govuk-link govuk-!-margin-bottom-0" href="#">Luke Walker</a></li>
+				<li class="govuk-!-margin-bottom-2"><a class="govuk-link govuk-!-margin-bottom-0" href="max-talbot">Max Talbot</a></li>
+				<li class="govuk-!-margin-bottom-2"><a class="govuk-link govuk-!-margin-bottom-0" href="#">Nathan Powell</a></li>
+				<li class="govuk-!-margin-bottom-2"><a class="govuk-link govuk-!-margin-bottom-0" href="#">Spencer Singh</a></li>
+			</ul> -->
+		</div>
+	</div>
+</form>
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
+{% endblock %}
