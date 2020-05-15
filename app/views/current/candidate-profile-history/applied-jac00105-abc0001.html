@@ -1,10 +1,10 @@
 {% extends "layout_unbranded.html" %}
 
-{% block pageTitle %}Judical Appointments Commission - View reports - JAC00105-abc0001{% endblock %}
+{% block pageTitle %}Judical Appointments Commission - View candidate profile and history - JAC00105-abc0001{% endblock %}
 
 {% block content %}
 {% include "includes/header.html" %}
-<form action="applied-jac00105-abc0001-saved#issues" method="post">
+<form action="#" method="post">
 	<div class="govuk-grid-row">
 		<div class="govuk-grid-column-full">
 			<button type="submit" formaction="#" class="govuk-button govuk-button--secondary govuk-!-margin-top-4 float-right" data-module="govuk-button">Add to favourites</button>
@@ -59,46 +59,33 @@
 						<a href="#" aria-current="location">Drafts</a>
 					</li>
 					<li class="moj-side-navigation__item moj-side-navigation__item--active">
-						<a href="#">Applied</a>
-					</li>
-				</ul>
-
-				<h4 class="moj-side-navigation__title">Stages</h4> 
-				<ul class="moj-side-navigation__list">
-					<li class="moj-side-navigation__item">
-						<a href="review">Review (100)</a>
-					</li>
-					<li class="moj-side-navigation__item">
-						<a href="#">Shortlisted (0)</a>
-					</li>
-					<li class="moj-side-navigation__item">
-						<a href="#">Selected (0)</a>
-					</li>
-					<li class="moj-side-navigation__item">
-						<a href="#">Recommended (0)</a>
-					</li>
-					<li class="moj-side-navigation__item">
-						<a href="#">Handover (0)</a>
+						<a href="applied">Applied</a>
 					</li>
 				</ul>
 
 				<h4 class="moj-side-navigation__title">Reports</h4>
 				<ul class="moj-side-navigation__list">
 					<li class="moj-side-navigation__item">
-						<a href="#" aria-current="location">Diversity</a>
-					</li>
-					<li class="moj-side-navigation__item">
-						<a href="index" aria-current="location">Issues</a>
+						<a href="#">Issues</a>
 					</li>
 				</ul>
 			</nav>
 		</div>
-
 		<div class="govuk-grid-column-three-quarters">
-			<span class="govuk-caption-l">Application</span>
-			<h2 class="govuk-heading-l">JAC00105-abc0001</h2>
-		</div> 
-
+			<div class="moj-page-header-actions">
+				<div class="moj-page-header-actions__title">
+					<span class="govuk-caption-l">Application</span>
+					<h2 class="govuk-heading-l">JAC00105-abc0001</h2>
+				</div>	
+				<div class="moj-page-header-actions__actions">
+					<div class="moj-button-menu">
+				  		<div class="moj-button-menu__wrapper">
+							<button type="submit" class="govuk-button moj-button-menu__item moj-page-header-actions__action" data-module="govuk-button">Unlock</button>
+				  		</div>
+					</div>
+				</div>		
+			</div> 
+		</div>
 		<div class="govuk-grid-column-three-quarters">
 			<div class="govuk-grid-row">
 				<div class="govuk-grid-column-one-half">
@@ -119,15 +106,12 @@
 			<div class="govuk-tabs" data-module="govuk-tabs">
 				<h2 class="govuk-tabs__title">Contents</h2>
 				<ul class="govuk-tabs__list">
-				  	<li class="govuk-tabs__list-item">
+				  	<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
 						<a class="govuk-tabs__tab" href="#full-information">Full information</a>
 				  	</li>
 				 	<li class="govuk-tabs__list-item">
 						<a class="govuk-tabs__tab" href="#panel-pack">Panel pack</a>
 					</li>
-					<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-						<a class="govuk-tabs__tab" href="#issues">Issues</a>
-				  	</li>
 				</ul>
 				<!-- Full information -->
 				<div class="govuk-tabs__panel" id="full-information">
@@ -442,7 +426,6 @@
 					</dl>
 					<h3 class="govuk-heading-m">Gaps in employment</h3>
 					<p class="govuk-body govuk-!-margin-bottom-7">No employment gaps declared.</p>
-
 					<h3 class="govuk-heading-m">Reasonable length of service</h3>
 					<dl class="govuk-summary-list govuk-!-margin-bottom-9">
 						<div class="govuk-summary-list__row">
@@ -497,83 +480,6 @@
 					</dl>
 					<button class="govuk-button govuk-button--secondary govuk-!-margin-right-1" data-module="govuk-button" formaction="#">Download as PDF</button>
 					<button class="govuk-button govuk-button--secondary" data-module="govuk-button" formaction="#">Export data</button>
-				</div>
-				<!-- Issues -->
-				<div class="govuk-tabs__panel" id="issues">
-					<h3 class="govuk-heading-m">Character</h3>
-					<dl class="govuk-summary-list govuk-!-margin-bottom-9">
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key no-border govuk-!-width-two-thirds">Has endorsements on their licence, or received any motoring fixed-penalty notices in the last 4 years</dt>
-							<dd class="govuk-summary-list__value">Yes</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key no-border govuk-!-width-two-thirds">&nbsp;</dt>
-							<dd class="govuk-summary-list__value">
-								<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0">Date</p>
-								<p class="govuk-body">9 March 2017</p>
-							</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key govuk-!-width-two-thirds">&nbsp;</dt>
-							<dd class="govuk-summary-list__value">
-								<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0">Declaration</p>
-								<p class="govuk-body">SP30 3 penalty points and a fixed fine of £125.</p>
-							</dd>
-						</div>
-					</dl>
-					<h3 class="govuk-heading-m">Eligibility</h3>
-					<dl class="govuk-summary-list govuk-!-margin-bottom-9">
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key govuk-!-width-two-thirds">Citizenship</dt>
-							<dd class="govuk-summary-list__value">Canada</dd>
-						</div>
-					</dl>
-					<div class="govuk-form-group">
-						<fieldset class="govuk-fieldset">
-							  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-								<h3 class="govuk-fieldset__heading">What would you like to do with this application? (TBC)</h3>
-							</legend>
-							<div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-								<div class="govuk-radios__item">
-									<input class="govuk-radios__input" id="issue-character-abc0001-1" name="issue-character-abc0001" type="radio" value="Recommend"  data-aria-controls="conditional-issue-character-abc0001-1" {{ checked("issue-character-abc0001", "Recommend") }}>
-									<label class="govuk-label govuk-radios__label" for="issue-character-abc0001-1">Recommend</label>
-								</div>
-								<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-issue-character-abc0001-1">
-									<div class="govuk-form-group">
-										<label class="govuk-label govuk-label--s" for="issue-character-abc0001-1-note">Add note</label>
-										<textarea class="govuk-textarea govuk-!-margin-bottom-0" id="issue-character-abc0001-1-note" name="issue-character-abc0001-1-note" rows="8">{{ data['issue-character-abc0001-1-note']}}</textarea>
-								   </div>
-							  	</div>
-								<div class="govuk-radios__item">
-									<input class="govuk-radios__input" id="issue-character-abc0001-2" name="issue-character-abc0001" type="radio" value="Discuss" data-aria-controls="conditional-issue-character-abc0001-2" {{ checked("issue-character-abc0001", "Discuss") }}>
-									<label class="govuk-label govuk-radios__label" for="issue-character-abc0001-2">Discuss</label>
-								</div>
-								<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-issue-character-abc0001-2">
-									<div class="govuk-form-group">
-										<label class="govuk-label govuk-label--s" for="issue-character-abc0001-2-note">Add note</label>
-										<textarea class="govuk-textarea govuk-!-margin-bottom-0" id="issue-character-abc0001-2-note" name="issue-character-abc0001-2-note" rows="8">{{ data['issue-character-abc0001-2-note']}}</textarea>
-								   </div>
-							  	</div>
-								<div class="govuk-radios__item">
-									<input class="govuk-radios__input" id="issue-character-abc0001-3" name="issue-character-abc0001" type="radio" value="Reject" data-aria-controls="conditional-issue-character-abc0001-3" {{ checked("issue-character-abc0001", "Reject") }}>
-									<label class="govuk-label govuk-radios__label" for="issue-character-abc0001-3">Reject</label>
-								</div>
-								<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-issue-character-abc0001-3">
-									<div class="govuk-form-group">
-										<label class="govuk-label govuk-label--s" for="issue-character-abc0001-3-note">Add note</label>
-										<textarea class="govuk-textarea govuk-!-margin-bottom-0" id="issue-character-abc0001-3-note" name="issue-character-abc0001-3-note" rows="8">{{ data['issue-character-abc0001-3-note']}}</textarea>
-								   </div>
-							  	</div>
-							</div>
-						</fieldset>
-					</div>
-					{% if data['issue-character-abc0001'] %}
-					<button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" type="submit">Save changes</button>
-					<button class="govuk-button govuk-button--secondary" data-module="govuk-button" type="reset">Clear form</button>
-					<p class="govuk-body"><a href="applied-jac00105-abc0001-saved#issues">Cancel</a></p>
-					{% else %}
-					<button class="govuk-button" data-module="govuk-button">Save</button>
-					{% endif %}
 				</div>
 			</div>
 		</div>
