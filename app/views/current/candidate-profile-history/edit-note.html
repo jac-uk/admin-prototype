@@ -41,28 +41,32 @@
 				  	<div class="govuk-date-input" id="expiry">
 						<div class="govuk-date-input__item">
 					  		<div class="govuk-form-group">
-								<label class="govuk-label govuk-date-input__label" for="date-day">Day</label>
-								<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-day" name="date-day" type="text" pattern="[0-9]*" inputmode="numeric" value="12">
+								<label class="govuk-label govuk-date-input__label" for="edit-day">Day</label>
+								<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="edit-day" name="edit-day" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['edit-day'] | default('12') }}">
 					  		</div>
 						</div>
 						<div class="govuk-date-input__item">
 					  		<div class="govuk-form-group">
-								<label class="govuk-label govuk-date-input__label" for="date-month">Month</label>
-								<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-month" name="date-month" type="text" pattern="[0-9]*" inputmode="numeric" value="2">
+								<label class="govuk-label govuk-date-input__label" for="edit-month">Month</label>
+								<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="edit-month" name="edit-month" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['edit-month'] | default('2') }}">
 					  		</div>
 						</div>
 						<div class="govuk-date-input__item">
 					  		<div class="govuk-form-group">
-								<label class="govuk-label govuk-date-input__label" for="date-year">Year</label>
-								<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-year" name="date-year" type="text" pattern="[0-9]*" inputmode="numeric" value="2020">
+								<label class="govuk-label govuk-date-input__label" for="edit-year">Year</label>
+								<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="edit-year" name="edit-year" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['edit-year'] | default('2020') }}">
 					  		</div>
 						</div>
 				  	</div>
 				</fieldset>
 			</div>
 			<div class="govuk-form-group">
-				<label class="govuk-label govuk-label--m" for="note-details">Note</label>
-				<textarea class="govuk-textarea" id="note-details" name="note-details" rows="5" spellcheck="false">Request to change email address.</textarea>
+				<label class="govuk-label govuk-label--m" for="edit-note-details">Note</label>
+				{% if data['edit-note-details'] %}
+				<textarea class="govuk-textarea" id="edit-note-details" name="edit-note-details" rows="5" spellcheck="false">{{ data['edit-note-details'] }}</textarea>
+				{% else %}
+				<textarea class="govuk-textarea" id="edit-note-details" name="edit-note-details" rows="5" spellcheck="false">Request to change email address.</textarea>
+				{% endif %}
 			</div>
 			<button class="govuk-button" data-module="govuk-button">Save and return</button>
 		</div>

@@ -201,16 +201,43 @@
 							</tr>
 						</thead> 
 						<tbody class="govuk-table__body">
+							<!-- new example -->
+							{% if data['add-note-details'] %}
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell">{{ data['add-day'] }} {{ data['add-month'] | toMonth }} {{ data['add-year'] }}</td>
+								<td class="govuk-table__cell">{{ data['add-note-details'] }}</td>
+								<td class="govuk-table__cell"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td> 
+							</tr>
+							{% endif %}
+							<!-- edit example -->
+							{% if data['edit-note-details'] %}
+							<tr class="govuk-table__row">
+								{% if data['edit-day'] and data['edit-month'] and data['edit-year'] %}
+								<td class="govuk-table__cell">{{ data['edit-day'] }} {{ data['edit-month'] | toMonth }} {{ data['edit-year'] }}</td>
+								{% else %}
+								<td class="govuk-table__cell">12 February 2020</td>
+								{% endif %}
+								<td class="govuk-table__cell">{{ data['edit-note-details'] }}</td>
+								<td class="govuk-table__cell"><a href="edit-note">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td> 
+							</tr>
+							{% else %}
 							<tr class="govuk-table__row">
 								<td class="govuk-table__cell">12 February 2020</td>
 								<td class="govuk-table__cell">Request to change email address.</td>
-								<td class="govuk-table__cell"><a href="edit-note">Edit</a>&nbsp;&nbsp;&nbsp;<a href="delete-note">Delete</a></td> 
+								<td class="govuk-table__cell"><a href="edit-note">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td> 
 							</tr>
+							{% endif %}
+
+							<!-- delete example -->
+							{% if data['delete-details'] == "Yes" %}
+							<!-- empty -->
+							{% else %}
 							<tr class="govuk-table__row">
 								<td class="govuk-table__cell">16 December 2019</td>
 								<td class="govuk-table__cell">Eligibility considered by SCC. Outcome: Proceed.</td>
-								<td class="govuk-table__cell"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td> 
+								<td class="govuk-table__cell"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="delete-note">Delete</a></td> 
 							</tr>
+							{% endif %}
 						</tbody>
 					</table>
 				</div>

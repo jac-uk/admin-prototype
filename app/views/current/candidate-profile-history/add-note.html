@@ -41,28 +41,28 @@
 				  	<div class="govuk-date-input" id="expiry">
 						<div class="govuk-date-input__item">
 					  		<div class="govuk-form-group">
-								<label class="govuk-label govuk-date-input__label" for="date-day">Day</label>
-								<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-day" name="date-day" type="text" pattern="[0-9]*" inputmode="numeric">
+								<label class="govuk-label govuk-date-input__label" for="add-day">Day</label>
+								<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="add-day" name="add-day" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['add-day'] }}">
 					  		</div>
 						</div>
 						<div class="govuk-date-input__item">
 					  		<div class="govuk-form-group">
-								<label class="govuk-label govuk-date-input__label" for="date-month">Month</label>
-								<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-month" name="date-month" type="text" pattern="[0-9]*" inputmode="numeric">
+								<label class="govuk-label govuk-date-input__label" for="add-month">Month</label>
+								<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="add-month" name="add-month" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['add-month'] }}">
 					  		</div>
 						</div>
 						<div class="govuk-date-input__item">
 					  		<div class="govuk-form-group">
-								<label class="govuk-label govuk-date-input__label" for="date-year">Year</label>
-								<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-year" name="date-year" type="text" pattern="[0-9]*" inputmode="numeric">
+								<label class="govuk-label govuk-date-input__label" for="add-year">Year</label>
+								<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="add-year" name="add-year" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['add-year'] }}">
 					  		</div>
 						</div>
 				  	</div>
 				</fieldset>
 			</div>
 			<div class="govuk-form-group">
-				<label class="govuk-label govuk-label--m" for="note-details">Note</label>
-				<textarea class="govuk-textarea" id="note-details" name="note-details" rows="5" spellcheck="false"></textarea>
+				<label class="govuk-label govuk-label--m" for="add-note-details">Note</label>
+				<textarea class="govuk-textarea" id="add-note-details" name="add-note-details" rows="5" spellcheck="false">{{ data['add-note-details'] }}</textarea>
 			</div>
 			<button class="govuk-button" data-module="govuk-button">Save and return</button>
 		</div>
