@@ -1,0 +1,61 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}Judical Appointments Commission - View candidate profile and history - Delete note?{% endblock %}
+
+{% block content %}
+<div class="header-background clearfix">
+	<div class="header-title govuk-!-margin-bottom-2">
+		<a href="/" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-24 govuk-!-font-weight-bold">Internal service name</a>
+		<nav class="float-right">
+			<ul id="navigation" class="govuk-header__navigation user-menu">
+				<li class="govuk-header__navigation-item">
+					<a class="govuk-header__link" href="#">Exercises</a>
+				</li>
+				<li class="govuk-header__navigation-item">
+					<a class="govuk-header__link" href="index">Candidates</a>
+				</li>
+				<li class="govuk-header__navigation-item">
+					<a class="govuk-header__link" href="#">My account</a>
+				</li>
+				<li class="govuk-header__navigation-item">
+					<a class="govuk-header__link" href="#">Sign out</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<div class="govuk-phase-banner">
+	<p class="govuk-phase-banner__content">
+		<strong class="govuk-tag govuk-phase-banner__content__tag">beta</strong>
+		<span class="govuk-phase-banner__text">This is a new service – your <a class="govuk-link govuk-link--no-visited-state" href="#">feedback</a> will help us to improve it.</span>
+	</p>
+</div>
+<form action="max-talbot" method="post">
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds govuk-!-margin-top-8">
+			<h1 class="govuk-heading-xl govuk-!-margin-bottom-7">Delete note?</h1>
+			<div class="govuk-inset-text govuk-!-margin-bottom-8">
+				<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0">12 February 2020</p>
+				<p class="govuk-body">Request to change email address.</p>
+			</div>
+			<div class="govuk-form-group">
+				<div class="govuk-radios">
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="delete-details" name="delete-details" type="radio" value="Yes" {{ checked("delete-details", "Yes") }}>
+						<label class="govuk-label govuk-radios__label" for="delete-details">Yes</label>
+					</div>
+					<div class="govuk-radios__item">
+						<input class="govuk-radios__input" id="delete-details-2" name="delete-details" type="radio" value="No" {{ checked("delete-details", "No") }}>
+						<label class="govuk-label govuk-radios__label" for="delete-details-2">No</label>
+					</div>
+				</div>
+			</div>
+			<button class="govuk-button" data-module="govuk-button">Save and return</button>
+		</div>
+	</div>
+</form>
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
+{% endblock %}

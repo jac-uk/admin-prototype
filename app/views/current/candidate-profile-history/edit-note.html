@@ -1,0 +1,75 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}Judical Appointments Commission - View candidate profile and history - Add note{% endblock %}
+
+{% block content %}
+<div class="header-background clearfix">
+	<div class="header-title govuk-!-margin-bottom-2">
+		<a href="/" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-24 govuk-!-font-weight-bold">Internal service name</a>
+		<nav class="float-right">
+			<ul id="navigation" class="govuk-header__navigation user-menu">
+				<li class="govuk-header__navigation-item">
+					<a class="govuk-header__link" href="#">Exercises</a>
+				</li>
+				<li class="govuk-header__navigation-item">
+					<a class="govuk-header__link" href="index">Candidates</a>
+				</li>
+				<li class="govuk-header__navigation-item">
+					<a class="govuk-header__link" href="#">My account</a>
+				</li>
+				<li class="govuk-header__navigation-item">
+					<a class="govuk-header__link" href="#">Sign out</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<div class="govuk-phase-banner">
+	<p class="govuk-phase-banner__content">
+		<strong class="govuk-tag govuk-phase-banner__content__tag">beta</strong>
+		<span class="govuk-phase-banner__text">This is a new service – your <a class="govuk-link govuk-link--no-visited-state" href="#">feedback</a> will help us to improve it.</span>
+	</p>
+</div>
+<form action="max-talbot" method="post">
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds govuk-!-margin-top-8">
+			<h1 class="govuk-heading-xl govuk-!-margin-bottom-7">Add note</h1>
+			<div class="govuk-form-group">
+				<fieldset class="govuk-fieldset" role="group" aria-describedby="date-hint">
+				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-!-margin-bottom-1">Date</legend>
+				  	<span id="date-hint" class="govuk-hint govuk-!-margin-bottom-2">For example, 10 4 2019</span>
+				  	<div class="govuk-date-input" id="expiry">
+						<div class="govuk-date-input__item">
+					  		<div class="govuk-form-group">
+								<label class="govuk-label govuk-date-input__label" for="date-day">Day</label>
+								<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-day" name="date-day" type="text" pattern="[0-9]*" inputmode="numeric" value="12">
+					  		</div>
+						</div>
+						<div class="govuk-date-input__item">
+					  		<div class="govuk-form-group">
+								<label class="govuk-label govuk-date-input__label" for="date-month">Month</label>
+								<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-month" name="date-month" type="text" pattern="[0-9]*" inputmode="numeric" value="2">
+					  		</div>
+						</div>
+						<div class="govuk-date-input__item">
+					  		<div class="govuk-form-group">
+								<label class="govuk-label govuk-date-input__label" for="date-year">Year</label>
+								<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-year" name="date-year" type="text" pattern="[0-9]*" inputmode="numeric" value="2020">
+					  		</div>
+						</div>
+				  	</div>
+				</fieldset>
+			</div>
+			<div class="govuk-form-group">
+				<label class="govuk-label govuk-label--m" for="note-details">Note</label>
+				<textarea class="govuk-textarea" id="note-details" name="note-details" rows="5" spellcheck="false">Request to change email address.</textarea>
+			</div>
+			<button class="govuk-button" data-module="govuk-button">Save and return</button>
+		</div>
+	</div>
+</form>
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
+{% endblock %}
