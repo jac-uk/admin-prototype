@@ -33,6 +33,32 @@
 <form action="add-note" method="post">
 	<div class="govuk-grid-row">
 		<div class="govuk-grid-column-full govuk-!-margin-top-8">
+			{% if data['add-note-details'] %}
+			<div class="moj-banner moj-banner--success">
+				<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+				<path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+				<div class="moj-banner__message">
+				<span class="moj-banner__assistive">Success</span>Note added (TBC).</div>
+			</div> 
+			{% endif %}
+
+			{% if data['edit-note-details'] %}
+			<div class="moj-banner moj-banner--success">
+				<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+				<path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+				<div class="moj-banner__message">
+				<span class="moj-banner__assistive">Success</span>Note updated (TBC).</div>
+			</div> 
+			{% endif %}
+
+			{% if data['delete-details'] %}
+			<div class="moj-banner moj-banner--success">
+				<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+				<path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+				<div class="moj-banner__message">
+				<span class="moj-banner__assistive">Success</span>The note has been deleted (TBC).</div>
+			</div> 
+			{% endif %}
 			<h1 class="govuk-heading-xl govuk-!-margin-bottom-7">Max Talbot</h1>
 			<div class="govuk-grid-row">
 				<div class="govuk-grid-column-two-thirds_ govuk-grid-column-one-half">
