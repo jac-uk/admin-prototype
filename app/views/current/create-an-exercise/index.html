@@ -26,17 +26,57 @@
 			<div class="govuk-tabs" data-module="govuk-tabs">
 				<h2 class="govuk-tabs__title">Contents</h2>
 				<ul class="govuk-tabs__list">
-					<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-						<a class="govuk-tabs__tab" href="#all-teams">All teams</a>
-				  	</li>
 				  	<li class="govuk-tabs__list-item">
 						<a class="govuk-tabs__tab" href="#created-me">Created by me</a>
 				  	</li>
 				  	<li class="govuk-tabs__list-item">
 						<a class="govuk-tabs__tab" href="#my-favourites">My favourites</a>
+					</li>
+					<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+						<a class="govuk-tabs__tab" href="#all-teams">All teams</a>
 				  	</li>
 				</ul>
-
+				<!-- Created by me -->
+				<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="created-me">
+				  	<h2 class="govuk-heading-l hidden">Created by me</h2>
+				  	<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">Created by me</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header hidden">Exercise</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell"><a href="/current/view-an-exercise/" class="govuk-link">JAC00105 Fee-paid Legal Members of the Mental Health Review Tribunal for Wales</a></td>
+							</tr>
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">JAC00184 Senior Circuit Judge of the Employment Appeal Tribunal</a></td>
+							</tr>
+						</tbody>
+					</table> 
+				</div>
+				<!-- My favourites -->
+				<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="my-favourites">		
+					<h2 class="govuk-heading-l hidden">My favourites</h2>
+					<table class="govuk-table">
+						<caption class="govuk-table__caption hidden">My favourites</caption>
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header hidden">Exercise</th>
+							  </tr>
+						</thead>
+						<tbody class="govuk-table__body">
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">JAC00148 Fee-paid Medical Members, First-tier Tribunal, Social Entitlement Chamber (Social Security and Child Support)</a></td>
+							</tr>
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell"><a href="#" class="govuk-link">JAC00174 Fee-paid Education Panel Members for the Special Educational Needs Tribunal for Wales (SENTW)</a></td>
+							</tr>
+						</tbody>
+					</table> 
+				</div>
+				<!-- All teams -->
 				<div class="govuk-tabs__panel" id="all-teams">
 					<h2 class="govuk-heading-l hidden">All teams</h2>
 					<table class="govuk-table">
@@ -85,46 +125,6 @@
 							</tr>
 							<tr class="govuk-table__row">
 								<td class="govuk-table__cell"><a href="#" class="govuk-link">JAC00323 s9(1) Authorisation to act as a High Court Judge</a></td>
-							</tr>
-						</tbody>
-					</table> 
-				</div>
-
-				<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="created-me">
-				  	<h2 class="govuk-heading-l hidden">Created by me</h2>
-				  	<table class="govuk-table">
-						<caption class="govuk-table__caption hidden">Created by me</caption>
-						<thead class="govuk-table__head">
-							<tr class="govuk-table__row">
-								<th scope="col" class="govuk-table__header hidden">Exercise</th>
-							  </tr>
-						</thead>
-						<tbody class="govuk-table__body">
-							<tr class="govuk-table__row">
-								<td class="govuk-table__cell"><a href="/current/view-an-exercise/" class="govuk-link">JAC00105 Fee-paid Legal Members of the Mental Health Review Tribunal for Wales</a></td>
-							</tr>
-							<tr class="govuk-table__row">
-								<td class="govuk-table__cell"><a href="#" class="govuk-link">JAC00184 Senior Circuit Judge of the Employment Appeal Tribunal</a></td>
-							</tr>
-						</tbody>
-					</table> 
-				</div>
-
-				<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="my-favourites">		
-					<h2 class="govuk-heading-l hidden">My favourites</h2>
-					<table class="govuk-table">
-						<caption class="govuk-table__caption hidden">My favourites</caption>
-						<thead class="govuk-table__head">
-							<tr class="govuk-table__row">
-								<th scope="col" class="govuk-table__header hidden">Exercise</th>
-							  </tr>
-						</thead>
-						<tbody class="govuk-table__body">
-							<tr class="govuk-table__row">
-								<td class="govuk-table__cell"><a href="#" class="govuk-link">JAC00148 Fee-paid Medical Members, First-tier Tribunal, Social Entitlement Chamber (Social Security and Child Support)</a></td>
-							</tr>
-							<tr class="govuk-table__row">
-								<td class="govuk-table__cell"><a href="#" class="govuk-link">JAC00174 Fee-paid Education Panel Members for the Special Educational Needs Tribunal for Wales (SENTW)</a></td>
 							</tr>
 						</tbody>
 					</table> 

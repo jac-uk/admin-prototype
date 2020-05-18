@@ -12,7 +12,7 @@
 					<a class="govuk-header__link" href="#">Exercises</a>
 				</li>
 				<li class="govuk-header__navigation-item">
-					<a class="govuk-header__link" href="#">Candidates</a>
+					<a class="govuk-header__link" href="index">Candidates</a>
 				</li>
 				<li class="govuk-header__navigation-item">
 					<a class="govuk-header__link" href="#">My account</a>
@@ -30,42 +30,55 @@
 		<span class="govuk-phase-banner__text">This is a new service – your <a class="govuk-link govuk-link--no-visited-state" href="#">feedback</a> will help us to improve it.</span>
 	</p>
 </div>
-<form action="#" method="post">
+<form action="add-note" method="post">
 	<div class="govuk-grid-row">
 		<div class="govuk-grid-column-full govuk-!-margin-top-8">
+			{% if data['add-note-details'] %}
+			<div class="moj-banner moj-banner--success">
+				<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+				<path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+				<div class="moj-banner__message">
+				<span class="moj-banner__assistive">Success</span>Note added (TBC).</div>
+			</div> 
+			{% endif %}
+
+			{% if data['edit-note-details'] %}
+			<div class="moj-banner moj-banner--success">
+				<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+				<path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+				<div class="moj-banner__message">
+				<span class="moj-banner__assistive">Success</span>Note updated (TBC).</div>
+			</div> 
+			{% endif %}
+
+			{% if data['delete-details'] %}
+			<div class="moj-banner moj-banner--success">
+				<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+				<path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+				<div class="moj-banner__message">
+				<span class="moj-banner__assistive">Success</span>The note has been deleted (TBC).</div>
+			</div> 
+			{% endif %}
 			<h1 class="govuk-heading-xl govuk-!-margin-bottom-7">Max Talbot</h1>
 			<div class="govuk-grid-row">
 				<div class="govuk-grid-column-two-thirds_ govuk-grid-column-one-half">
-					<h2 class="govuk-heading-l govuk-!-margin-bottom-4">Contact details</h2>
+					<h2 class="govuk-heading-l govuk-!-margin-bottom-4">Personal details</h2>
 					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Email address</dt>
 							<dd class="govuk-summary-list__value"><a href="#">max.talbot@example.com</a></dd>
-							<dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> email</span></a></dd>
+							<dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> email address</span></a></dd>
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Phone number</dt>
 							  <dd class="govuk-summary-list__value">01273 800 900</dd>
-							  <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> phone</span></a></dd>
+							  <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> phone number</span></a></dd>
 						</div>
-						<!-- <div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key no-border">Independent assessors</dt>
-							<dd class="govuk-summary-list__value">
-								<p class="govuk-body">Henry Brady</p>
-								<p class="govuk-body"><a class="govuk-link" href="#">henry.brady@example.com</a></p>
-								<p class="govuk-body">07771 900 900</p>
-							</dd>
-							<dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> assessor</span></a></dd>
-						</div> 
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">&nbsp;</dt>
-							<dd class="govuk-summary-list__value">
-								<p class="govuk-body">Kiera Watts</p>
-								<p class="govuk-body"><a class="govuk-link" href="#">kiera.watts@example.com</a></p>
-								<p class="govuk-body">020 7450 4000</p>
-							</dd>
-							<dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> assessor</span></a></dd>
-						</div> -->
+							<dt class="govuk-summary-list__key">National Insurance number</dt>
+							<dd class="govuk-summary-list__value">QQ 12 34 56 C</dd>
+							<dd class="govuk-summary-list__actions">&nbsp;</dd>
+						</div>
 					</dl>
 					<h2 class="govuk-heading-l govuk-!-margin-top-8 govuk-!-margin-bottom-4">Diversity</h2>
 					<dl class="govuk-summary-list">
@@ -98,14 +111,35 @@
 					<h2 class="govuk-heading-l govuk-!-margin-top-8 govuk-!-margin-bottom-4">Character</h2>
 					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Date</dt>
-							<dd class="govuk-summary-list__value">9 March 2017</dd>
+							<dt class="govuk-summary-list__key no-border">Information</dt>
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0">Date</p>
+								<p class="govuk-body">14 May 2018</p>
+							</dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Declaration</dt>
-							<dd class="govuk-summary-list__value">SP30 3 penalty points and a fixed fine of £125.</dd>
+							<dt class="govuk-summary-list__key no-border">&nbsp;</dt>
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0">Declaration</p>
+								<p class="govuk-body">Late tax return penalty to HMRC.</p>
+							</dd>
 						</div>
-					</dl> 
+
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key no-border">&nbsp;</dt>
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0  govuk-!-margin-top-4">Date</p>
+								<p class="govuk-body">9 March 2017</p>
+							</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">&nbsp;</dt>
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0">Declaration</p>
+								<p class="govuk-body">SP30 3 penalty points and a fixed fine of £125.</p>
+							</dd>
+						</div>
+					</dl>
 					<h2 class="govuk-heading-l govuk-!-margin-top-8 govuk-!-margin-bottom-4">Eligibility</h2>
 					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
@@ -137,7 +171,7 @@
 									</thead> 
 									<tbody class="govuk-table__body">
 										<tr class="govuk-table__row">
-											<td class="govuk-table__cell"><a href="#">JAC00105 Fee-paid Legal Members of the Mental Health Review Tribunal for Wales</a></td>
+											<td class="govuk-table__cell"><a href="applied-jac00105-abc0001">JAC00105 Fee-paid Legal Members of the Mental Health Review Tribunal for Wales</a></td>
 											<td class="govuk-table__cell">Applied</td> 
 										</tr>
 									</tbody>
@@ -180,16 +214,43 @@
 							</tr>
 						</thead> 
 						<tbody class="govuk-table__body">
+							<!-- new example -->
+							{% if data['add-note-details'] %}
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell">{{ data['add-day'] }} {{ data['add-month'] | toMonth }} {{ data['add-year'] }}</td>
+								<td class="govuk-table__cell">{{ data['add-note-details'] }}</td>
+								<td class="govuk-table__cell"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td> 
+							</tr>
+							{% endif %}
+							<!-- edit example -->
+							{% if data['edit-note-details'] %}
+							<tr class="govuk-table__row">
+								{% if data['edit-day'] and data['edit-month'] and data['edit-year'] %}
+								<td class="govuk-table__cell">{{ data['edit-day'] }} {{ data['edit-month'] | toMonth }} {{ data['edit-year'] }}</td>
+								{% else %}
+								<td class="govuk-table__cell">12 February 2020</td>
+								{% endif %}
+								<td class="govuk-table__cell">{{ data['edit-note-details'] }}</td>
+								<td class="govuk-table__cell"><a href="edit-note">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td> 
+							</tr>
+							{% else %}
 							<tr class="govuk-table__row">
 								<td class="govuk-table__cell">12 February 2020</td>
 								<td class="govuk-table__cell">Request to change email address.</td>
-								<td class="govuk-table__cell"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td> 
+								<td class="govuk-table__cell"><a href="edit-note">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td> 
 							</tr>
+							{% endif %}
+
+							<!-- delete example -->
+							{% if data['delete-details'] == "Yes" %}
+							<!-- empty -->
+							{% else %}
 							<tr class="govuk-table__row">
 								<td class="govuk-table__cell">16 August 2016</td>
 								<td class="govuk-table__cell">Eligibility considered by SCC. Outcome: Proceed.</td>
-								<td class="govuk-table__cell"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td> 
+								<td class="govuk-table__cell"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="delete-note">Delete</a></td> 
 							</tr>
+							{% endif %}
 						</tbody>
 					</table>
 				</div>
