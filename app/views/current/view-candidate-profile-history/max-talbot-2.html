@@ -30,93 +30,267 @@
 		<span class="govuk-phase-banner__text">This is a new service – your <a class="govuk-link govuk-link--no-visited-state" href="#">feedback</a> will help us to improve it.</span>
 	</p>
 </div>
-<form action="#" method="post">
+<form action="add-note" method="post">
 	<div class="govuk-grid-row">
 		<div class="govuk-grid-column-full govuk-!-margin-top-8">
-			<!-- <span class="govuk-caption-xl">Candidates</span> -->
-			<h2 class="govuk-heading-xl">Max Talbot</h2>
+			{% if data['add-note-details'] %}
+			<div class="moj-banner moj-banner--success">
+				<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+				<path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+				<div class="moj-banner__message">
+				<span class="moj-banner__assistive">Success</span>Note added (TBC).</div>
+			</div> 
+			{% endif %}
+
+			{% if data['edit-note-details'] %}
+			<div class="moj-banner moj-banner--success">
+				<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+				<path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+				<div class="moj-banner__message">
+				<span class="moj-banner__assistive">Success</span>Note updated (TBC).</div>
+			</div> 
+			{% endif %}
+
+			{% if data['delete-details'] %}
+			<div class="moj-banner moj-banner--success">
+				<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+				<path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+				<div class="moj-banner__message">
+				<span class="moj-banner__assistive">Success</span>The note has been deleted (TBC).</div>
+			</div> 
+			{% endif %}
+			<h1 class="govuk-heading-xl govuk-!-margin-bottom-7">Max Talbot</h1>
 			<div class="govuk-grid-row">
 				<div class="govuk-grid-column-two-thirds_ govuk-grid-column-one-half">
-					<h2 class="govuk-heading-l">Career</h2>
-					<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
-						<li>Registered with the GMC - January 2007</li>
-						<li>Fee-Paid member of the Social Entitlement Chamber -December 2016</li>
-					</ul>
-					<p class="govuk-body govuk-!-margin-top-2"><a href="#">View more</a></p>
-
-					<h2 class="govuk-heading-l">Diversity information</h2>
-					<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
-						<li>White</li>
-						<li>Gender neutral</li>
-						<li>No disability</li>
-						<li>Barrister</li>
-						<li>Fee-Paid Tribunal Judge</li>
-					</ul>
-					<p class="govuk-body govuk-!-margin-top-2"><a href="#">View more</a></p>
-
-					<h2 class="govuk-heading-l">Character declarations</h2>
-					<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
-						<li>2018 Late tax return penalty</li>
-						<li>2017 Declared bankrupt</li>
-						<li>2017 Fixed penality SP50</li>
-						<li>2015 Fixed penalty SP30</li>
-					</ul>
-					<p class="govuk-body govuk-!-margin-top-2"><a href="#">View more</a></p>
-
-					<h2 class="govuk-heading-l">Eligibility flags</h2>
-					<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
-						<li>Restrictions on Practice - October 2018</li>
-					</ul>
-					<p class="govuk-body govuk-!-margin-top-2"><a href="#">View more</a></p>
-				</div>
-				<div class="govuk-grid-column-one-third_ govuk-grid-column-one-half">
-					<h3 class="govuk-heading-m">Contact details</h3>
+					<h2 class="govuk-heading-l govuk-!-margin-bottom-4">Personal details</h2>
 					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Email</dt>
-						  	<dd class="govuk-summary-list__value"><a href="#">max.talbot@example.com</a></dd>
+							<dt class="govuk-summary-list__key">Email address</dt>
+							<dd class="govuk-summary-list__value"><a href="#">max.talbot@example.com</a></dd>
+							<dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> email address</span></a></dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key">Phone</dt>
-						  	<dd class="govuk-summary-list__value">07771 900 900</dd>
+							<dt class="govuk-summary-list__key">Phone number</dt>
+							  <dd class="govuk-summary-list__value">01273 800 900</dd>
+							  <dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> phone number</span></a></dd>
 						</div>
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key no-border">Assessors</dt>
+							<dt class="govuk-summary-list__key">National Insurance number</dt>
+							<dd class="govuk-summary-list__value">QQ 12 34 56 C</dd>
+							<dd class="govuk-summary-list__actions">&nbsp;</dd>
+						</div>
+					</dl>
+					<h2 class="govuk-heading-l govuk-!-margin-top-8 govuk-!-margin-bottom-4">Diversity</h2>
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Ethnic group</dt>
+							<dd class="govuk-summary-list__value">White</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Gender</dt>
+							<dd class="govuk-summary-list__value">Male</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Disability</dt>
+							<dd class="govuk-summary-list__value">Prefer not to say</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Professional background</dt>
 							<dd class="govuk-summary-list__value">
-								<p class="govuk-body">Steven Jacobs</p>
-								<p class="govuk-body"><a class="govuk-link" href="#">steven.jacobs@example.com</a></p>
-								<p class="govuk-body">020 7450 4000</p>
+								<ul class="govuk-list govuk-list--bullet">
+									<li>Barrister</li>
+									<li>Solicitor</li>
+								</ul>
 							</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Fee-paid judicial role</dt>
+							<dd class="govuk-summary-list__value">Prefer not to say</dd>
+						</div>
+					</dl>
+					<h2 class="govuk-heading-l govuk-!-margin-top-8 govuk-!-margin-bottom-4">Character</h2>
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key no-border">Issues</dt>
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0">Date</p>
+								<p class="govuk-body">14 May 2018</p>
+							</dd>
+							<!-- <dd class="govuk-summary-list__actions">&nbsp;</dd> -->
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key no-border">&nbsp;</dt>
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0">Declaration</p>
+								<p class="govuk-body">Late tax return penalty to HMRC.</p>
+							</dd>
+							<!-- <dd class="govuk-summary-list__actions">&nbsp;</dd> -->
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key no-border">&nbsp;</dt>
+							<dd class="govuk-summary-list__value">
+								<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0  govuk-!-margin-top-4">Date</p>
+								<p class="govuk-body">9 March 2017</p>
+							</dd>
+							<!-- <dd class="govuk-summary-list__actions">&nbsp;</dd> -->
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">&nbsp;</dt>
 							<dd class="govuk-summary-list__value">
-								<p class="govuk-body">Faye Dwell</p>
-								<p class="govuk-body"><a class="govuk-link" href="#">faye.dwell@example.com</a></p>
-								<p class="govuk-body">01273 800 900</p>
+								<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-0">Declaration</p>
+								<p class="govuk-body">SP30 3 penalty points and a fixed fine of £125.</p>
+							</dd>
+							<!-- <dd class="govuk-summary-list__actions">&nbsp;</dd> -->
+						</div>
+						<!-- <div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Checks</dt>
+							<dd class="govuk-summary-list__value"><a href="checks" class="govuk-link">View</a></dd>
+						</div> 	
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Checks</dt>
+							<dd class="govuk-summary-list__value">
+								<ul class="govuk-list govuk-list--bullet">
+									<li>ACRO</li>
+									<li>Solicitors Regulation Authority (SRA)</li>
+									<li>Bar Standards Board (BSB)</li>
+									<li>Judicial Conduct Investigations Office (JCIO)</li>
+									<li>HMRC</li>
+									<li>Other</li>
+								</ul>
+							</dd>
+							<dd class="govuk-summary-list__actions"><a class="govuk-link" href="checks">View</a></dd>
+						</div> -->
+
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Checks</dt>
+							<dd class="govuk-summary-list__value">
+								<ul class="govuk-list">
+									<li><a class="govuk-link" href="checks#acro">ACRO</a></li>
+									<li><a class="govuk-link" href="checks#sra">Solicitors Regulation Authority (SRA)</a></li>
+									<li><a class="govuk-link" href="checks#bsb">Bar Standards Board (BSB)</a></li>
+									<li><a class="govuk-link" href="checks#jcio">Judicial Conduct Investigations Office (JCIO)</a></li>
+									<li><a class="govuk-link" href="checks#hmrc">HMRC</a></li>
+									<li><a class="govuk-link" href="checks#other">Other</a></li>
+								</ul>
 							</dd>
 						</div>
+						
 					</dl>
-					<h3 class="govuk-heading-m govuk-!-margin-top-8">Past application outcomes</h3>
+					<h2 class="govuk-heading-l govuk-!-margin-top-8 govuk-!-margin-bottom-4">Eligibility</h2>
 					<dl class="govuk-summary-list">
 						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key font-normal" style="width: 80%"><a href="#">136 Fee-Paid Medical Member SEC</a></dt>
-						  	<dd class="govuk-summary-list__value font-weight-bold">Appointed</dd>
-						</div>
-						<div class="govuk-summary-list__row">
-							<dt class="govuk-summary-list__key font-normal" style="width: 80%"><a href="#">178 Fee-Paid Medical Member SEC</a></dt>
-						  	<dd class="govuk-summary-list__value font-weight-bold">Withdrew</dd>
+							<dt class="govuk-summary-list__key">Cititzenship</dt>
+							<dd class="govuk-summary-list__value">Canada</dd>
 						</div>
 					</dl>
-				  	<!-- <p class="govuk-body">This is a paragraph inside a one-third wide column</p> -->
+				</div>
+				<div class="govuk-grid-column-one-third_ govuk-grid-column-one-half">
+					<div class="govuk-!-margin-left-4"> 
+						<h3 class="govuk-heading-m">Applications</h3>
+						<div class="govuk-tabs" data-module="govuk-tabs">
+							<h2 class="govuk-tabs__title hidden">Contents</h2>
+							<ul class="govuk-tabs__list">
+								<li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+									<a class="govuk-tabs__tab" href="#open">Open</a>
+								</li>
+								<li class="govuk-tabs__list-item">
+									<a class="govuk-tabs__tab" href="#closed">Closed</a>
+								</li>
+							</ul>
+							<div class="govuk-tabs__panel govuk-!-padding-top-2" id="open">
+								<table class="govuk-table">
+									<thead class="govuk-table__head">
+										<tr class="govuk-table__row">
+											<th scope="col" class="govuk-table__header">Exercise</th>
+											<th scope="col" class="govuk-table__header">Outcome</th>
+										</tr>
+									</thead> 
+									<tbody class="govuk-table__body">
+										<tr class="govuk-table__row">
+											<td class="govuk-table__cell"><a href="applied-jac00105-abc0001">JAC00105 Fee-paid Legal Members of the Mental Health Review Tribunal for Wales</a></td>
+											<td class="govuk-table__cell">Applied</td> 
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="govuk-tabs__panel govuk-!-padding-top-2 govuk-tabs__panel--hidden" id="closed">
+								<table class="govuk-table">
+									<thead class="govuk-table__head">
+										<tr class="govuk-table__row">
+											<th scope="col" class="govuk-table__header">Exercise</th>
+											<th scope="col" class="govuk-table__header">Outcome</th>
+										</tr>
+									</thead> 
+									<tbody class="govuk-table__body">
+										<tr class="govuk-table__row">
+											<td class="govuk-table__cell"><a href="#">JAC00184 Senior Circuit Judge of the Employment Appeal Tribunal</a></td>
+											<td class="govuk-table__cell">Appointed</td>
+										</tr>
+										<tr class="govuk-table__row">
+											<td class="govuk-table__cell"><a href="#">JAC00148 Fee-paid Medical Members, First-tier Tribunal, Social Entitlement Chamber (Social Security and Child Support)</a></td>
+											<td class="govuk-table__cell">Withdrew</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div> 
+			</div>
+			<div class="govuk-grid-row">
+				<div class="govuk-grid-column-full govuk-!-margin-top-8">
+					<h2 class="govuk-heading-l">Notes about the candidate</h2>
+					<button class="govuk-button govuk-button--secondary" data-module="govuk-button">Add a note</button>
+					<table class="govuk-table">
+						<thead class="govuk-table__head">
+							<tr class="govuk-table__row">
+								<th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Date</th>
+								<th scope="col" class="govuk-table__header">Note</th>
+								<th scope="col" class="govuk-table__header">&nbsp;</th>
+							</tr>
+						</thead> 
+						<tbody class="govuk-table__body">
+							<!-- new example -->
+							{% if data['add-note-details'] %}
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell">{{ data['add-day'] }} {{ data['add-month'] | toMonth }} {{ data['add-year'] }}</td>
+								<td class="govuk-table__cell">{{ data['add-note-details'] }}</td>
+								<td class="govuk-table__cell"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td> 
+							</tr>
+							{% endif %}
+							<!-- edit example -->
+							{% if data['edit-note-details'] %}
+							<tr class="govuk-table__row">
+								{% if data['edit-day'] and data['edit-month'] and data['edit-year'] %}
+								<td class="govuk-table__cell">{{ data['edit-day'] }} {{ data['edit-month'] | toMonth }} {{ data['edit-year'] }}</td>
+								{% else %}
+								<td class="govuk-table__cell">12 February 2020</td>
+								{% endif %}
+								<td class="govuk-table__cell">{{ data['edit-note-details'] }}</td>
+								<td class="govuk-table__cell"><a href="edit-note">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td> 
+							</tr>
+							{% else %}
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell">12 February 2020</td>
+								<td class="govuk-table__cell">Request to change email address.</td>
+								<td class="govuk-table__cell"><a href="edit-note">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td> 
+							</tr>
+							{% endif %}
+
+							<!-- delete example -->
+							{% if data['delete-details'] == "Yes" %}
+							<!-- empty -->
+							{% else %}
+							<tr class="govuk-table__row">
+								<td class="govuk-table__cell">16 August 2016</td>
+								<td class="govuk-table__cell">Eligibility considered by SCC. Outcome: Proceed.</td>
+								<td class="govuk-table__cell"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="delete-note">Delete</a></td> 
+							</tr>
+							{% endif %}
+						</tbody>
+					</table>
 				</div>
 			</div>
-			
-
-			<!--<p class="govuk-body" style="margin-bottom: 300px">TBC</p>
-			 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-			<button class="govuk-button" data-module="govuk-button">Save and continue</button> -->
-
 		</div>
 	</div>
 </form>
