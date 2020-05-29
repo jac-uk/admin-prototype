@@ -1,0 +1,314 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}Judical Appointments Commission - View reports - Issues{% endblock %}
+
+{% block content %}
+{% include "includes/header.html" %}
+<form action="#" method="post">
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-full">
+			<button type="submit" formaction="#" class="govuk-button govuk-button--secondary govuk-!-margin-top-4 float-right" data-module="govuk-button">Add to favourites</button>
+		</div>
+	</div>
+	<div class="govuk-grid-row clearfix">
+		<div class="govuk-grid-column-full">
+			<span class="govuk-caption-xl">JAC00105</span>
+			<h1 class="govuk-heading-xl">Fee-paid Legal Members of the Mental Health Review Tribunal for Wales</h1>
+		</div>
+	</div>
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-one-quarter">
+			<nav class="moj-side-navigation govuk-!-padding-top-0" aria-label="Side navigation">
+				<h4 class="moj-side-navigation__title">Exercise</h4>
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item">
+						<a href="#">Overview</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Website listing</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Vacancy information</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Contacts</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Timeline</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Shortlisting</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Eligibility information</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Working preferences</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Assessment options</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Downloads</a>
+					</li>		  
+				</ul>
+			
+				<h4 class="moj-side-navigation__title">Applications</h4> 
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item">
+						<a href="#" aria-current="location">Drafts</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Applied</a>
+					</li>
+				</ul>
+
+				<h4 class="moj-side-navigation__title">Stages</h4> 
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item">
+						<a href="review">Review (100)</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Shortlisted (0)</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Selected (0)</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Recommended (0)</a>
+					</li>
+					<li class="moj-side-navigation__item">
+						<a href="#">Handover (0)</a>
+					</li>
+				</ul>
+
+				<h4 class="moj-side-navigation__title">Reports</h4>
+				<ul class="moj-side-navigation__list">
+					<li class="moj-side-navigation__item">
+						<a href="#" aria-current="location">Diversity</a>
+					</li>
+					<li class="moj-side-navigation__item moj-side-navigation__item--active">
+						<a href="index" aria-current="location">Issues</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="govuk-grid-column-three-quarters">
+			<h2 class="govuk-heading-l govuk-!-margin-bottom-8">Issues</h2> 
+			<div class="govuk-tabs" data-module="govuk-tabs">
+				<h2 class="govuk-tabs__title">Contents</h2>
+				<ul class="govuk-tabs__list">
+				  	<li class="govuk-tabs__list-item">
+						<a class="govuk-tabs__tab" href="#character">Character</a>
+				  	</li>
+				  	<li class="govuk-tabs__list-item">
+						<a class="govuk-tabs__tab" href="#eligibility">Eligibility</a>
+				  	</li>
+				</ul>
+				<div class="govuk-tabs__panel" id="character">
+					<h3 class="govuk-heading-m">Character</h3>
+					<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-6">20 issues</p>
+					<!-- 1 -->
+					<span class="govuk-caption-m">Max Talbot</span>
+					{% if data['issue-character-abc0001'] %}
+					<h3 class="govuk-heading-m"><a href="applied-jac00105-abc0001-saved#issues" class="govuk-link">JAC00105-abc0001</a></h3>
+					{% else %}
+					<h3 class="govuk-heading-m"><a href="applied-jac00105-abc0001#issues" class="govuk-link">JAC00105-abc0001</a></h3>
+					{% endif %}
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Has endorsements on their licence, or received any motoring fixed-penalty notices in the last 4 years</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 2 -->
+					<span class="govuk-caption-m">Spencer Singh</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0002</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Received a non-motoring penalty notice</li>
+						<li>Been disqualified from driving, or convicted for driving under the influence of drink or drugs</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 3 -->
+					<span class="govuk-caption-m">Luke Walker</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0003</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Has declared other issues we should know about</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 4 -->
+					<span class="govuk-caption-m">Nathan Powell</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0004</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Been declared bankrupt or entered into an Individual Voluntary Agreement (IVA)</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 5 -->
+					<span class="govuk-caption-m">Harry Farmer</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0005</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Has received a non-motoring penalty notice in the last 4 years</li>
+						<li>Been cautioned or convicted of a criminal offence</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 6 -->
+					<span class="govuk-caption-m">Alex Potter</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0006</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Filed late tax returns or been fined my HMRC</li>
+						<li>Has received a non-motoring penalty notice in the last 4 years</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 7 -->
+					<span class="govuk-caption-m">Connor Wood</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0007</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Been disqualified from driving, or convicted for driving under the influence of drink or drugs</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 8 -->
+					<span class="govuk-caption-m">Connor Gibbs</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0008</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Filed late tax returns or been fined my HMRC</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 9 -->
+					<span class="govuk-caption-m">Josh Davison</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0009</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Has endorsements on their licence, or received any motoring fixed-penalty notices in the last 4 years</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 10 -->
+					<span class="govuk-caption-m">Kai Blackburn</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0010</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Been disqualified from driving, or convicted for driving under the influence of drink or drugs</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 11 -->
+					<span class="govuk-caption-m">Imogen Newman</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0011</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Has declared other issues we should know about</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 12 -->
+					<span class="govuk-caption-m">Leon Hewitt</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0012</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Been disqualified from driving, or convicted for driving under the influence of drink or drugs</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 13 -->
+					<span class="govuk-caption-m">Isobel Kemp</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0013</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Has declared other issues we should know about</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 14 -->
+					<span class="govuk-caption-m">Zachary Taylor</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0014</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Been disqualified from driving, or convicted for driving under the influence of drink or drugs</li>
+						<li>Filed late tax returns or been fined my HMRC</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 15 -->
+					<span class="govuk-caption-m">Matilda Dean</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0015</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Has endorsements on their licence, or received any motoring fixed-penalty notices in the last 4 years</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 16 -->
+					<span class="govuk-caption-m">Max Lucas</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0016</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Been declared bankrupt or entered into an Individual Voluntary Agreement (IVA)</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 17 -->
+					<span class="govuk-caption-m">Eve Kent</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0017</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Filed late tax returns or been fined my HMRC</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 18 -->
+					<span class="govuk-caption-m">Alicia Howell</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0018</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Been, or is currently, subject to professional misconduct, negligence, wrongful dismissal, discrimination or harassment proceedings</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 19 -->
+					<span class="govuk-caption-m">Morgan Randall</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0019</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Been subject to complaints or disciplinary action, or been asked to resign from a position</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 20 -->
+					<span class="govuk-caption-m">Sophia Lane</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0020</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Has declared other issues we should know about</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<button class="govuk-button govuk-button--secondary govuk-!-margin-top-4" data-module="govuk-button" formaction="#">Download as PDF</button>
+				</div>
+				<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="eligibility">
+					<h3 class="govuk-heading-m">Eligibility</h3>
+					<p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-6">5 issues</p>
+					<!-- 1 -->
+					<span class="govuk-caption-m">Max Talbot</span>
+					{% if data['issue-character-abc0001'] %}
+					<h3 class="govuk-heading-m"><a href="applied-jac00105-abc0001-saved#issues" class="govuk-link">JAC00105-abc0001</a></h3>
+					{% else %}
+					<h3 class="govuk-heading-m"><a href="applied-jac00105-abc0001#issues" class="govuk-link">JAC00105-abc0001</a></h3>
+					{% endif %}
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Citizenship</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 2 -->
+					<span class="govuk-caption-m">Gabriel Pearce</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0022</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Reasonable length of service</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 3 -->
+					<span class="govuk-caption-m">Sophie Bevan</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0023</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Citizenship</li>
+						<li>Post-qualification experience</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 4 -->
+					<span class="govuk-caption-m">Declan Clayton</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0024</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Reasonable length of service</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<!-- 5 -->
+					<span class="govuk-caption-m">Joel Hussain</span>
+					<h3 class="govuk-heading-m"><a href="#" class="govuk-link">JAC00105-abc0025</a></h3>
+					<ul class="govuk-list govuk-list--bullet">
+						<li>Citizenship</li>
+					</ul>
+					<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+					<button class="govuk-button govuk-button--secondary govuk-!-margin-top-4" data-module="govuk-button" formaction="#">Download as PDF</button>
+				</div>	
+			</div>
+		</div>
+	</div>
+</form>
+{% endblock %}
+
+{% block footer %}
+{% include "includes/footer.html" %}
+{% endblock %}
