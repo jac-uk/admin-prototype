@@ -120,14 +120,7 @@
 			</nav>
 		</div>
 		<div class="govuk-grid-column-three-quarters">
-			<span class="govuk-caption-l">Max Talbot</span>
-			<h2 class="govuk-heading-l">JAC00105-abc0001</h2>
-			<p class="govuk-body"><a href="applied-jac00105-abc0001">View submitted application</a></p>
-			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-			{% if data['send-consent-form'] == "Yes" %}
-			<!-- <p class="govuk-body">Consent form email has been sent (TBC).</p> -->
-
-			<div class="moj-banner govuk-!-margin-bottom-6">
+			<div class="moj-banner">
 				<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
 				<path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
 				C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" /></svg>
@@ -135,7 +128,11 @@
 					<h2 class="govuk-heading-s">Consent form email sent on 29 May 2020 (TBC).</h2>
 				</div>
 			</div> 
-
+			<span class="govuk-caption-l">Max Talbot</span>
+			<h2 class="govuk-heading-l">JAC00105-abc0001</h2>
+			<p class="govuk-body"><a href="applied-jac00105-abc0001">View submitted application</a></p>
+			<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+			{% if data['send-consent-form'] == "Yes" %}
 			<div class="govuk-form-group">
 				<fieldset class="govuk-fieldset">
 				  	<legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-!-margin-bottom-2">
