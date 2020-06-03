@@ -205,6 +205,34 @@
 							<dt class="govuk-summary-list__key">Declaration</dt>
 							<dd class="govuk-summary-list__value">SP30 3 penalty points and a fixed fine of £125.</dd>
 						</div>
+						{% if data['issue-character-abc0001'] == "Recommend" %}
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Outcome</dt>
+							<dd class="govuk-summary-list__value">Recommend</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Reason</dt>
+							<dd class="govuk-summary-list__value">{{ data['issue-character-abc0001-1-note'] }}</dd>
+						</div>
+						{% elseif data['issue-character-abc0001'] == "Discuss" %}
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Outcome</dt>
+							<dd class="govuk-summary-list__value">Discuss</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Reason</dt>
+							<dd class="govuk-summary-list__value">{{ data['issue-character-abc0001-2-note'] }}</dd>
+						</div>
+						{% elseif data['issue-character-abc0001'] == "Reject" %}
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Outcome</dt>
+							<dd class="govuk-summary-list__value">Reject</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Reason</dt>
+							<dd class="govuk-summary-list__value">{{ data['issue-character-abc0001-3-note'] }}</dd>
+						</div>
+						{% endif %}
 					</dl>	
 
 
