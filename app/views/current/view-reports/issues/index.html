@@ -190,7 +190,11 @@
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Reference number</dt>
+							{% if data['issue-character-abc0001'] %}
+							<dd class="govuk-summary-list__value"><a href="applied-jac00105-abc0001-saved#issues">JAC00105-abc0001</a></dd>
+							{% else %}
 							<dd class="govuk-summary-list__value"><a href="applied-jac00105-abc0001">JAC00105-abc0001</a></dd>
+							{% endif %}
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Issue</dt>
@@ -322,7 +326,7 @@
 				</div>	
 				<div class="govuk-tabs__panel" id="character">
 					<!-- <h3 class="govuk-heading-m">Character</h3> -->
-					<p class="govuk-body govuk-!-margin-bottom-6">24 issues</p>
+					<p class="govuk-body govuk-!-margin-bottom-6">13 issues</p>
 
 					<h3 class="govuk-heading-m">Single motoring offences</h3>
 					<dl class="govuk-summary-list">
@@ -332,7 +336,11 @@
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Reference number</dt>
+							{% if data['issue-character-abc0001'] %}
+							<dd class="govuk-summary-list__value"><a href="applied-jac00105-abc0001-saved#issues">JAC00105-abc0001</a></dd>
+							{% else %}
 							<dd class="govuk-summary-list__value"><a href="applied-jac00105-abc0001">JAC00105-abc0001</a></dd>
+							{% endif %}
 						</div>
 						<div class="govuk-summary-list__row">
 							<dt class="govuk-summary-list__key">Issue</dt>
@@ -484,11 +492,121 @@
 						</div>
 					</dl>	
 
-
 					<h3 class="govuk-heading-m">Multiple financial issues</h3>
+					<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Name</dt>
+							<dd class="govuk-summary-list__value">Connor Gibbs</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Reference number</dt>
+							<dd class="govuk-summary-list__value"><a href="#">JAC00105-abc0008</a></dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Issue</dt>
+							<dd class="govuk-summary-list__value">Filed late tax returns or been fined my HMRC</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Date</dt>
+							<dd class="govuk-summary-list__value">17 June 2019</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Declaration</dt>
+							<dd class="govuk-summary-list__value">Late payment charge for Self Assessment to HMRC. I was charged £25.05 in interest for this late payment.</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Date</dt>
+							<dd class="govuk-summary-list__value">21 November 2018</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Declaration</dt>
+							<dd class="govuk-summary-list__value">I missed a VAT payment during 2018, which I was not aware of. I have since paid this money back to HMRC and there are no outstanding VAT payments.</dd>
+						</div>
+					</dl>
+
 					<h3 class="govuk-heading-m">Single professional negligence</h3>
+					<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Name</dt>
+							<dd class="govuk-summary-list__value">Alicia Howell</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Reference number</dt>
+							<dd class="govuk-summary-list__value"><a href="#">JAC00105-abc0018</a></dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Issue</dt>
+							<dd class="govuk-summary-list__value">Been, or is currently, subject to professional misconduct, negligence, wrongful dismissal, discrimination or harassment proceedings</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Date</dt>
+							<dd class="govuk-summary-list__value">23 February 2019</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Declaration</dt>
+							<dd class="govuk-summary-list__value">My ex-employers ABC Solicitors were under investigation from 23 February to 29 May 2019 by the Solicitors Regulation Authority. I left this firm in January 2019 but wanted to make JAC aware of this.</dd>
+						</div>
+					</dl>
+
 					<h3 class="govuk-heading-m">Single professional misconduct</h3>
+					<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Name</dt>
+							<dd class="govuk-summary-list__value">Zachary Taylor</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Reference number</dt>
+							<dd class="govuk-summary-list__value"><a href="#">JAC00105-abc0014</a></dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Issue</dt>
+							<dd class="govuk-summary-list__value">Been, or is currently, subject to professional misconduct, negligence, wrongful dismissal, discrimination or harassment proceedings</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Date</dt>
+							<dd class="govuk-summary-list__value">14 December 2017</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Declaration</dt>
+							<dd class="govuk-summary-list__value">A direct access client tried to make a refund claim of £5,500 for the trial fees. I was not negligent but was advised that it would be easier to settle this and pay the claimant £4,000.</dd>
+						</div>
+					</dl>
+
 					<h3 class="govuk-heading-m">Mixture of issues</h3>
+					<dl class="govuk-summary-list">
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Name</dt>
+							<dd class="govuk-summary-list__value">Eve Kent</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Reference number</dt>
+							<dd class="govuk-summary-list__value"><a href="#">JAC00105-abc0017</a></dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Issue</dt>
+							<dd class="govuk-summary-list__value">Has endorsements on their licence, or received any motoring fixed-penalty notices in the last 4 years</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Date</dt>
+							<dd class="govuk-summary-list__value">9 July 2019</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Declaration</dt>
+							<dd class="govuk-summary-list__value">SP30, 3 penalty points and £100 fine.</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Issue</dt>
+							<dd class="govuk-summary-list__value">Filed late tax returns or been fined my HMRC</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Date</dt>
+							<dd class="govuk-summary-list__value">11 September 2016</dd>
+						</div>
+						<div class="govuk-summary-list__row">
+							<dt class="govuk-summary-list__key">Declaration</dt>
+							<dd class="govuk-summary-list__value">My VAT return was submitted late and I was fined by HMRC.</dd>
+						</div>
+					</dl>
 
 					<!-- Been cautioned or convicted of a criminal offence
 					<table class="govuk-table govuk-!-margin-bottom-7">
